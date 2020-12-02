@@ -14,10 +14,11 @@ public class Template{
 
     //模板名称；转换字典，逆转换字典；叶节点数量
     private String templateName;
-    private HashMap<String,List<Integer>> template;
-    private HashMap<List<Integer>,String> reTransform;
-    private HashMap<String,String> typeDefine;
+    private Map<String,List<Integer>> template;
+    private Map<List<Integer>,String> reTransform;
+    private Map<String,String> typeDefine;
     private int leafCount;
+    private Map<String,Integer> arrayCount;
 
     //private JSONObject origianlJson;
 
@@ -30,11 +31,10 @@ public class Template{
         this.template = new HashMap<>();
         this.reTransform = new HashMap<>();
         this.typeDefine = new HashMap<>();
+        this.arrayCount = new HashMap<>();
 
         JSONObject origianlJson = JSON.parseObject(readTemplate());
-        transformTemplate(origianlJson.getJSONObject("template"), this.templateName,0,"_notarray");
-
-        this.leafCount = this.template.size();
+        this.leafCount = transformTemplate(origianlJson.getJSONObject("template"), this.templateName,0,"_notarray");
 
     }
 
@@ -72,6 +72,7 @@ public class Template{
                 String jsonchildname = nodename + "." + entry.getKey();
                 arraycount =  transformTemplate(jsonchild,jsonchildname,arraycount,nodename);
             }
+            this.arrayCount.put(nodename,arraycount);
         }
         else{
             if("_notarray".equals(arrayname)){
@@ -134,15 +135,15 @@ public class Template{
         return this.leafCount;
     }
 
-    public HashMap<List<Integer>, String> getReTransform() {
+    public Map<List<Integer>, String> getReTransform() {
         return this.reTransform;
     }
 
-    public HashMap<String, List<Integer>> getTemplate() {
+    public Map<String, List<Integer>> getTemplate() {
         return this.template;
     }
 
-    public HashMap<String,String> getTypeDefine(){
+    public Map<String,String> getTypeDefine(){
         return this.typeDefine;
     }
 
@@ -197,7 +198,7 @@ public class Template{
 
      */
 
-/*
+
     public List<Record> dataTransform(String originaldata){
 
 
@@ -206,45 +207,27 @@ public class Template{
 
         for (int num = 0; num < dataarray.size(); num++) {
 
-            Record record = new Record(this.leafCount);
+            //Record record = new Record(this.leafCount);
+            List<Object> leaf = new ArrayList<>();
 
-            for (HashMap.Entry<String, Integer> entry : this.template.entrySet()) {
+            for (HashMap.Entry<String, List<Integer>> entry : this.template.entrySet()) {
                 JSONObject tmpdata = dataarray.getJSONObject(num).getJSONObject("content");
                 String[] nodes = entry.getKey().split("\\.");
                 for (int i = 1; i < nodes.length; i++) {
-                    if (i == nodes.length - 1) continue;
                     tmpdata = tmpdata.getJSONObject(nodes[i]);
+
+                    //System.out.println(data);
+
                 }
-                Object data = new Object();
-                switch (this.typeDefine.get(entry.getKey())){
-                    case "字符串型": data = tmpdata.getString(nodes[nodes.length - 1]); break;
-                    //此处可以增加统计
-                    case "数值型": data = tmpdata.getDouble(nodes[nodes.length-1]);
-                        //此处可以增加统计
-                }
-
-
-                switch (this.typeDefine.get(entry.getKey())) {
-                    case "字符串型":
-                        data = tmpdata.getString(nodes[nodes.length - 1]);
-                        break;
-                    //此处可以增加统计
-                    case "数值型":
-                        data = tmpdata.getDouble(nodes[nodes.length - 1]);
-                        //此处可以增加统计
-                }
-
-
-                //System.out.println(data);
-                record.setData(entry.getValue(), data);
             }
 
+            Record record = new Record(new ArrayList<Object>());
             records.add(record);
         }
 
         return records;
     }
-*/
+
 
 
 }
