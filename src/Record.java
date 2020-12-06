@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,30 @@ public class Record {
         this.fields = fields;
     }
 
-    public Object getField(int idx) {
-        return fields.get(idx);
+    public List<Object> getField(List<Integer> idx) {
+
+        List<Object> result = new ArrayList<>();
+        //List<Object> current = this.fields;
+        if(idx.size()==1){
+            result.add(this.fields.get(idx.get(0)));
+        }
+        else if(idx.size()==2) {
+            //System.out.println(idx);
+            List<Object> array = (List<Object>) this.fields.get(idx.get(0));
+            result = (List<Object>) array.get(idx.get(1));
+        }
+        else{
+            //System.out.println(idx);
+            List<Object> array = (List<Object>) this.fields.get(idx.get(0));
+            List<Object> array2 = (List<Object>)array.get(idx.get(1));
+            for(int i=0;i<array2.size();i++){
+                List<Object> current = (List<Object>) array2.get(i);
+                result.add(current.get(idx.get(2)));
+            }
+        }
+
+
+        return result;
     }
+
 }

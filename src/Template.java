@@ -1,50 +1,66 @@
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 
 public class Template{
 
-    public static final List<String> arrays = new ArrayList<>(Arrays.asList("图片型","数组型","文件型","表格型"));
-    public static final List<String> container = new ArrayList<>(Arrays.asList("容器型","生成器型"));
+
+    public static final List<String> ARRAYS = new ArrayList<>(Arrays.asList("图片型","数组型","文件型","表格型"));
+    public static final List<String> CONTAINER = new ArrayList<>(Arrays.asList("容器型","生成器型"));
 
     //模板名称；转换字典，逆转换字典；叶节点数量
     private String templateName;
-    private Map<String,List<Integer>> template;
-    private Map<List<Integer>,String> reTransform;
-    private Map<String,String> typeDefine;
-    private int leafCount;
-    private Map<String,Integer> arrayCount;
+    private Map<String,List<Integer>> idxs;
+    private Map<List<Integer>,String> fields;
+    private Map<String,String> type;
+    private int leaf;
+    private Map<String,Integer> arrays;
 
     //private JSONObject origianlJson;
 
 
     //初始化模板名称；成对的模板转换字典；计数模板的二维长度
     Template(){}
-    Template(String templatename){
+    public Template(String templatename){
 
         this.templateName = templatename;
-        this.template = new HashMap<>();
-        this.reTransform = new HashMap<>();
-        this.typeDefine = new HashMap<>();
-        this.arrayCount = new HashMap<>();
+        this.idxs = new HashMap<>();
+        this.fields = new HashMap<>();
+        this.type = new HashMap<>();
+        this.arrays = new HashMap<>();
 
         JSONObject origianlJson = JSON.parseObject(readTemplate());
-        this.leafCount = transformTemplate(origianlJson.getJSONObject("template"), this.templateName,0,"_notarray");
+        this.leaf = transformTemplate(origianlJson.getJSONObject("template"), this.templateName,0,"_notarray");
 
     }
 
     //读取模板文件
     String readTemplate(){
 
-        ScanPqt fileUtil = new ScanPqt();
-        String path = this.templateName+".json";
-        String originaljson = fileUtil.ReadFile(path);
-        return originaljson;
+        BufferedReader reader = null;
+        String laststr = "";
+        try {
+            FileInputStream fileinputstream = new FileInputStream(this.templateName + ".json");
+            InputStreamReader inputstreamreader = new InputStreamReader(fileinputstream, "UTF-8");
+            reader = new BufferedReader(inputstreamreader);
+            String tempString = null;
+            while ((tempString = reader.readLine()) != null) {
+                laststr += tempString;
+            }
+            reader.close();
+            fileinputstream.close();
+            ;
+            inputstreamreader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return laststr;
     }
 
     //递归调用，直到JSON树的叶子节点
@@ -52,7 +68,7 @@ public class Template{
 
         Boolean leafcheck = true;
 
-        if(container.contains(jsonroot.get("_type"))){
+        if(CONTAINER.contains(jsonroot.get("_type"))){
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
                 if(entry.getKey().matches("_(.*)"))continue;
                 leafcheck = false;
@@ -61,7 +77,7 @@ public class Template{
                 count =  transformTemplate(jsonchild,jsonchildname,count,arrayname);
             }
         }
-        else if(arrays.contains(jsonroot.get("_type"))){
+        else if(ARRAYS.contains(jsonroot.get("_type"))){
             if("_notarray".equals(arrayname)){addLeaf(jsonroot,nodename,count);}
             else{addArray(jsonroot,nodename,arrayname,count);}
             count++;
@@ -72,7 +88,7 @@ public class Template{
                 String jsonchildname = nodename + "." + entry.getKey();
                 arraycount =  transformTemplate(jsonchild,jsonchildname,arraycount,nodename);
             }
-            this.arrayCount.put(nodename,arraycount);
+            this.arrays.put(nodename,arraycount);
         }
         else{
             if("_notarray".equals(arrayname)){
@@ -111,57 +127,40 @@ public class Template{
 
     void addLeaf(JSONObject jsonroot, String nodename,int count){
         String type = jsonroot.getString("_type");
-        this.typeDefine.put(nodename,type);
-        this.template.put(nodename,new ArrayList<>(Arrays.asList(count)));
-        this.reTransform.put(new ArrayList<Integer>(Arrays.asList(count)),nodename);
+        this.type.put(nodename,type);
+        this.idxs.put(nodename,new ArrayList<>(Arrays.asList(count)));
+        this.fields.put(new ArrayList<Integer>(Arrays.asList(count)),nodename);
     }
 
     void addArray(JSONObject jsonroot, String nodename, String arrayname, int count){
         String type = jsonroot.getString("_type");
-        this.typeDefine.put(nodename,type);
-        List<Integer>arrayidx = this.template.get(arrayname);
+        this.type.put(nodename,type);
+        List<Integer>arrayidx = this.idxs.get(arrayname);
         List<Integer> elemidx = new ArrayList<>(arrayidx);
         elemidx.add(count);
-        this.template.put(nodename,elemidx);
-        this.reTransform.put(elemidx,nodename);
+        this.idxs.put(nodename,elemidx);
+        this.fields.put(elemidx,nodename);
     }
 
-
-    public String getTemplateName() {
-        return templateName;
+    public int getLeaf(){
+        return this.leaf;
     }
 
-    public int getLeafCount(){
-        return this.leafCount;
+    public Map<List<Integer>, String> getFields() {
+        return this.fields;
     }
 
-    public Map<List<Integer>, String> getReTransform() {
-        return this.reTransform;
+    public Map<String, List<Integer>> getIdxs() {
+        return this.idxs;
     }
 
-    public Map<String, List<Integer>> getTemplate() {
-        return this.template;
+    public Map<String,String> getType(){
+
+        return this.type;
     }
 
-    public Map<String,String> getTypeDefine(){
-        return this.typeDefine;
-    }
-
-    //输入字段名，获取模板数组index，失败返回-1
-    public List<Integer> getValue(String field){
-
-        List<Integer> result = new ArrayList<>();
-        if(template.containsKey(field))result=template.get(field);
-
-        return result;
-    }
-
-    //返回时通过数组index查找字段
-    public String getKey(int value){
-
-        String result = reTransform.get(value);
-
-        return result;
+    public Map<String,Integer> getArrays(){
+        return this.arrays;
     }
 
     /*
@@ -198,35 +197,6 @@ public class Template{
 
      */
 
-
-    public List<Record> dataTransform(String originaldata){
-
-
-        List<Record> records = new ArrayList<Record>();//Record(this.leafCount);
-        JSONArray dataarray = JSON.parseObject(originaldata).getJSONArray("data");
-
-        for (int num = 0; num < dataarray.size(); num++) {
-
-            //Record record = new Record(this.leafCount);
-            List<Object> leaf = new ArrayList<>();
-
-            for (HashMap.Entry<String, List<Integer>> entry : this.template.entrySet()) {
-                JSONObject tmpdata = dataarray.getJSONObject(num).getJSONObject("content");
-                String[] nodes = entry.getKey().split("\\.");
-                for (int i = 1; i < nodes.length; i++) {
-                    tmpdata = tmpdata.getJSONObject(nodes[i]);
-
-                    //System.out.println(data);
-
-                }
-            }
-
-            Record record = new Record(new ArrayList<Object>());
-            records.add(record);
-        }
-
-        return records;
-    }
 
 
 
