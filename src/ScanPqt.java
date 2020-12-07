@@ -23,24 +23,25 @@ public class ScanPqt extends Pqt{
 
     }
 
+    @Override
     public void open(){
 
         JSONReader jsonreader = null;
         String laststr = "";
         try{
-            FileInputStream fileinputstream = new FileInputStream(this.schema.getSchemaName()+".json");
-            InputStreamReader inputstreamreader = new InputStreamReader(fileinputstream, "UTF-8");
-            jsonreader = new JSONReader(inputstreamreader);
+            FileInputStream file = new FileInputStream(this.schema.getSchemaName()+".json");
+            InputStreamReader input = new InputStreamReader(file, "UTF-8");
+            jsonreader = new JSONReader(input);
 
             jsonreader.startObject();
+            jsonreader.readString();
+            jsonreader.readString();
+            jsonreader.readString();
 
-            jsonreader.readString();
-            jsonreader.readString();
-            jsonreader.readString();
             jsonreader.startArray();
 
-            fileinputstream.close();;
-            inputstreamreader.close();
+            file.close();;
+            input.close();
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -48,6 +49,7 @@ public class ScanPqt extends Pqt{
         this.reader = jsonreader;
     }
 
+    @Override
     public List<Record> fetch(int size){
         List<Record> returndata = new ArrayList<>();
         for(int i=0;i<size;i++){
@@ -74,6 +76,12 @@ public class ScanPqt extends Pqt{
         }
 
     }
+
+    @Override
+    public void close(){
+        this.reader.close();
+    }
+
 
 }
 

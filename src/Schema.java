@@ -16,7 +16,7 @@ public class Schema {
     private List<String> names; // 字段名
     private Map<String, List<Integer>> idxs; // 字段名 --> 下标
     private Map<List<Integer>,String> fields;
-    private Map<String,String> type;
+    private Map<String,Integer> type;
     private int leaf;
     private Map<String,Integer> arrays;
 
@@ -41,13 +41,17 @@ public class Schema {
         return new Record(Arrays.asList(record));
     }
 
-    //输入字段名，获取模板数组index，失败返回-1
+    //输入字段名，获取模板数组index，失败返回空list
     public List<Integer> getValue(String field){
 
         List<Integer> result = new ArrayList<>();
         if(this.idxs.containsKey(field))result=this.idxs.get(field);
 
         return result;
+    }
+
+    public int getType(String f){
+        return this.type.get(f);
     }
 
     public String getSchemaName() {
@@ -160,6 +164,7 @@ public class Schema {
         result.add(new Pair<>(offset,returnvalue));
         return result;
     }
+
 
     public Schema joinSchema(Schema schema){
            return new Schema("");

@@ -14,11 +14,18 @@ public class Template{
     public static final List<String> ARRAYS = new ArrayList<>(Arrays.asList("图片型","数组型","文件型","表格型"));
     public static final List<String> CONTAINER = new ArrayList<>(Arrays.asList("容器型","生成器型"));
 
+    public static final int INTEGER = 1;
+    public static final int FLOAT = 2;
+    public static final int STRING = 3;
+    public static final int BOOL = 4;
+    public static final int INTEGER_ARRAY = 5;
+    public static final int STRING_ARRAY = 6;
+
     //模板名称；转换字典，逆转换字典；叶节点数量
     private String templateName;
     private Map<String,List<Integer>> idxs;
     private Map<List<Integer>,String> fields;
-    private Map<String,String> type;
+    private Map<String,Integer> type;
     private int leaf;
     private Map<String,Integer> arrays;
 
@@ -102,39 +109,49 @@ public class Template{
             }
         }
 
-/*
+    return count;
+    }
 
-    for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
-            if(entry.getKey().matches("_(.*)")){
-             if("表格型".equals(entry.getValue())) {
-                 //JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
-                 String jsonchildname = nodename + "." + entry.getKey();
-                 transformTemplate(,jsonchildname,0,nodename);
-                 count++;
-             }
-             else{continue;}
-            }
-            leafcheck = false;
-            JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
-            String jsonchildname = nodename + "." + entry.getKey();
-            count =  transformTemplate(jsonchild,jsonchildname,count,arrayname);
+    int typeSwitch(String t){
+
+        switch (t){
+
+            case "数组型":
+                return INTEGER_ARRAY;
+
+            case "数值型":
+                return FLOAT;
+
+            case "字符串型":
+                return  STRING;
+
+            case "整数型":
+                return INTEGER;
+
+            case "图片型":
+                return STRING_ARRAY;
+
+            case "文件型":
+                return STRING_ARRAY;
+
+            case "布尔型":
+                return BOOL;
+
+            default: return 0;
         }
 
-        */
-
-    return count;
     }
 
     void addLeaf(JSONObject jsonroot, String nodename,int count){
         String type = jsonroot.getString("_type");
-        this.type.put(nodename,type);
+        this.type.put(nodename,typeSwitch(type));
         this.idxs.put(nodename,new ArrayList<>(Arrays.asList(count)));
         this.fields.put(new ArrayList<Integer>(Arrays.asList(count)),nodename);
     }
 
     void addArray(JSONObject jsonroot, String nodename, String arrayname, int count){
         String type = jsonroot.getString("_type");
-        this.type.put(nodename,type);
+        this.type.put(nodename,typeSwitch(type));
         List<Integer>arrayidx = this.idxs.get(arrayname);
         List<Integer> elemidx = new ArrayList<>(arrayidx);
         elemidx.add(count);
@@ -154,7 +171,7 @@ public class Template{
         return this.idxs;
     }
 
-    public Map<String,String> getType(){
+    public Map<String,Integer> getType(){
 
         return this.type;
     }

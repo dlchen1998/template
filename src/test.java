@@ -17,8 +17,11 @@ public class test {
         scan.open();
         List<Record> result = scan.fetch(5);
 
+        List<Integer> idx = schema.getValue("aaaa");
 
-        System.out.println(result.get(1).getField(Arrays.asList(1)));
+        //System.out.println(idx.get(0));
+
+        System.out.println(result.get(1).getField(Arrays.asList(0)));
 
     }
 
