@@ -115,10 +115,11 @@ public class Schema {
             List<Integer> idx = this.idxs.get(nodename);
             int offset = idx.get(idx.size()-1);
             List<Object> returnvalue0 = new ArrayList<>();
-
-            for(int i=0;i < jsonarray.size();i++){
-                returnvalue0.add(jsonarray.getDouble(i));
-            }
+            
+                for (int i = 0; i < jsonarray.size(); i++) {
+                    returnvalue0.add(jsonarray.getFloat(i));
+                }
+            
 
             result.add(new Pair<>(offset,returnvalue0));
             return result;

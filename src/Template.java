@@ -18,7 +18,7 @@ public class Template{
     public static final int FLOAT = 2;
     public static final int STRING = 3;
     public static final int BOOL = 4;
-    public static final int INTEGER_ARRAY = 5;
+    public static final int FLOAT_ARRAY = 5;
     public static final int STRING_ARRAY = 6;
 
     //模板名称；转换字典，逆转换字典；叶节点数量
@@ -78,7 +78,6 @@ public class Template{
         if(CONTAINER.contains(jsonroot.get("_type"))){
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
                 if(entry.getKey().matches("_(.*)"))continue;
-                leafcheck = false;
                 JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
                 String jsonchildname = nodename + "." + entry.getKey();
                 count =  transformTemplate(jsonchild,jsonchildname,count,arrayname);
@@ -88,12 +87,26 @@ public class Template{
             if("_notarray".equals(arrayname)){addLeaf(jsonroot,nodename,count);}
             else{addArray(jsonroot,nodename,arrayname,count);}
             count++;
+            if("数组型".equals(jsonroot.get("_type"))){
+                String[] tmp = nodename.split("\\.");
+                jsonroot=JSON.parseObject(jsonroot.get(tmp[tmp.length-1]).toString());
+            }
             int arraycount = 0;
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
                 if(entry.getKey().matches("_(.*)"))continue;
                 JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
                 String jsonchildname = nodename + "." + entry.getKey();
                 arraycount =  transformTemplate(jsonchild,jsonchildname,arraycount,nodename);
+            }
+            if(arraycount==0){
+                String type = jsonroot.get("_type").toString();
+                switch (type){
+                    case "数值型":
+                        this.type.put(nodename,FLOAT_ARRAY);
+                        break;
+                    case "字符串型":
+                        this.type.put(nodename,STRING_ARRAY);
+                }
             }
             this.arrays.put(nodename,arraycount);
         }
@@ -115,9 +128,6 @@ public class Template{
     int typeSwitch(String t){
 
         switch (t){
-
-            case "数组型":
-                return INTEGER_ARRAY;
 
             case "数值型":
                 return FLOAT;

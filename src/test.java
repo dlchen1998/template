@@ -21,6 +21,10 @@ public class test {
 
         //System.out.println(idx.get(0));
 
+        //System.out.println(schema.getType(""));
+        List<Object> tmp = (List<Object>) result.get(1).getField(Arrays.asList(0)).get(0);
+        String str = tmp.get(0).toString();
+        System.out.println(str);
         System.out.println(result.get(1).getField(Arrays.asList(0)));
 
     }
