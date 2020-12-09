@@ -99,6 +99,8 @@ public class Template{
                 arraycount =  transformTemplate(jsonchild,jsonchildname,arraycount,nodename);
             }
             if(arraycount==0){
+                List<Integer> tmpidx = this.idxs.get(nodename);
+                tmpidx.add(0);
                 String type = jsonroot.get("_type").toString();
                 switch (type){
                     case "数值型":
@@ -161,7 +163,7 @@ public class Template{
 
     void addArray(JSONObject jsonroot, String nodename, String arrayname, int count){
         String type = jsonroot.getString("_type");
-        this.type.put(nodename,typeSwitch(type));
+        this.type.put(nodename,typeSwitch(type)+3);
         List<Integer>arrayidx = this.idxs.get(arrayname);
         List<Integer> elemidx = new ArrayList<>(arrayidx);
         elemidx.add(count);
