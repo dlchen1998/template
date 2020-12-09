@@ -79,7 +79,7 @@ public class Schema {
                 String jsonchildname = nodename + "." + entry.getKey();
                 if(this.arrays.containsKey(jsonchildname)) {
                     JSONArray jsonchild = JSON.parseArray(entry.getValue().toString());
-                    result.addAll(arrayTransform(jsonchild,jsonchildname));
+                    result.add(arrayTransform(jsonchild,jsonchildname));
                 }
 
                 else if(this.idxs.containsKey(jsonchildname)){
@@ -101,68 +101,68 @@ public class Schema {
         return result;
     }
 
-    public List<Pair<Integer,Object>> arrayTransform(JSONArray jsonarray,String nodename){
-        List<Pair<Integer,Object>> result = new ArrayList<>();
+    public Pair<Integer,Object> arrayTransform(JSONArray jsonarray,String nodename){
+        Pair<Integer,Object> result;
         int arraycount = this.arrays.get(nodename);
 
-        List<List<Object>> returnvalue = new ArrayList<>();
-        for (int i=0;i<arraycount;i++){
-            returnvalue.add(new ArrayList<Object>());
-        }
+        List<Record> returnvalue = new ArrayList<>();
 
         if(arraycount==0){
 
             List<Integer> idx = this.idxs.get(nodename);
             int offset = idx.get(idx.size()-1);
-            List<Object> returnvalue0 = new ArrayList<>();
             
                 for (int i = 0; i < jsonarray.size(); i++) {
-                    returnvalue0.add(jsonarray.getFloat(i));
+                    Object[] element = new Object[1];
+                    element[0] = jsonarray.getString(i);
+                    returnvalue.add(new Record(Arrays.asList(element)));
                 }
-            
 
-            result.add(new Pair<>(offset,returnvalue0));
+            result = new Pair<>(offset,returnvalue);
             return result;
         }
 
+
         for(int i=0;i < jsonarray.size();i++){
 
-            //Object[] elements = new Object[arraycount];
+            Object[] elements = new Object[arraycount];
             JSONObject jsonelement = jsonarray.getJSONObject(i);
             List<Pair<Integer,Object>> lowerelements = new ArrayList<>();
+
             for(HashMap.Entry<String, Object> entry : jsonelement.entrySet()) {
                 String jsonchildname = nodename + "." + entry.getKey();
 
                 if(this.arrays.containsKey(jsonchildname)) {
                     JSONArray jsonchild = JSON.parseArray(entry.getValue().toString());
-                    lowerelements.addAll(arrayTransform(jsonchild,jsonchildname));
+                    Pair<Integer,Object> tmpfield = arrayTransform(jsonchild,jsonchildname);
+                    elements[tmpfield.getKey()] = tmpfield.getValue();
                 }
 
                 else if(this.idxs.containsKey(jsonchildname)){
 
                     List<Integer> idx = this.idxs.get(jsonchildname);
                     int offset = idx.get(idx.size()-1);
-                    lowerelements.add(new Pair<>(offset,jsonelement.getString(entry.getKey())));
+                    elements[offset] = jsonelement.getString(entry.getKey());
                 }
 
                 else{
                     JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
-                    lowerelements.addAll(fieldsTransform(jsonchild,jsonchildname));
+                    List<Pair<Integer,Object>> tmp = fieldsTransform(jsonchild,jsonchildname);
+                    for(Pair<Integer,Object> pair:tmp){
+                        elements[pair.getKey()] = pair.getValue();
+                    }
                 }
 
             }
 
-            for(Pair<Integer,Object> element : lowerelements){
-                returnvalue.get(element.getKey()).add(element.getValue());
-            }
-            //returnvalue.add(Arrays.asList(elements));
+            returnvalue.add(new Record(Arrays.asList(elements)));
 
         }
 
         List<Integer> idx = this.idxs.get(nodename);
         int offset = idx.get(idx.size()-1);
 
-        result.add(new Pair<>(offset,returnvalue));
+        result = new Pair<>(offset,returnvalue);
         return result;
     }
 

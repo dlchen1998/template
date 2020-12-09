@@ -107,6 +107,9 @@ public class Template{
                     case "字符串型":
                         this.type.put(nodename,STRING_ARRAY);
                 }
+
+                List<Integer> l = this.idxs.get(nodename);
+                l.add(0);
             }
             this.arrays.put(nodename,arraycount);
         }
@@ -161,7 +164,7 @@ public class Template{
 
     void addArray(JSONObject jsonroot, String nodename, String arrayname, int count){
         String type = jsonroot.getString("_type");
-        this.type.put(nodename,typeSwitch(type));
+        this.type.put(nodename,typeSwitch(type)+3);
         List<Integer>arrayidx = this.idxs.get(arrayname);
         List<Integer> elemidx = new ArrayList<>(arrayidx);
         elemidx.add(count);
