@@ -7,13 +7,19 @@ import java.io.InputStreamReader;
 
 import java.util.*;
 
-
+/**
+ * @ClassName: .Template.java
+ * @Description: Template类，包含模板转换，字段类型定义，以及模板基本结构数据
+ */
 public class Template{
 
 
-    public static final List<String> ARRAYS = new ArrayList<>(Arrays.asList("图片型","数组型","文件型","表格型"));
+    //可能的数组格式类型
+    public static final List<String> ARRAYS = new ArrayList<>(Arrays.asList("图片型","数组型","文件","表格型"));
+    //可能的容器格式类型
     public static final List<String> CONTAINER = new ArrayList<>(Arrays.asList("容器型","生成器型"));
 
+    //类型定义
     public static final int INTEGER = 1;
     public static final int FLOAT = 2;
     public static final int STRING = 3;
@@ -21,19 +27,20 @@ public class Template{
     public static final int FLOAT_ARRAY = 5;
     public static final int STRING_ARRAY = 6;
 
-    //模板名称；转换字典，逆转换字典；叶节点数量
-    private String templateName;
-    private Map<String,List<Integer>> idxs;
-    private Map<List<Integer>,String> fields;
-    private Map<String,Integer> type;
-    private int leaf;
-    private Map<String,Integer> arrays;
+    private String templateName;//模板名
+    private Map<String,List<Integer>> idxs;//字段名 --> 下标
+    private Map<List<Integer>,String> fields;//下标 --> 字段名
+    private Map<String,Integer> type;//字段名 --> 类型
+    private int leaf;//此模板第一层长度
+    private Map<String,Integer> arrays;//数组字段名 --> 数组元素叶子节点个数
 
-    //private JSONObject origianlJson;
-
-
-    //初始化模板名称；成对的模板转换字典；计数模板的二维长度
     Template(){}
+
+    /**
+     * 构造函数，将原始JSON转化为templa
+     * @MethodName: Template
+     * @Return
+     */
     public Template(String templatename){
 
         this.templateName = templatename;
@@ -47,9 +54,13 @@ public class Template{
 
     }
 
-    //读取模板文件
-    String readTemplate(){
 
+    /**
+     * 读取JSON模板源文件
+     * @MethodName: readTemplate
+     * @Return java.lang.String
+     */
+    String readTemplate(){
         BufferedReader reader = null;
         String laststr = "";
         try {
@@ -70,10 +81,17 @@ public class Template{
         return laststr;
     }
 
-    //递归调用，直到JSON树的叶子节点
+    /**
+     * 模板转换，递归生成，参数包含当前JSON节点，当前节点全称，当前叶子节点编号，以及当前节点属于的数组名（若不存在于数组中记为“_notarray”）
+     * 当前节点若为容器CONTAINER，对其中每个键值对继续递归
+     * 当前节点若为数组ARRAYS，将该节点加入idxs，对其中每个键值对继续递归，统计该数组包含的元素的叶子节点数量；
+     * 若当前节点属于ARRAYS中的“数组型”,需要根据当前节点名再对原始JSON深入一层，并通过其内部元素的类型，将整个数组标记为字符串数组或数值数组
+     * 对于ARRAYS中的“数组型，文件，图片型”，需要人为地将其内部的元素拓展至下一层级便于数据转换，将其索引list添加元素“0”
+     * 当为idxs添加新的键值对时，需要判断当前属于的数组，若不属于任何一个数组，则采用addLeaf方法，否则采用addArray方法
+     * @MethodName: transformTemplate
+     * @Return int
+     */
     int transformTemplate(JSONObject jsonroot, String nodename, int count, String arrayname){
-
-        Boolean leafcheck = true;
 
         if(CONTAINER.contains(jsonroot.get("_type"))){
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
@@ -130,7 +148,13 @@ public class Template{
     return count;
     }
 
+    /**
+     * 将中文类型名称转换为统一的Integer类型
+     * @MethodName: typeSwitch
+     * @Return int
+     */
     int typeSwitch(String t){
+
 
         switch (t){
 
@@ -157,14 +181,26 @@ public class Template{
 
     }
 
+    /**
+     * 直接通过当前叶子节点的编号，加入idxs
+     * @MethodName: addLeaf
+     * @Return void
+     */
     void addLeaf(JSONObject jsonroot, String nodename,int count){
+
         String type = jsonroot.getString("_type");
         this.type.put(nodename,typeSwitch(type));
         this.idxs.put(nodename,new ArrayList<>(Arrays.asList(count)));
         this.fields.put(new ArrayList<Integer>(Arrays.asList(count)),nodename);
     }
 
+    /**
+     * 由于此叶子节点处于数组中，需要获取数组的索引idx并将此叶子在数组中的位置添加至idx，以此获得叶子节点的索引
+     * @MethodName: addArray
+     * @Return void
+     */
     void addArray(JSONObject jsonroot, String nodename, String arrayname, int count){
+
         String type = jsonroot.getString("_type");
         this.type.put(nodename,typeSwitch(type)+3);
         List<Integer>arrayidx = this.idxs.get(arrayname);
@@ -174,24 +210,53 @@ public class Template{
         this.fields.put(elemidx,nodename);
     }
 
+    /**
+     * 获取此模板第一层叶子节点数量
+     * @MethodName: getLeaf
+     * @Return int
+     */
     public int getLeaf(){
+
         return this.leaf;
     }
 
+    /**
+     * 获取 索引 --> 字段名
+     * @MethodName: getFields
+     * @Return java.util.Map<java.util.List < java.lang.Integer>,java.lang.String>
+     */
     public Map<List<Integer>, String> getFields() {
+
         return this.fields;
     }
 
+    /**
+     * 获取 字段名 --> 索引
+     * @MethodName: getIdxs
+     * @Return java.util.Map<java.lang.String, java.util.List < java.lang.Integer>>
+     */
     public Map<String, List<Integer>> getIdxs() {
+
         return this.idxs;
     }
 
+    /**
+     * 获取 字段名 --> 类型
+     * @MethodName: getType
+     * @Return java.util.Map<java.lang.String, java.lang.Integer>
+     */
     public Map<String,Integer> getType(){
 
         return this.type;
     }
 
+    /**
+     * 获取 数组字段名 --> 数组元素叶子节点个数
+     * @MethodName: getArrays
+     * @Return java.util.Map<java.lang.String, java.lang.Integer>
+     */
     public Map<String,Integer> getArrays(){
+
         return this.arrays;
     }
 

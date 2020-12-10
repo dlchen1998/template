@@ -8,19 +8,23 @@ import java.util.*;
 
 /**
  * @ClassName: .Schema.java
- * @Description:
+ * @Description: Schema类，包含转换模板，类型定义，数据转换方法，
  */
 public class Schema {
 
-    private String schemaName;
+    private String schemaName;//schema名称
     private List<String> names; // 字段名
     private Map<String, List<Integer>> idxs; // 字段名 --> 下标
-    private Map<List<Integer>,String> fields;
-    private Map<String,Integer> type;
-    private int leaf;
-    private Map<String,Integer> arrays;
+    private Map<List<Integer>,String> fields;// 下标 --> 字段名
+    private Map<String,Integer> type;//字段名 --> 类型
+    private int leaf;//Record 第一层长度
+    private Map<String,Integer> arrays;//数组字段名 --> 数组元素个数
 
 
+    /**
+     * 构造函数（通过template）
+     * @MethodName: Schema
+     */
     public Schema(String name){
         Template template = new Template(name);
         this.idxs = template.getIdxs();
@@ -31,6 +35,11 @@ public class Schema {
         this.leaf = template.getLeaf();
     }
 
+    /**
+     * 数据转换，开始递归
+     * @MethodName: dataTransform
+     * @Return Record
+     */
     public Record dataTransform(String originaldata) {
         Object[] record = new Object[this.leaf];
         JSONObject jsonroot = JSON.parseObject(originaldata);
@@ -41,37 +50,12 @@ public class Schema {
         return new Record(Arrays.asList(record));
     }
 
-    //输入字段名，获取模板数组index，失败返回空list
-    public List<Integer> getValue(String field){
-
-        List<Integer> result = new ArrayList<>();
-        if(this.idxs.containsKey(field))result=this.idxs.get(field);
-
-        return result;
-    }
-
-    public int getType(String f){
-        return this.type.get(f);
-    }
-
-    public String getSchemaName() {
-        return this.schemaName;
-    }
-
-    //返回时通过数组index查找字段
-    public String getKey(List<Integer> value){
-
-        String result = fields.get(value);
-
-        return result;
-    }
-
-    public List<Pair<Integer, Object>> fieldsTransform(JSONObject jsonroot, String nodename){
-
-        //JSONObject data = JSON.parseObject(originaldata);
-        //List<Object> leaf = new ArrayList<>(this.leafCount);
-        //String type = this.typeDefine.get(nodename);
-
+    /**
+     * 递归调用：普通JSONObject
+     * @MethodName: fieldsTransform
+     * @Return List<Pair < Integer, Object>>
+     */
+    List<Pair<Integer, Object>> fieldsTransform(JSONObject jsonroot, String nodename){
         List<Pair<Integer,Object>> result = new ArrayList<>();
 
         if(!this.idxs.containsKey(nodename)) {
@@ -101,7 +85,13 @@ public class Schema {
         return result;
     }
 
-    public Pair<Integer,Object> arrayTransform(JSONArray jsonarray,String nodename){
+    /**
+     * 递归调用：JSONArray
+     * @MethodName: arrayTransform
+     * @Return Pair<Integer, Object>
+     */
+    Pair<Integer,Object> arrayTransform(JSONArray jsonarray,String nodename){
+
         Pair<Integer,Object> result;
         int arraycount = this.arrays.get(nodename);
 
@@ -111,12 +101,12 @@ public class Schema {
 
             List<Integer> idx = this.idxs.get(nodename);
             int offset = idx.get(idx.size()-1);
-            
-                for (int i = 0; i < jsonarray.size(); i++) {
-                    Object[] element = new Object[1];
-                    element[0] = jsonarray.getString(i);
-                    returnvalue.add(new Record(Arrays.asList(element)));
-                }
+
+            for (int i = 0; i < jsonarray.size(); i++) {
+                Object[] element = new Object[1];
+                element[0] = jsonarray.getString(i);
+                returnvalue.add(new Record(Arrays.asList(element)));
+            }
 
             result = new Pair<>(offset,returnvalue);
             return result;
@@ -166,11 +156,63 @@ public class Schema {
         return result;
     }
 
+    /**
+     * 获取索引
+     * @MethodName: getValue
+     * @Return java.util.List<java.lang.Integer>
+     */
+    public List<Integer> getValue(String field){
+        List<Integer> result = new ArrayList<>();
+        if(this.idxs.containsKey(field))result=this.idxs.get(field);
 
+        return result;
+    }
+
+    /**
+     * 获取字段类型
+     * @MethodName: getType
+     * @Return int
+     */
+    public int getType(String f){
+        return this.type.get(f);
+    }
+
+    /**
+     * 获取schema名称
+     * @MethodName: getSchemaName
+     * @Return java.lang.String
+     */
+    public String getSchemaName() {
+        return this.schemaName;
+    }
+
+    /**
+     * 根据索引获取字段名
+     * @MethodName: getKey
+     * @Return java.lang.String
+     */
+    public String getKey(List<Integer> value){
+
+        String result = fields.get(value);
+
+        return result;
+    }
+
+    /**
+     * schema做join操作
+     * @MethodName: joinSchema
+     * @Return Schema
+     */
     public Schema joinSchema(Schema schema){
+
            return new Schema("");
     }
 
+    /**
+     * schema做projection操作
+     * @MethodName: projectSchema
+     * @Return Schema
+     */
     public Schema projectSchema(){
         return new Schema("");
     }
