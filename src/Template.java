@@ -109,6 +109,9 @@ public class Template{
                     case "字符串型":
                         this.type.put(nodename,STRING_ARRAY);
                 }
+
+                List<Integer> l = this.idxs.get(nodename);
+                l.add(0);
             }
             this.arrays.put(nodename,arraycount);
         }
