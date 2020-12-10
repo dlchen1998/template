@@ -18,7 +18,7 @@ public class Schema {
     private Map<List<Integer>,String> fields;// 下标 --> 字段名
     private Map<String,Integer> type;//字段名 --> 类型
     private int leaf;//Record 第一层长度
-    private Map<String,Integer> arrays;//数组字段名 --> 数组元素个数
+    private Map<String,Integer> arrays;//数组字段名 --> 数组元素叶子节点个数
 
 
     /**
@@ -58,14 +58,20 @@ public class Schema {
     List<Pair<Integer, Object>> fieldsTransform(JSONObject jsonroot, String nodename){
         List<Pair<Integer,Object>> result = new ArrayList<>();
 
+        /**需要判断当前JSON节点的子节点类型**/
+
+        /**对于容器型子节点，收集所有的返回二元组**/
         if(!this.idxs.containsKey(nodename)) {
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
                 String jsonchildname = nodename + "." + entry.getKey();
+
+                /**对于子节点为数组的情况，调用arrayTransform**/
                 if(this.arrays.containsKey(jsonchildname)) {
                     JSONArray jsonchild = JSON.parseArray(entry.getValue().toString());
                     result.add(arrayTransform(jsonchild,jsonchildname));
                 }
 
+                /**对于子节点为叶子节点的情况，返回偏移量以及值**/
                 else if(this.idxs.containsKey(jsonchildname)){
 
                     List<Integer> idx = this.idxs.get(jsonchildname);
@@ -75,6 +81,7 @@ public class Schema {
                     result.add(new Pair<>(offset,returnvalue));
                 }
 
+                /**对于子节点为容器型的情况，继续调用fieldsTransform**/
                 else{
                     JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
                     result.addAll(fieldsTransform(jsonchild,jsonchildname));
@@ -97,6 +104,7 @@ public class Schema {
 
         List<Record> returnvalue = new ArrayList<>();
 
+        /** 针对元素为基本类型的数组，生成的List<Record>，Record只包含一个字段 **/
         if(arraycount==0){
 
             List<Integer> idx = this.idxs.get(nodename);
@@ -113,12 +121,13 @@ public class Schema {
         }
 
 
+        /** 针对元素含有多个叶子节点的数组，遍历数组中每一个JSON数据**/
         for(int i=0;i < jsonarray.size();i++){
 
             Object[] elements = new Object[arraycount];
             JSONObject jsonelement = jsonarray.getJSONObject(i);
-            List<Pair<Integer,Object>> lowerelements = new ArrayList<>();
 
+            /**针对每一个JSON数据生成Record，根据arrays设置其中字段个数，加入List**/
             for(HashMap.Entry<String, Object> entry : jsonelement.entrySet()) {
                 String jsonchildname = nodename + "." + entry.getKey();
 

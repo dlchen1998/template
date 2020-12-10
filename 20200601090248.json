@@ -41,10 +41,7 @@
             "_type": "数值型"
         },
         "floatArray": {
-            "_type": "数组型",
-            "floatArray": {
-                "_type": "数值型"
-            }
+            "_type": "文件"
         },
         "ARRAY": {
             "_type": "数组型",

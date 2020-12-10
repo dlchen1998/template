@@ -82,17 +82,14 @@ public class Template{
     }
 
     /**
-     * 模板转换，递归生成，参数包含当前JSON节点，当前节点全称，当前叶子节点编号，以及当前节点属于的数组名（若不存在于数组中记为“_notarray”）
-     * 当前节点若为容器CONTAINER，对其中每个键值对继续递归
-     * 当前节点若为数组ARRAYS，将该节点加入idxs，对其中每个键值对继续递归，统计该数组包含的元素的叶子节点数量；
-     * 若当前节点属于ARRAYS中的“数组型”,需要根据当前节点名再对原始JSON深入一层，并通过其内部元素的类型，将整个数组标记为字符串数组或数值数组
-     * 对于ARRAYS中的“数组型，文件，图片型”，需要人为地将其内部的元素拓展至下一层级便于数据转换，将其索引list添加元素“0”
-     * 当为idxs添加新的键值对时，需要判断当前属于的数组，若不属于任何一个数组，则采用addLeaf方法，否则采用addArray方法
+     * 模板转换，递归生成，参数包含当前JSON节点，当前节点全称，当前叶子节点编号，
+     * 以及当前节点属于的数组名（若不存在于数组中记为“_notarray”）
      * @MethodName: transformTemplate
      * @Return int
      */
     int transformTemplate(JSONObject jsonroot, String nodename, int count, String arrayname){
 
+        /** 当前节点若为容器CONTAINER，对其中每个键值对继续递归**/
         if(CONTAINER.contains(jsonroot.get("_type"))){
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
                 if(entry.getKey().matches("_(.*)"))continue;
@@ -101,10 +98,17 @@ public class Template{
                 count =  transformTemplate(jsonchild,jsonchildname,count,arrayname);
             }
         }
+
+        /**当前节点若为数组ARRAYS，将该节点加入idxs，对其中每个键值对继续递归，统计该数组包含的元素的叶子节点数量；**/
         else if(ARRAYS.contains(jsonroot.get("_type"))){
+
+            /*** 当为idxs添加新的键值对时，需要判断当前属于的数组，
+             * 若不属于任何一个数组，则采用addLeaf方法，否则采用addArray方法**/
             if("_notarray".equals(arrayname)){addLeaf(jsonroot,nodename,count);}
             else{addArray(jsonroot,nodename,arrayname,count);}
             count++;
+
+            /** 若当前节点属于ARRAYS中的“数组型”,需要根据当前节点名再对原始JSON深入一层 **/
             if("数组型".equals(jsonroot.get("_type"))){
                 String[] tmp = nodename.split("\\.");
                 jsonroot=JSON.parseObject(jsonroot.get(tmp[tmp.length-1]).toString());
@@ -116,15 +120,20 @@ public class Template{
                 String jsonchildname = nodename + "." + entry.getKey();
                 arraycount =  transformTemplate(jsonchild,jsonchildname,arraycount,nodename);
             }
+
+            /** 对于ARRAYS中的“数组型，文件，图片型”，
+             * 需要人为地将其内部的元素拓展至下一层级便于数据转换，将其索引list添加元素“0” **/
             if(arraycount==0){
-                List<Integer> tmpidx = this.idxs.get(nodename);
-                tmpidx.add(0);
                 String type = jsonroot.get("_type").toString();
+
+                /** 若其内部元素为基本类型，将整个数组标记为字符串数组或数值数组**/
                 switch (type){
                     case "数值型":
                         this.type.put(nodename,FLOAT_ARRAY);
                         break;
                     case "字符串型":
+                        this.type.put(nodename,STRING_ARRAY);
+                    default:
                         this.type.put(nodename,STRING_ARRAY);
                 }
 

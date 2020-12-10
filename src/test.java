@@ -26,7 +26,7 @@ public class test {
         //String str = tmp.get(0).toString();
         //System.out.println(str);
         Record r = (Record) result.get(1);
-        System.out.println(result.get(1).getField(Arrays.asList(3,0)));
+        System.out.println(result.get(1).getField(Arrays.asList(0,0)));
 
     }
 
