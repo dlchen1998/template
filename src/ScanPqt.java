@@ -43,7 +43,7 @@ public class ScanPqt extends Pqt{
 
         JSONReader jsonreader = null;
 
-        try(FileInputStream file = new FileInputStream(schema.getSchemaName()+".json");
+        try(FileInputStream file = new FileInputStream("./Templates/"+schema.getSchemaName()+".json");
             InputStreamReader input = new InputStreamReader(file, "UTF-8")){
 
             jsonreader = new JSONReader(input);

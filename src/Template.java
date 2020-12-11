@@ -61,23 +61,21 @@ public class Template{
      * @Return java.lang.String
      */
     String readTemplate(){
-        BufferedReader reader = null;
+
         String laststr = "";
-        try {
-            FileInputStream fileinputstream = new FileInputStream(this.templateName + ".json");
-            InputStreamReader inputstreamreader = new InputStreamReader(fileinputstream, "UTF-8");
-            reader = new BufferedReader(inputstreamreader);
+        try( FileInputStream fileinputstream = new FileInputStream("./Templates/"+this.templateName + ".json");
+             InputStreamReader inputstreamreader = new InputStreamReader(fileinputstream, "UTF-8");
+             BufferedReader reader = new BufferedReader(inputstreamreader)) {
+
             String tempString = null;
             while ((tempString = reader.readLine()) != null) {
                 laststr += tempString;
             }
-            reader.close();
-            fileinputstream.close();
-            ;
-            inputstreamreader.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return laststr;
     }
 

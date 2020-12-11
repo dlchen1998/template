@@ -11,8 +11,8 @@ public class test {
         //scan.close();
 
 
-        Record r = (Record) result.get(1);
-        System.out.println(result.get(1).getField(Arrays.asList(0,0)));
+        Record r = (Record) result.get(0);
+        System.out.println(result.get(0).getField(Arrays.asList(0,0)));
 
     }
 
