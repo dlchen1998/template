@@ -43,6 +43,13 @@ public class Schema {
     private int leaf;//Record 第一层长度
     private Map<String, Integer> arrays;//数组字段名 --> 数组元素叶子节点个数
 
+    /**
+     * 无参构造
+     * @MethodName: Schema
+     * @Return
+     */
+    Schema(){
+    }
 
     /**
      * 构造函数（通过template）
@@ -187,6 +194,36 @@ public class Schema {
     }
 
     /**
+     * 获取字段类型
+     *
+     * @MethodName: getType
+     * @Return int
+     */
+    public int getType(String f) {
+        return this.type.get(f);
+    }
+
+    /**
+     * 获取type
+     * @MethodName: getType
+     * @Return java.util.Map<java.lang.String, java.lang.Integer>
+     */
+    public Map<String, Integer> getAllType() {
+
+        return type;
+    }
+
+    /**
+     * 设置type
+     * @MethodName: setType
+     * @Return void
+     */
+    public void setType(Map<String, Integer> type) {
+
+        this.type = type;
+    }
+
+    /**
      * 获取索引
      *
      * @MethodName: getValue
@@ -200,13 +237,23 @@ public class Schema {
     }
 
     /**
-     * 获取字段类型
-     *
-     * @MethodName: getType
-     * @Return int
+     * 设置idxs
+     * @MethodName: setIdxs
+     * @Return void
      */
-    public int getType(String f) {
-        return this.type.get(f);
+    public void setIdxs(Map<String, List<Integer>> i){
+
+        idxs = i;
+    }
+
+    /**
+     * 获取idxs
+     * @MethodName: getIdxs
+     * @Return java.util.Map<java.lang.String, java.util.List < java.lang.Integer>>
+     */
+    public Map<String, List<Integer>> getIdxs(){
+
+        return idxs;
     }
 
     /**
@@ -217,6 +264,15 @@ public class Schema {
      */
     public String getSchemaName() {
         return this.schemaName;
+    }
+
+    /**
+     * 设置schemaName
+     * @MethodName: setSchemaName
+     * @Return void
+     */
+    public void setSchemaName(String name){
+        schemaName=name;
     }
 
     /**
@@ -233,15 +289,91 @@ public class Schema {
     }
 
     /**
+     * 获取fields
+     * @MethodName: getFields
+     * @Return java.util.Map<java.util.List < java.lang.Integer>,java.lang.String>
+     */
+    public Map<List<Integer>, String> getFields(){
+
+        return fields;
+    }
+
+    /**
+     * 设置fields
+     * @MethodName: setFieldst
+     * @Return void
+     */
+    public void setFields(Map<List<Integer>, String> f){
+
+        fields = f;
+    }
+
+    /**
+     * 获取leaf
+     * @MethodName: getLeaf
+     * @Return int
+     */
+    public int getLeaf() {
+
+        return leaf;
+    }
+
+    /**
+     * 设置leaf
+     * @MethodName: setLeaf
+     * @Return
+     */
+    public void setLeaf(int leaf) {
+        this.leaf = leaf;
+    }
+
+    /**
      * schema做join操作
      *
      * @MethodName: joinSchema
      * @Return Schema
      */
-    public Schema joinSchema(Schema schema) {
+    public Schema joinSchema(Schema s2){
 
-        return new Schema("");
+        Schema result = new Schema();
+        result.setSchemaName(schemaName+"_join_"+s2.getSchemaName());
+        result.setLeaf(this.leaf+s2.getLeaf());
+        int offset = this.leaf;
+
+        Map<String, List<Integer>> idxs2 = s2.getIdxs();
+        Map<String, List<Integer>> newidxs = new HashMap<>(); // 字段名 --> 下标
+        Map<List<Integer>, String> newfields = new HashMap<>();// 下标 --> 字段名
+
+
+        for(HashMap.Entry<String, List<Integer>> entry : idxs.entrySet()) {
+            String key = entry.getKey();
+            List<Integer> value = entry.getValue();
+            newidxs.put(key,value);
+            newfields.put(value,key);
+        }
+
+        for(HashMap.Entry<String, List<Integer>> entry : idxs2.entrySet()) {
+           String key = entry.getKey();
+           List<Integer> value = entry.getValue();
+           value.set(0,value.get(0)+offset);
+           newidxs.put(key,value);
+           newfields.put(value,key);
+        }
+
+        result.setIdxs(newidxs);
+        result.setFields(newfields);
+
+        Map<String,Integer> newtype = new HashMap<>();
+        newtype.putAll(type);
+        newtype.putAll(s2.getAllType());
+
+        result.setType(newtype);
+
+
+        return result;
     }
+
+
 
     /**
      * schema做projection操作
@@ -249,8 +381,30 @@ public class Schema {
      * @MethodName: projectSchema
      * @Return Schema
      */
-    public Schema projectSchema() {
-        return new Schema("");
+    public Schema projectSchema(List<String> rules) {
+
+        Schema result = new Schema();
+
+        Map<String, List<Integer>> newidxs = new HashMap<>(); // 字段名 --> 下标
+        Map<List<Integer>, String> newfields = new HashMap<>();// 下标 --> 字段名
+        Map<String,Integer> newtype = new HashMap<>();
+
+        for(String rule: rules){
+
+            List<Integer> idx = idxs.get(rule);
+            int t = type.get(rule);
+
+            newidxs.put(rule,idx);
+            newfields.put(idx,rule);
+            newtype.put(rule,t);
+
+        }
+
+        result.setIdxs(newidxs);
+        result.setFields(newfields);
+        result.setType(newtype);
+
+        return result;
     }
 
 

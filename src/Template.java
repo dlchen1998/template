@@ -20,12 +20,13 @@ public class Template{
     public static final List<String> CONTAINER = new ArrayList<>(Arrays.asList("容器型","生成器型"));
 
     //类型定义
-    public static final int INTEGER = 1;
-    public static final int FLOAT = 2;
-    public static final int STRING = 3;
-    public static final int BOOL = 4;
-    public static final int FLOAT_ARRAY = 5;
-    public static final int STRING_ARRAY = 6;
+    public static final int STRING = 262;
+    public static final int INTEGER = 263;
+    public static final int BOOL =264;
+    public static final int FLOAT = 265;
+    public static final int STRING_ARRAY = 266;
+    public static final int INTEGER_ARRAY = 267;
+    public static final int FLOAT_ARRAY = 269;
 
     private String templateName;//模板名
     private Map<String,List<Integer>> idxs;//字段名 --> 下标
@@ -267,39 +268,6 @@ public class Template{
         return this.arrays;
     }
 
-    /*
-    //跨模板join操作,当前模板与输入模板拼接
-    public TemplateTransform joinTemplate(TemplateTransform t1){
-
-        TemplateTransform result = new TemplateTransform();
-        result.templateName = this.templateName+"_join_"+t1.getTemplateName();
-        result.leafCount = this.leafCount+t1.getLeafCount();
-        int offset = this.leafCount;
-
-        HashMap<String, Integer> template = new HashMap<>();
-        HashMap<Integer, String> retransform = new HashMap<>();
-
-        for(HashMap.Entry<String, Integer> entry : this.template.entrySet()) {
-            String key = entry.getKey();
-            int value = entry.getValue();
-            template.put(key,value);
-            retransform.put(value,key);
-        }
-
-        for(HashMap.Entry<String, Integer> entry : t1.getTemplate().entrySet()) {
-            String key = entry.getKey();
-            int value = entry.getValue()+offset;
-            template.put(key,value);
-            retransform.put(value,key);
-        }
-
-        result.template=template;
-        result.reTransform=retransform;
-
-        return result;
-    }
-
-     */
 
 
 
