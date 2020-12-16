@@ -14,6 +14,8 @@ import java.util.*;
  */
 public class Schema {
 
+
+
     class Pair{
 
         private final int key;
@@ -354,10 +356,11 @@ public class Schema {
 
         for(HashMap.Entry<String, List<Integer>> entry : idxs2.entrySet()) {
            String key = entry.getKey();
-           List<Integer> value = entry.getValue();
-           value.set(0,value.get(0)+offset);
-           newidxs.put(key,value);
-           newfields.put(value,key);
+           ArrayList<Integer> value = (ArrayList<Integer>)entry.getValue();
+           ArrayList<Integer> v = (ArrayList<Integer>)value.clone();
+           v.set(0,value.get(0)+offset);
+           newidxs.put(key,v);
+           newfields.put(v,key);
         }
 
         result.setIdxs(newidxs);

@@ -64,7 +64,7 @@ public class Template{
     String readTemplate(){
 
         String laststr = "";
-        try( FileInputStream fileinputstream = new FileInputStream("./Templates/"+this.templateName + ".json");
+        try( FileInputStream fileinputstream = new FileInputStream("./templates/"+this.templateName + ".json");
              InputStreamReader inputstreamreader = new InputStreamReader(fileinputstream, "UTF-8");
              BufferedReader reader = new BufferedReader(inputstreamreader)) {
 
@@ -89,7 +89,7 @@ public class Template{
     int transformTemplate(JSONObject jsonroot, String nodename, int count, String arrayname){
 
         /** 当前节点若为容器CONTAINER，对其中每个键值对继续递归**/
-        if(CONTAINER.contains(jsonroot.get("_type"))){
+        if(CONTAINER.contains(jsonroot.get("_type"))||!jsonroot.containsKey("_type")){
             for(HashMap.Entry<String, Object> entry : jsonroot.entrySet()) {
                 if(entry.getKey().matches("_(.*)"))continue;
                 JSONObject jsonchild = JSON.parseObject(entry.getValue().toString());
@@ -210,7 +210,7 @@ public class Template{
     void addArray(JSONObject jsonroot, String nodename, String arrayname, int count){
 
         String type = jsonroot.getString("_type");
-        this.type.put(nodename,typeSwitch(type)+3);
+        this.type.put(nodename,typeSwitch(type)+4);
         List<Integer>arrayidx = this.idxs.get(arrayname);
         List<Integer> elemidx = new ArrayList<>(arrayidx);
         elemidx.add(count);
