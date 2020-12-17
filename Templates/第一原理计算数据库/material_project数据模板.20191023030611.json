@@ -1,0 +1,89 @@
+{
+    "template": {
+        "_id": 394,
+        "energy": {
+            "_type": "数值型"
+        },
+        "energy_per_atom": {
+            "_type": "数值型"
+        },
+        "volume": {
+            "_type": "数值型"
+        },
+        "formation_energy_per_atom": {
+            "_type": "数值型"
+        },
+        "nsites": {
+            "_type": "数值型"
+        },
+        "unit_cell_formula": {
+            "_type": "表格型",
+            "elmenet": {
+                "_type": "字符串型"
+            },
+            "number": {
+                "_type": "数值型"
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "energy": "在这里填写 energy (数值型)",
+                "energy_per_atom": "在这里填写 energy_per_atom (数值型)",
+                "volume": "在这里填写 volume (数值型)",
+                "formation_energy_per_atom": "在这里填写 formation_energy_per_atom (数值型)",
+                "nsites": "在这里填写 nsites (数值型)",
+                "unit_cell_formula": [
+                    {
+                        "elmenet": "在这里填写 elmenet (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    },
+                    {
+                        "elmenet": "在这里填写 elmenet (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    }
+                ]
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "energy": "在这里填写 energy (数值型)",
+                "energy_per_atom": "在这里填写 energy_per_atom (数值型)",
+                "volume": "在这里填写 volume (数值型)",
+                "formation_energy_per_atom": "在这里填写 formation_energy_per_atom (数值型)",
+                "nsites": "在这里填写 nsites (数值型)",
+                "unit_cell_formula": [
+                    {
+                        "elmenet": "在这里填写 elmenet (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    },
+                    {
+                        "elmenet": "在这里填写 elmenet (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    }
+                ]
+            }
+        }
+    ]
+}

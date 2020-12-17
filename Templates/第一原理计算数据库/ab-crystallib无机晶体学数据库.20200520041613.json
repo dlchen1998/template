@@ -1,0 +1,342 @@
+{
+    "template": {
+        "_id": 673,
+        "basic information": {
+            "_type": "容器型",
+            "ICSD_code": {
+                "_type": "数值型"
+            },
+            "substance": {
+                "_type": "字符串型"
+            },
+            "elements": {
+                "_type": "字符串型"
+            },
+            "species": {
+                "_type": "数值型"
+            }
+        },
+        "calculation": {
+            "_type": "容器型",
+            "Ab-initio code": {
+                "_type": "字符串型"
+            },
+            "Composition per cell": {
+                "_type": "字符串型"
+            },
+            "energy_cutoff": {
+                "_type": "字符串型"
+            },
+            "delta_electronic_energy_convergence": {
+                "_type": "字符串型"
+            },
+            "delta_electronic_energy_threshold_": {
+                "_type": "字符串型"
+            }
+        },
+        "structure": {
+            "_type": "容器型",
+            "Lattice": {
+                "_type": "字符串型"
+            },
+            "Volume": {
+                "_type": "字符串型"
+            },
+            "Number of Atoms per Cell:": {
+                "_type": "字符串型"
+            },
+            "Density(calc):": {
+                "_type": "字符串型"
+            },
+            "Density(aflowlib):": {
+                "_type": "字符串型"
+            },
+            "Space Group Number:": {
+                "_type": "字符串型"
+            },
+            "Pearson Symbol:": {
+                "_type": "字符串型"
+            },
+            "Bravais Lattice Primitive:": {
+                "_type": "字符串型"
+            },
+            "Bravais Lattice Variation:": {
+                "_type": "字符串型"
+            },
+            "Bravais Lattice System:": {
+                "_type": "字符串型"
+            },
+            "Crystal Family:": {
+                "_type": "字符串型"
+            },
+            "Crystal System:": {
+                "_type": "字符串型"
+            },
+            "Crystal Class:": {
+                "_type": "字符串型"
+            },
+            "Point Group (Herm Maug):": {
+                "_type": "字符串型"
+            },
+            "Point Group (Schoenflies):": {
+                "_type": "字符串型"
+            },
+            "Point Group Orbifold:": {
+                "_type": "字符串型"
+            },
+            "Point Group Type:": {
+                "_type": "字符串型"
+            },
+            "Point Group Order:": {
+                "_type": "字符串型"
+            },
+            "Point Group Structure:": {
+                "_type": "字符串型"
+            },
+            "Superlattice Primitive unit cell:": {
+                "_type": "字符串型"
+            },
+            "Superlattice Variation:": {
+                "_type": "字符串型"
+            },
+            "Superlattice Lattice System :": {
+                "_type": "字符串型"
+            },
+            "Superlattice Pearson Symbol:": {
+                "_type": "字符串型"
+            },
+            "Reciprocal Lattices:": {
+                "_type": "字符串型"
+            },
+            "Volume:": {
+                "_type": "字符串型"
+            },
+            "Lattice Primitive:": {
+                "_type": "字符串型"
+            },
+            "Lattice Variation:": {
+                "_type": "字符串型"
+            }
+        },
+        "thermodynamics": {
+            "_type": "容器型",
+            "Formation Enthalpy_cell:": {
+                "_type": "字符串型"
+            },
+            "Formation Enthalpy_atom:": {
+                "_type": "字符串型"
+            },
+            "Ab-initio energy_cell:": {
+                "_type": "字符串型"
+            },
+            "Ab-initio energy_atom:": {
+                "_type": "字符串型"
+            }
+        },
+        "electronic": {
+            "_type": "容器型",
+            "Spin Decomposition per atoms:": {
+                "_type": "字符串型"
+            },
+            "Spin Polarization (EF):": {
+                "_type": "字符串型"
+            },
+            "Band Gap:": {
+                "_type": "字符串型"
+            },
+            "Fit Band Gap:": {
+                "_type": "字符串型"
+            },
+            "Magnetic Moment:": {
+                "_type": "字符串型"
+            },
+            "Magnetic Moment/atom:": {
+                "_type": "字符串型"
+            },
+            "Electron Mass(FIX):": {
+                "_type": "字符串型"
+            },
+            "Hole Mass(FIX):": {
+                "_type": "字符串型"
+            }
+        },
+        "downloas": {
+            "_type": "容器型",
+            "CONTCAR_relax_vasp": {
+                "_type": "字符串型"
+            },
+            "INCAR_bands": {
+                "_type": "字符串型"
+            },
+            "KPOINTS_relax": {
+                "_type": "字符串型"
+            },
+            "KPOINTS_static": {
+                "_type": "字符串型"
+            },
+            "KPOINTS_bands": {
+                "_type": "字符串型"
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "basic information": {
+                    "ICSD_code": "在这里填写 ICSD_code (数值型)",
+                    "substance": "在这里填写 substance (字符串型)",
+                    "elements": "在这里填写 elements (字符串型)",
+                    "species": "在这里填写 species (数值型)"
+                },
+                "calculation": {
+                    "Ab-initio code": "在这里填写 Ab-initio code (字符串型)",
+                    "Composition per cell": "在这里填写 Composition per cell (字符串型)",
+                    "energy_cutoff": "在这里填写 energy_cutoff (字符串型)",
+                    "delta_electronic_energy_convergence": "在这里填写 delta_electronic_energy_convergence (字符串型)",
+                    "delta_electronic_energy_threshold_": "在这里填写 delta_electronic_energy_threshold_ (字符串型)"
+                },
+                "structure": {
+                    "Lattice": "在这里填写 Lattice (字符串型)",
+                    "Volume": "在这里填写 Volume (字符串型)",
+                    "Number of Atoms per Cell:": "在这里填写 Number of Atoms per Cell: (字符串型)",
+                    "Density(calc):": "在这里填写 Density(calc): (字符串型)",
+                    "Density(aflowlib):": "在这里填写 Density(aflowlib): (字符串型)",
+                    "Space Group Number:": "在这里填写 Space Group Number: (字符串型)",
+                    "Pearson Symbol:": "在这里填写 Pearson Symbol: (字符串型)",
+                    "Bravais Lattice Primitive:": "在这里填写 Bravais Lattice Primitive: (字符串型)",
+                    "Bravais Lattice Variation:": "在这里填写 Bravais Lattice Variation: (字符串型)",
+                    "Bravais Lattice System:": "在这里填写 Bravais Lattice System: (字符串型)",
+                    "Crystal Family:": "在这里填写 Crystal Family: (字符串型)",
+                    "Crystal System:": "在这里填写 Crystal System: (字符串型)",
+                    "Crystal Class:": "在这里填写 Crystal Class: (字符串型)",
+                    "Point Group (Herm Maug):": "在这里填写 Point Group (Herm Maug): (字符串型)",
+                    "Point Group (Schoenflies):": "在这里填写 Point Group (Schoenflies): (字符串型)",
+                    "Point Group Orbifold:": "在这里填写 Point Group Orbifold: (字符串型)",
+                    "Point Group Type:": "在这里填写 Point Group Type: (字符串型)",
+                    "Point Group Order:": "在这里填写 Point Group Order: (字符串型)",
+                    "Point Group Structure:": "在这里填写 Point Group Structure: (字符串型)",
+                    "Superlattice Primitive unit cell:": "在这里填写 Superlattice Primitive unit cell: (字符串型)",
+                    "Superlattice Variation:": "在这里填写 Superlattice Variation: (字符串型)",
+                    "Superlattice Lattice System :": "在这里填写 Superlattice Lattice System : (字符串型)",
+                    "Superlattice Pearson Symbol:": "在这里填写 Superlattice Pearson Symbol: (字符串型)",
+                    "Reciprocal Lattices:": "在这里填写 Reciprocal Lattices: (字符串型)",
+                    "Volume:": "在这里填写 Volume: (字符串型)",
+                    "Lattice Primitive:": "在这里填写 Lattice Primitive: (字符串型)",
+                    "Lattice Variation:": "在这里填写 Lattice Variation: (字符串型)"
+                },
+                "thermodynamics": {
+                    "Formation Enthalpy_cell:": "在这里填写 Formation Enthalpy_cell: (字符串型)",
+                    "Formation Enthalpy_atom:": "在这里填写 Formation Enthalpy_atom: (字符串型)",
+                    "Ab-initio energy_cell:": "在这里填写 Ab-initio energy_cell: (字符串型)",
+                    "Ab-initio energy_atom:": "在这里填写 Ab-initio energy_atom: (字符串型)"
+                },
+                "electronic": {
+                    "Spin Decomposition per atoms:": "在这里填写 Spin Decomposition per atoms: (字符串型)",
+                    "Spin Polarization (EF):": "在这里填写 Spin Polarization (EF): (字符串型)",
+                    "Band Gap:": "在这里填写 Band Gap: (字符串型)",
+                    "Fit Band Gap:": "在这里填写 Fit Band Gap: (字符串型)",
+                    "Magnetic Moment:": "在这里填写 Magnetic Moment: (字符串型)",
+                    "Magnetic Moment/atom:": "在这里填写 Magnetic Moment/atom: (字符串型)",
+                    "Electron Mass(FIX):": "在这里填写 Electron Mass(FIX): (字符串型)",
+                    "Hole Mass(FIX):": "在这里填写 Hole Mass(FIX): (字符串型)"
+                },
+                "downloas": {
+                    "CONTCAR_relax_vasp": "在这里填写 CONTCAR_relax_vasp (字符串型)",
+                    "INCAR_bands": "在这里填写 INCAR_bands (字符串型)",
+                    "KPOINTS_relax": "在这里填写 KPOINTS_relax (字符串型)",
+                    "KPOINTS_static": "在这里填写 KPOINTS_static (字符串型)",
+                    "KPOINTS_bands": "在这里填写 KPOINTS_bands (字符串型)"
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "basic information": {
+                    "ICSD_code": "在这里填写 ICSD_code (数值型)",
+                    "substance": "在这里填写 substance (字符串型)",
+                    "elements": "在这里填写 elements (字符串型)",
+                    "species": "在这里填写 species (数值型)"
+                },
+                "calculation": {
+                    "Ab-initio code": "在这里填写 Ab-initio code (字符串型)",
+                    "Composition per cell": "在这里填写 Composition per cell (字符串型)",
+                    "energy_cutoff": "在这里填写 energy_cutoff (字符串型)",
+                    "delta_electronic_energy_convergence": "在这里填写 delta_electronic_energy_convergence (字符串型)",
+                    "delta_electronic_energy_threshold_": "在这里填写 delta_electronic_energy_threshold_ (字符串型)"
+                },
+                "structure": {
+                    "Lattice": "在这里填写 Lattice (字符串型)",
+                    "Volume": "在这里填写 Volume (字符串型)",
+                    "Number of Atoms per Cell:": "在这里填写 Number of Atoms per Cell: (字符串型)",
+                    "Density(calc):": "在这里填写 Density(calc): (字符串型)",
+                    "Density(aflowlib):": "在这里填写 Density(aflowlib): (字符串型)",
+                    "Space Group Number:": "在这里填写 Space Group Number: (字符串型)",
+                    "Pearson Symbol:": "在这里填写 Pearson Symbol: (字符串型)",
+                    "Bravais Lattice Primitive:": "在这里填写 Bravais Lattice Primitive: (字符串型)",
+                    "Bravais Lattice Variation:": "在这里填写 Bravais Lattice Variation: (字符串型)",
+                    "Bravais Lattice System:": "在这里填写 Bravais Lattice System: (字符串型)",
+                    "Crystal Family:": "在这里填写 Crystal Family: (字符串型)",
+                    "Crystal System:": "在这里填写 Crystal System: (字符串型)",
+                    "Crystal Class:": "在这里填写 Crystal Class: (字符串型)",
+                    "Point Group (Herm Maug):": "在这里填写 Point Group (Herm Maug): (字符串型)",
+                    "Point Group (Schoenflies):": "在这里填写 Point Group (Schoenflies): (字符串型)",
+                    "Point Group Orbifold:": "在这里填写 Point Group Orbifold: (字符串型)",
+                    "Point Group Type:": "在这里填写 Point Group Type: (字符串型)",
+                    "Point Group Order:": "在这里填写 Point Group Order: (字符串型)",
+                    "Point Group Structure:": "在这里填写 Point Group Structure: (字符串型)",
+                    "Superlattice Primitive unit cell:": "在这里填写 Superlattice Primitive unit cell: (字符串型)",
+                    "Superlattice Variation:": "在这里填写 Superlattice Variation: (字符串型)",
+                    "Superlattice Lattice System :": "在这里填写 Superlattice Lattice System : (字符串型)",
+                    "Superlattice Pearson Symbol:": "在这里填写 Superlattice Pearson Symbol: (字符串型)",
+                    "Reciprocal Lattices:": "在这里填写 Reciprocal Lattices: (字符串型)",
+                    "Volume:": "在这里填写 Volume: (字符串型)",
+                    "Lattice Primitive:": "在这里填写 Lattice Primitive: (字符串型)",
+                    "Lattice Variation:": "在这里填写 Lattice Variation: (字符串型)"
+                },
+                "thermodynamics": {
+                    "Formation Enthalpy_cell:": "在这里填写 Formation Enthalpy_cell: (字符串型)",
+                    "Formation Enthalpy_atom:": "在这里填写 Formation Enthalpy_atom: (字符串型)",
+                    "Ab-initio energy_cell:": "在这里填写 Ab-initio energy_cell: (字符串型)",
+                    "Ab-initio energy_atom:": "在这里填写 Ab-initio energy_atom: (字符串型)"
+                },
+                "electronic": {
+                    "Spin Decomposition per atoms:": "在这里填写 Spin Decomposition per atoms: (字符串型)",
+                    "Spin Polarization (EF):": "在这里填写 Spin Polarization (EF): (字符串型)",
+                    "Band Gap:": "在这里填写 Band Gap: (字符串型)",
+                    "Fit Band Gap:": "在这里填写 Fit Band Gap: (字符串型)",
+                    "Magnetic Moment:": "在这里填写 Magnetic Moment: (字符串型)",
+                    "Magnetic Moment/atom:": "在这里填写 Magnetic Moment/atom: (字符串型)",
+                    "Electron Mass(FIX):": "在这里填写 Electron Mass(FIX): (字符串型)",
+                    "Hole Mass(FIX):": "在这里填写 Hole Mass(FIX): (字符串型)"
+                },
+                "downloas": {
+                    "CONTCAR_relax_vasp": "在这里填写 CONTCAR_relax_vasp (字符串型)",
+                    "INCAR_bands": "在这里填写 INCAR_bands (字符串型)",
+                    "KPOINTS_relax": "在这里填写 KPOINTS_relax (字符串型)",
+                    "KPOINTS_static": "在这里填写 KPOINTS_static (字符串型)",
+                    "KPOINTS_bands": "在这里填写 KPOINTS_bands (字符串型)"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,790 @@
+{
+    "template": {
+        "_id": 206,
+        "systemType": {
+            "_type": "字符串型"
+        },
+        "component": {
+            "_type": "容器型",
+            "label": {
+                "_type": "字符串型"
+            },
+            "sample": {
+                "_type": "容器型",
+                "material": {
+                    "_type": "容器型",
+                    "cheicalFormula": {
+                        "_type": "字符串型"
+                    },
+                    "commonName": {
+                        "_type": "字符串型"
+                    },
+                    "composition": {
+                        "_type": "容器型",
+                        "element": {
+                            "_type": "数组型",
+                            "element": {
+                                "_type": "字符串型"
+                            }
+                        },
+                        "weightPercent": {
+                            "_type": "字符串型"
+                        },
+                        "atomicPercent": {
+                            "_type": "数组型",
+                            "atomicPercent": {
+                                "_type": "数值型"
+                            }
+                        }
+                    },
+                    "condition": {
+                        "_type": "容器型",
+                        "Type": {
+                            "_type": "字符串型"
+                        },
+                        "NumberOfSpecies": {
+                            "_type": "数值型"
+                        },
+                        "NumberOfSites": {
+                            "_type": "数值型"
+                        },
+                        "LatticeParameters": {
+                            "_type": "字符串型"
+                        },
+                        "Lattice": {
+                            "_type": "字符串型"
+                        },
+                        "Volumn": {
+                            "_type": "字符串型"
+                        },
+                        "RecLattice": {
+                            "_type": "字符串型"
+                        },
+                        "SpaceGroup": {
+                            "_type": "容器型",
+                            "Number": {
+                                "_type": "数值型"
+                            },
+                            "Symbol": {
+                                "_type": "字符串型"
+                            },
+                            "LongSymbol": {
+                                "_type": "字符串型"
+                            },
+                            "ShortSymbol": {
+                                "_type": "字符串型"
+                            },
+                            "SchoenfliesSymbol": {
+                                "_type": "字符串型"
+                            }
+                        },
+                        "PointGroup": {
+                            "_type": "容器型",
+                            "Number": {
+                                "_type": "数值型"
+                            },
+                            "Symbol": {
+                                "_type": "字符串型"
+                            },
+                            "ShortSymbol": {
+                                "_type": "字符串型"
+                            },
+                            "SchoenfliesSymbol": {
+                                "_type": "字符串型"
+                            }
+                        },
+                        "CrystalFamily": {
+                            "_type": "字符串型"
+                        },
+                        "CrystalSystem": {
+                            "_type": "字符串型"
+                        },
+                        "LatticeSystem": {
+                            "_type": "字符串型"
+                        },
+                        "LatticeType": {
+                            "_type": "字符串型"
+                        },
+                        "Centering": {
+                            "_type": "字符串型"
+                        },
+                        "IsPrimitive": {
+                            "_type": "字符串型"
+                        },
+                        "ReducedSites": {
+                            "_type": "数组型",
+                            "ReducedSites": {
+                                "_type": "容器型",
+                                "Position": {
+                                    "_type": "字符串型"
+                                },
+                                "Atom": {
+                                    "_type": "容器型",
+                                    "AtomicNumber": {
+                                        "_type": "数值型"
+                                    },
+                                    "MassNumber": {
+                                        "_type": "数值型"
+                                    },
+                                    "Symbol": {
+                                        "_type": "字符串型"
+                                    }
+                                }
+                            }
+                        },
+                        "Sites": {
+                            "_type": "数组型",
+                            "Sites": {
+                                "_type": "容器型",
+                                "Position": {
+                                    "_type": "字符串型"
+                                },
+                                "Atom": {
+                                    "_type": "容器型",
+                                    "AtomicNumber": {
+                                        "_type": "数值型"
+                                    },
+                                    "MassNumber": {
+                                        "_type": "数值型"
+                                    },
+                                    "Symbol": {
+                                        "_type": "字符串型"
+                                    }
+                                }
+                            }
+                        },
+                        "IsDisordered": {
+                            "_type": "字符串型"
+                        }
+                    },
+                    "id": {
+                        "_type": "字符串型"
+                    },
+                    "cif": {
+                        "_type": "字符串型"
+                    }
+                },
+                "measurement": {
+                    "_type": "容器型",
+                    "property": {
+                        "_type": "数组型",
+                        "property": {
+                            "_type": "容器型",
+                            "name": {
+                                "_type": "字符串型"
+                            },
+                            "units": {
+                                "_type": "字符串型"
+                            },
+                            "scalar": {
+                                "_type": "数组型",
+                                "scalar": {
+                                    "_type": "容器型",
+                                    "value": {
+                                        "_type": "字符串型"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "condition": {
+                        "_type": "数组型",
+                        "condition": {
+                            "_type": "容器型",
+                            "name": {
+                                "_type": "字符串型"
+                            },
+                            "units": {
+                                "_type": "字符串型"
+                            },
+                            "scalar": {
+                                "_type": "数组型",
+                                "scalar": {
+                                    "_type": "容器型",
+                                    "value": {
+                                        "_type": "字符串型"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "method": {
+                        "_type": "字符串型"
+                    },
+                    "dataType": {
+                        "_type": "字符串型"
+                    },
+                    "reference": {
+                        "_type": "容器型",
+                        "doi": {
+                            "_type": "字符串型"
+                        },
+                        "isbn": {
+                            "_type": "字符串型"
+                        },
+                        "issn": {
+                            "_type": "字符串型"
+                        },
+                        "url": {
+                            "_type": "字符串型"
+                        },
+                        "title": {
+                            "_type": "字符串型"
+                        },
+                        "publisher": {
+                            "_type": "字符串型"
+                        },
+                        "journal": {
+                            "_type": "字符串型"
+                        },
+                        "volume": {
+                            "_type": "字符串型"
+                        },
+                        "year": {
+                            "_type": "字符串型"
+                        },
+                        "issue": {
+                            "_type": "字符串型"
+                        },
+                        "pages": {
+                            "_type": "容器型",
+                            "start": {
+                                "_type": "数值型"
+                            },
+                            "end": {
+                                "_type": "字符串型"
+                            }
+                        },
+                        "author": {
+                            "_type": "字符串型"
+                        }
+                    },
+                    "contact": {
+                        "_type": "字符串型"
+                    },
+                    "license": {
+                        "_type": "字符串型"
+                    }
+                },
+                "reference": {
+                    "_type": "字符串型"
+                },
+                "contact": {
+                    "_type": "字符串型"
+                },
+                "license": {
+                    "_type": "字符串型"
+                }
+            },
+            "common": {
+                "_type": "容器型",
+                "Time": {
+                    "_type": "容器型",
+                    "StartTime": {
+                        "_type": "字符串型"
+                    },
+                    "EndTime": {
+                        "_type": "字符串型"
+                    }
+                },
+                "Resource": {
+                    "_type": "容器型",
+                    "Usage": {
+                        "_type": "容器型",
+                        "CpuTime": {
+                            "_type": "字符串型"
+                        },
+                        "WallTime": {
+                            "_type": "字符串型"
+                        },
+                        "Memory": {
+                            "_type": "字符串型"
+                        }
+                    },
+                    "Allocation": {
+                        "_type": "容器型",
+                        "Task": {
+                            "_type": "字符串型"
+                        },
+                        "Workflow": {
+                            "_type": "字符串型"
+                        },
+                        "Activity": {
+                            "_type": "字符串型"
+                        },
+                        "HpcCpuHours": {
+                            "_type": "字符串型"
+                        },
+                        "HpcMaxCores": {
+                            "_type": "字符串型"
+                        },
+                        "HpcMemory": {
+                            "_type": "字符串型"
+                        },
+                        "DateCreated": {
+                            "_type": "字符串型"
+                        },
+                        "HpcId": {
+                            "_type": "字符串型"
+                        },
+                        "ProcessesPerNode": {
+                            "_type": "字符串型"
+                        },
+                        "NumberOfNodes": {
+                            "_type": "字符串型"
+                        },
+                        "TotalCores": {
+                            "_type": "字符串型"
+                        }
+                    }
+                },
+                "Files": {
+                    "_type": "字符串型"
+                },
+                "Type": {
+                    "_type": "字符串型"
+                },
+                "Tool": {
+                    "_type": "容器型",
+                    "Workflow": {
+                        "_type": "字符串型"
+                    },
+                    "Activity": {
+                        "_type": "字符串型"
+                    },
+                    "Toolbox": {
+                        "_type": "字符串型"
+                    }
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "systemType": "在这里填写 systemType (字符串型)",
+                "component": {
+                    "label": "在这里填写 label (字符串型)",
+                    "sample": {
+                        "material": {
+                            "cheicalFormula": "在这里填写 cheicalFormula (字符串型)",
+                            "commonName": "在这里填写 commonName (字符串型)",
+                            "composition": {
+                                "element": [
+                                    "在这里填写 element (字符串型)",
+                                    "在这里填写 element (字符串型)"
+                                ],
+                                "weightPercent": "在这里填写 weightPercent (字符串型)",
+                                "atomicPercent": [
+                                    "在这里填写 atomicPercent (数值型)",
+                                    "在这里填写 atomicPercent (数值型)"
+                                ]
+                            },
+                            "condition": {
+                                "Type": "在这里填写 Type (字符串型)",
+                                "NumberOfSpecies": "在这里填写 NumberOfSpecies (数值型)",
+                                "NumberOfSites": "在这里填写 NumberOfSites (数值型)",
+                                "LatticeParameters": "在这里填写 LatticeParameters (字符串型)",
+                                "Lattice": "在这里填写 Lattice (字符串型)",
+                                "Volumn": "在这里填写 Volumn (字符串型)",
+                                "RecLattice": "在这里填写 RecLattice (字符串型)",
+                                "SpaceGroup": {
+                                    "Number": "在这里填写 Number (数值型)",
+                                    "Symbol": "在这里填写 Symbol (字符串型)",
+                                    "LongSymbol": "在这里填写 LongSymbol (字符串型)",
+                                    "ShortSymbol": "在这里填写 ShortSymbol (字符串型)",
+                                    "SchoenfliesSymbol": "在这里填写 SchoenfliesSymbol (字符串型)"
+                                },
+                                "PointGroup": {
+                                    "Number": "在这里填写 Number (数值型)",
+                                    "Symbol": "在这里填写 Symbol (字符串型)",
+                                    "ShortSymbol": "在这里填写 ShortSymbol (字符串型)",
+                                    "SchoenfliesSymbol": "在这里填写 SchoenfliesSymbol (字符串型)"
+                                },
+                                "CrystalFamily": "在这里填写 CrystalFamily (字符串型)",
+                                "CrystalSystem": "在这里填写 CrystalSystem (字符串型)",
+                                "LatticeSystem": "在这里填写 LatticeSystem (字符串型)",
+                                "LatticeType": "在这里填写 LatticeType (字符串型)",
+                                "Centering": "在这里填写 Centering (字符串型)",
+                                "IsPrimitive": "在这里填写 IsPrimitive (字符串型)",
+                                "ReducedSites": [
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    },
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    }
+                                ],
+                                "Sites": [
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    },
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    }
+                                ],
+                                "IsDisordered": "在这里填写 IsDisordered (字符串型)"
+                            },
+                            "id": "在这里填写 id (字符串型)",
+                            "cif": "在这里填写 cif (字符串型)"
+                        },
+                        "measurement": {
+                            "property": [
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "method": "在这里填写 method (字符串型)",
+                            "dataType": "在这里填写 dataType (字符串型)",
+                            "reference": {
+                                "doi": "在这里填写 doi (字符串型)",
+                                "isbn": "在这里填写 isbn (字符串型)",
+                                "issn": "在这里填写 issn (字符串型)",
+                                "url": "在这里填写 url (字符串型)",
+                                "title": "在这里填写 title (字符串型)",
+                                "publisher": "在这里填写 publisher (字符串型)",
+                                "journal": "在这里填写 journal (字符串型)",
+                                "volume": "在这里填写 volume (字符串型)",
+                                "year": "在这里填写 year (字符串型)",
+                                "issue": "在这里填写 issue (字符串型)",
+                                "pages": {
+                                    "start": "在这里填写 start (数值型)",
+                                    "end": "在这里填写 end (字符串型)"
+                                },
+                                "author": "在这里填写 author (字符串型)"
+                            },
+                            "contact": "在这里填写 contact (字符串型)",
+                            "license": "在这里填写 license (字符串型)"
+                        },
+                        "reference": "在这里填写 reference (字符串型)",
+                        "contact": "在这里填写 contact (字符串型)",
+                        "license": "在这里填写 license (字符串型)"
+                    },
+                    "common": {
+                        "Time": {
+                            "StartTime": "在这里填写 StartTime (字符串型)",
+                            "EndTime": "在这里填写 EndTime (字符串型)"
+                        },
+                        "Resource": {
+                            "Usage": {
+                                "CpuTime": "在这里填写 CpuTime (字符串型)",
+                                "WallTime": "在这里填写 WallTime (字符串型)",
+                                "Memory": "在这里填写 Memory (字符串型)"
+                            },
+                            "Allocation": {
+                                "Task": "在这里填写 Task (字符串型)",
+                                "Workflow": "在这里填写 Workflow (字符串型)",
+                                "Activity": "在这里填写 Activity (字符串型)",
+                                "HpcCpuHours": "在这里填写 HpcCpuHours (字符串型)",
+                                "HpcMaxCores": "在这里填写 HpcMaxCores (字符串型)",
+                                "HpcMemory": "在这里填写 HpcMemory (字符串型)",
+                                "DateCreated": "在这里填写 DateCreated (字符串型)",
+                                "HpcId": "在这里填写 HpcId (字符串型)",
+                                "ProcessesPerNode": "在这里填写 ProcessesPerNode (字符串型)",
+                                "NumberOfNodes": "在这里填写 NumberOfNodes (字符串型)",
+                                "TotalCores": "在这里填写 TotalCores (字符串型)"
+                            }
+                        },
+                        "Files": "在这里填写 Files (字符串型)",
+                        "Type": "在这里填写 Type (字符串型)",
+                        "Tool": {
+                            "Workflow": "在这里填写 Workflow (字符串型)",
+                            "Activity": "在这里填写 Activity (字符串型)",
+                            "Toolbox": "在这里填写 Toolbox (字符串型)"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "systemType": "在这里填写 systemType (字符串型)",
+                "component": {
+                    "label": "在这里填写 label (字符串型)",
+                    "sample": {
+                        "material": {
+                            "cheicalFormula": "在这里填写 cheicalFormula (字符串型)",
+                            "commonName": "在这里填写 commonName (字符串型)",
+                            "composition": {
+                                "element": [
+                                    "在这里填写 element (字符串型)",
+                                    "在这里填写 element (字符串型)"
+                                ],
+                                "weightPercent": "在这里填写 weightPercent (字符串型)",
+                                "atomicPercent": [
+                                    "在这里填写 atomicPercent (数值型)",
+                                    "在这里填写 atomicPercent (数值型)"
+                                ]
+                            },
+                            "condition": {
+                                "Type": "在这里填写 Type (字符串型)",
+                                "NumberOfSpecies": "在这里填写 NumberOfSpecies (数值型)",
+                                "NumberOfSites": "在这里填写 NumberOfSites (数值型)",
+                                "LatticeParameters": "在这里填写 LatticeParameters (字符串型)",
+                                "Lattice": "在这里填写 Lattice (字符串型)",
+                                "Volumn": "在这里填写 Volumn (字符串型)",
+                                "RecLattice": "在这里填写 RecLattice (字符串型)",
+                                "SpaceGroup": {
+                                    "Number": "在这里填写 Number (数值型)",
+                                    "Symbol": "在这里填写 Symbol (字符串型)",
+                                    "LongSymbol": "在这里填写 LongSymbol (字符串型)",
+                                    "ShortSymbol": "在这里填写 ShortSymbol (字符串型)",
+                                    "SchoenfliesSymbol": "在这里填写 SchoenfliesSymbol (字符串型)"
+                                },
+                                "PointGroup": {
+                                    "Number": "在这里填写 Number (数值型)",
+                                    "Symbol": "在这里填写 Symbol (字符串型)",
+                                    "ShortSymbol": "在这里填写 ShortSymbol (字符串型)",
+                                    "SchoenfliesSymbol": "在这里填写 SchoenfliesSymbol (字符串型)"
+                                },
+                                "CrystalFamily": "在这里填写 CrystalFamily (字符串型)",
+                                "CrystalSystem": "在这里填写 CrystalSystem (字符串型)",
+                                "LatticeSystem": "在这里填写 LatticeSystem (字符串型)",
+                                "LatticeType": "在这里填写 LatticeType (字符串型)",
+                                "Centering": "在这里填写 Centering (字符串型)",
+                                "IsPrimitive": "在这里填写 IsPrimitive (字符串型)",
+                                "ReducedSites": [
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    },
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    }
+                                ],
+                                "Sites": [
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    },
+                                    {
+                                        "Position": "在这里填写 Position (字符串型)",
+                                        "Atom": {
+                                            "AtomicNumber": "在这里填写 AtomicNumber (数值型)",
+                                            "MassNumber": "在这里填写 MassNumber (数值型)",
+                                            "Symbol": "在这里填写 Symbol (字符串型)"
+                                        }
+                                    }
+                                ],
+                                "IsDisordered": "在这里填写 IsDisordered (字符串型)"
+                            },
+                            "id": "在这里填写 id (字符串型)",
+                            "cif": "在这里填写 cif (字符串型)"
+                        },
+                        "measurement": {
+                            "property": [
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "condition": [
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "在这里填写 name (字符串型)",
+                                    "units": "在这里填写 units (字符串型)",
+                                    "scalar": [
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        },
+                                        {
+                                            "value": "在这里填写 value (字符串型)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "method": "在这里填写 method (字符串型)",
+                            "dataType": "在这里填写 dataType (字符串型)",
+                            "reference": {
+                                "doi": "在这里填写 doi (字符串型)",
+                                "isbn": "在这里填写 isbn (字符串型)",
+                                "issn": "在这里填写 issn (字符串型)",
+                                "url": "在这里填写 url (字符串型)",
+                                "title": "在这里填写 title (字符串型)",
+                                "publisher": "在这里填写 publisher (字符串型)",
+                                "journal": "在这里填写 journal (字符串型)",
+                                "volume": "在这里填写 volume (字符串型)",
+                                "year": "在这里填写 year (字符串型)",
+                                "issue": "在这里填写 issue (字符串型)",
+                                "pages": {
+                                    "start": "在这里填写 start (数值型)",
+                                    "end": "在这里填写 end (字符串型)"
+                                },
+                                "author": "在这里填写 author (字符串型)"
+                            },
+                            "contact": "在这里填写 contact (字符串型)",
+                            "license": "在这里填写 license (字符串型)"
+                        },
+                        "reference": "在这里填写 reference (字符串型)",
+                        "contact": "在这里填写 contact (字符串型)",
+                        "license": "在这里填写 license (字符串型)"
+                    },
+                    "common": {
+                        "Time": {
+                            "StartTime": "在这里填写 StartTime (字符串型)",
+                            "EndTime": "在这里填写 EndTime (字符串型)"
+                        },
+                        "Resource": {
+                            "Usage": {
+                                "CpuTime": "在这里填写 CpuTime (字符串型)",
+                                "WallTime": "在这里填写 WallTime (字符串型)",
+                                "Memory": "在这里填写 Memory (字符串型)"
+                            },
+                            "Allocation": {
+                                "Task": "在这里填写 Task (字符串型)",
+                                "Workflow": "在这里填写 Workflow (字符串型)",
+                                "Activity": "在这里填写 Activity (字符串型)",
+                                "HpcCpuHours": "在这里填写 HpcCpuHours (字符串型)",
+                                "HpcMaxCores": "在这里填写 HpcMaxCores (字符串型)",
+                                "HpcMemory": "在这里填写 HpcMemory (字符串型)",
+                                "DateCreated": "在这里填写 DateCreated (字符串型)",
+                                "HpcId": "在这里填写 HpcId (字符串型)",
+                                "ProcessesPerNode": "在这里填写 ProcessesPerNode (字符串型)",
+                                "NumberOfNodes": "在这里填写 NumberOfNodes (字符串型)",
+                                "TotalCores": "在这里填写 TotalCores (字符串型)"
+                            }
+                        },
+                        "Files": "在这里填写 Files (字符串型)",
+                        "Type": "在这里填写 Type (字符串型)",
+                        "Tool": {
+                            "Workflow": "在这里填写 Workflow (字符串型)",
+                            "Activity": "在这里填写 Activity (字符串型)",
+                            "Toolbox": "在这里填写 Toolbox (字符串型)"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

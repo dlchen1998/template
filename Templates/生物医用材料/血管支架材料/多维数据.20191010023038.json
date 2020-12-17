@@ -1,0 +1,114 @@
+{
+    "template": {
+        "_id": 408,
+        "Sample ID": {
+            "_type": "数值型"
+        },
+        "Sample Name": {
+            "_type": "字符串型"
+        },
+        "Remark": {
+            "_type": "字符串型"
+        },
+        "文献来源": {
+            "_type": "容器型",
+            "文献来源": {
+                "_type": "表格型",
+                "DOI": {
+                    "_type": "字符串型"
+                },
+                "Journal": {
+                    "_type": "字符串型"
+                },
+                "Annual": {
+                    "_type": "数值型"
+                },
+                "Volume": {
+                    "_type": "数值型"
+                },
+                "Page_num": {
+                    "_type": "范围型"
+                },
+                "Literature": {
+                    "_type": "字符串型"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Sample ID": "在这里填写 Sample ID (数值型)",
+                "Sample Name": "在这里填写 Sample Name (字符串型)",
+                "Remark": "在这里填写 Remark (字符串型)",
+                "文献来源": {
+                    "文献来源": [
+                        {
+                            "DOI": "在这里填写 DOI (字符串型)",
+                            "Journal": "在这里填写 Journal (字符串型)",
+                            "Annual": "在这里填写 Annual (数值型)",
+                            "Volume": "在这里填写 Volume (数值型)",
+                            "Page_num": "在这里填写 Page_num (范围型)",
+                            "Literature": "在这里填写 Literature (字符串型)"
+                        },
+                        {
+                            "DOI": "在这里填写 DOI (字符串型)",
+                            "Journal": "在这里填写 Journal (字符串型)",
+                            "Annual": "在这里填写 Annual (数值型)",
+                            "Volume": "在这里填写 Volume (数值型)",
+                            "Page_num": "在这里填写 Page_num (范围型)",
+                            "Literature": "在这里填写 Literature (字符串型)"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Sample ID": "在这里填写 Sample ID (数值型)",
+                "Sample Name": "在这里填写 Sample Name (字符串型)",
+                "Remark": "在这里填写 Remark (字符串型)",
+                "文献来源": {
+                    "文献来源": [
+                        {
+                            "DOI": "在这里填写 DOI (字符串型)",
+                            "Journal": "在这里填写 Journal (字符串型)",
+                            "Annual": "在这里填写 Annual (数值型)",
+                            "Volume": "在这里填写 Volume (数值型)",
+                            "Page_num": "在这里填写 Page_num (范围型)",
+                            "Literature": "在这里填写 Literature (字符串型)"
+                        },
+                        {
+                            "DOI": "在这里填写 DOI (字符串型)",
+                            "Journal": "在这里填写 Journal (字符串型)",
+                            "Annual": "在这里填写 Annual (数值型)",
+                            "Volume": "在这里填写 Volume (数值型)",
+                            "Page_num": "在这里填写 Page_num (范围型)",
+                            "Literature": "在这里填写 Literature (字符串型)"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

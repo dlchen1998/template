@@ -1,0 +1,428 @@
+{
+    "template": {
+        "_id": 411,
+        "Sample ID": {
+            "_type": "数值型"
+        },
+        "Sample Name": {
+            "_type": "字符串型"
+        },
+        "Remark": {
+            "_type": "字符串型"
+        },
+        "Paper": {
+            "_type": "容器型",
+            "Sample id": {
+                "_type": "数值型"
+            },
+            "DOI": {
+                "_type": "字符串型"
+            },
+            "Journal": {
+                "_type": "字符串型"
+            },
+            "Annual": {
+                "_type": "数值型"
+            },
+            "Volume": {
+                "_type": "数值型"
+            },
+            "Page number": {
+                "_type": "字符串型"
+            },
+            "Literature": {
+                "_type": "字符串型"
+            }
+        },
+        "raw material": {
+            "_type": "表格型",
+            "raw material ID": {
+                "_type": "数值型"
+            },
+            "raw material name_x": {
+                "_type": "字符串型"
+            },
+            "raw material name_y": {
+                "_type": "字符串型"
+            },
+            "preparation": {
+                "_type": "字符串型"
+            },
+            "parameter": {
+                "_type": "字符串型"
+            },
+            "parameter minimum": {
+                "_type": "数值型"
+            },
+            "parameter maximum": {
+                "_type": "数值型"
+            },
+            "parameter unit": {
+                "_type": "字符串型"
+            },
+            "remark": {
+                "_type": "字符串型"
+            }
+        },
+        "new material": {
+            "_type": "容器型",
+            "Material ID": {
+                "_type": "字符串型"
+            },
+            "sample preparation": {
+                "_type": "容器型",
+                "preparation": {
+                    "_type": "字符串型"
+                },
+                "parameter": {
+                    "_type": "字符串型"
+                },
+                "parameter_minimum": {
+                    "_type": "数值型"
+                },
+                "parameter_maximum": {
+                    "_type": "数值型"
+                },
+                "parameter_unit": {
+                    "_type": "字符串型"
+                },
+                "remark": {
+                    "_type": "字符串型"
+                }
+            },
+            "characterization in vitro": {
+                "_type": "容器型",
+                "parameter_1": {
+                    "_type": "字符串型"
+                },
+                "parameter_value_1": {
+                    "_type": "数值型"
+                },
+                "parameter_unit_1": {
+                    "_type": "字符串型"
+                },
+                "parameter_2": {
+                    "_type": "字符串型"
+                },
+                "parameter_value_2": {
+                    "_type": "数值型"
+                },
+                "parameter_unit_2": {
+                    "_type": "字符串型"
+                },
+                "measure factor": {
+                    "_type": "字符串型"
+                },
+                "property name": {
+                    "_type": "字符串型"
+                },
+                "property ID": {
+                    "_type": "数值型"
+                },
+                "property value_min": {
+                    "_type": "数值型"
+                },
+                "property value_max": {
+                    "_type": "数值型"
+                },
+                "property value_unit": {
+                    "_type": "字符串型"
+                }
+            },
+            "characterization in vivo": {
+                "_type": "容器型",
+                "Material ID": {
+                    "_type": "字符串型"
+                },
+                "parameter_1": {
+                    "_type": "字符串型"
+                },
+                "parameter_value_1": {
+                    "_type": "数值型"
+                },
+                "parameter_unit_1": {
+                    "_type": "字符串型"
+                },
+                "measure factor": {
+                    "_type": "字符串型"
+                },
+                "property name": {
+                    "_type": "字符串型"
+                },
+                "property ID": {
+                    "_type": "字符串型"
+                },
+                "property value_min": {
+                    "_type": "数值型"
+                },
+                "property value_max": {
+                    "_type": "数值型"
+                },
+                "property value_unit": {
+                    "_type": "字符串型"
+                }
+            },
+            "physicochemical characterization": {
+                "_type": "表格型",
+                "Material ID": {
+                    "_type": "字符串型"
+                },
+                "parameter_1": {
+                    "_type": "字符串型"
+                },
+                "parameter_value_1": {
+                    "_type": "数值型"
+                },
+                "parameter_unit_1": {
+                    "_type": "字符串型"
+                },
+                "measure factor": {
+                    "_type": "字符串型"
+                },
+                "property name": {
+                    "_type": "字符串型"
+                },
+                "property ID": {
+                    "_type": "字符串型"
+                },
+                "property value_min": {
+                    "_type": "数值型"
+                },
+                "property value_max": {
+                    "_type": "数值型"
+                },
+                "property value_unit": {
+                    "_type": "字符串型"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Sample ID": "在这里填写 Sample ID (数值型)",
+                "Sample Name": "在这里填写 Sample Name (字符串型)",
+                "Remark": "在这里填写 Remark (字符串型)",
+                "Paper": {
+                    "Sample id": "在这里填写 Sample id (数值型)",
+                    "DOI": "在这里填写 DOI (字符串型)",
+                    "Journal": "在这里填写 Journal (字符串型)",
+                    "Annual": "在这里填写 Annual (数值型)",
+                    "Volume": "在这里填写 Volume (数值型)",
+                    "Page number": "在这里填写 Page number (字符串型)",
+                    "Literature": "在这里填写 Literature (字符串型)"
+                },
+                "raw material": [
+                    {
+                        "raw material ID": "在这里填写 raw material ID (数值型)",
+                        "raw material name_x": "在这里填写 raw material name_x (字符串型)",
+                        "raw material name_y": "在这里填写 raw material name_y (字符串型)",
+                        "preparation": "在这里填写 preparation (字符串型)",
+                        "parameter": "在这里填写 parameter (字符串型)",
+                        "parameter minimum": "在这里填写 parameter minimum (数值型)",
+                        "parameter maximum": "在这里填写 parameter maximum (数值型)",
+                        "parameter unit": "在这里填写 parameter unit (字符串型)",
+                        "remark": "在这里填写 remark (字符串型)"
+                    },
+                    {
+                        "raw material ID": "在这里填写 raw material ID (数值型)",
+                        "raw material name_x": "在这里填写 raw material name_x (字符串型)",
+                        "raw material name_y": "在这里填写 raw material name_y (字符串型)",
+                        "preparation": "在这里填写 preparation (字符串型)",
+                        "parameter": "在这里填写 parameter (字符串型)",
+                        "parameter minimum": "在这里填写 parameter minimum (数值型)",
+                        "parameter maximum": "在这里填写 parameter maximum (数值型)",
+                        "parameter unit": "在这里填写 parameter unit (字符串型)",
+                        "remark": "在这里填写 remark (字符串型)"
+                    }
+                ],
+                "new material": {
+                    "Material ID": "在这里填写 Material ID (字符串型)",
+                    "sample preparation": {
+                        "preparation": "在这里填写 preparation (字符串型)",
+                        "parameter": "在这里填写 parameter (字符串型)",
+                        "parameter_minimum": "在这里填写 parameter_minimum (数值型)",
+                        "parameter_maximum": "在这里填写 parameter_maximum (数值型)",
+                        "parameter_unit": "在这里填写 parameter_unit (字符串型)",
+                        "remark": "在这里填写 remark (字符串型)"
+                    },
+                    "characterization in vitro": {
+                        "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                        "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                        "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                        "parameter_2": "在这里填写 parameter_2 (字符串型)",
+                        "parameter_value_2": "在这里填写 parameter_value_2 (数值型)",
+                        "parameter_unit_2": "在这里填写 parameter_unit_2 (字符串型)",
+                        "measure factor": "在这里填写 measure factor (字符串型)",
+                        "property name": "在这里填写 property name (字符串型)",
+                        "property ID": "在这里填写 property ID (数值型)",
+                        "property value_min": "在这里填写 property value_min (数值型)",
+                        "property value_max": "在这里填写 property value_max (数值型)",
+                        "property value_unit": "在这里填写 property value_unit (字符串型)"
+                    },
+                    "characterization in vivo": {
+                        "Material ID": "在这里填写 Material ID (字符串型)",
+                        "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                        "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                        "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                        "measure factor": "在这里填写 measure factor (字符串型)",
+                        "property name": "在这里填写 property name (字符串型)",
+                        "property ID": "在这里填写 property ID (字符串型)",
+                        "property value_min": "在这里填写 property value_min (数值型)",
+                        "property value_max": "在这里填写 property value_max (数值型)",
+                        "property value_unit": "在这里填写 property value_unit (字符串型)"
+                    },
+                    "physicochemical characterization": [
+                        {
+                            "Material ID": "在这里填写 Material ID (字符串型)",
+                            "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                            "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                            "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                            "measure factor": "在这里填写 measure factor (字符串型)",
+                            "property name": "在这里填写 property name (字符串型)",
+                            "property ID": "在这里填写 property ID (字符串型)",
+                            "property value_min": "在这里填写 property value_min (数值型)",
+                            "property value_max": "在这里填写 property value_max (数值型)",
+                            "property value_unit": "在这里填写 property value_unit (字符串型)"
+                        },
+                        {
+                            "Material ID": "在这里填写 Material ID (字符串型)",
+                            "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                            "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                            "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                            "measure factor": "在这里填写 measure factor (字符串型)",
+                            "property name": "在这里填写 property name (字符串型)",
+                            "property ID": "在这里填写 property ID (字符串型)",
+                            "property value_min": "在这里填写 property value_min (数值型)",
+                            "property value_max": "在这里填写 property value_max (数值型)",
+                            "property value_unit": "在这里填写 property value_unit (字符串型)"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Sample ID": "在这里填写 Sample ID (数值型)",
+                "Sample Name": "在这里填写 Sample Name (字符串型)",
+                "Remark": "在这里填写 Remark (字符串型)",
+                "Paper": {
+                    "Sample id": "在这里填写 Sample id (数值型)",
+                    "DOI": "在这里填写 DOI (字符串型)",
+                    "Journal": "在这里填写 Journal (字符串型)",
+                    "Annual": "在这里填写 Annual (数值型)",
+                    "Volume": "在这里填写 Volume (数值型)",
+                    "Page number": "在这里填写 Page number (字符串型)",
+                    "Literature": "在这里填写 Literature (字符串型)"
+                },
+                "raw material": [
+                    {
+                        "raw material ID": "在这里填写 raw material ID (数值型)",
+                        "raw material name_x": "在这里填写 raw material name_x (字符串型)",
+                        "raw material name_y": "在这里填写 raw material name_y (字符串型)",
+                        "preparation": "在这里填写 preparation (字符串型)",
+                        "parameter": "在这里填写 parameter (字符串型)",
+                        "parameter minimum": "在这里填写 parameter minimum (数值型)",
+                        "parameter maximum": "在这里填写 parameter maximum (数值型)",
+                        "parameter unit": "在这里填写 parameter unit (字符串型)",
+                        "remark": "在这里填写 remark (字符串型)"
+                    },
+                    {
+                        "raw material ID": "在这里填写 raw material ID (数值型)",
+                        "raw material name_x": "在这里填写 raw material name_x (字符串型)",
+                        "raw material name_y": "在这里填写 raw material name_y (字符串型)",
+                        "preparation": "在这里填写 preparation (字符串型)",
+                        "parameter": "在这里填写 parameter (字符串型)",
+                        "parameter minimum": "在这里填写 parameter minimum (数值型)",
+                        "parameter maximum": "在这里填写 parameter maximum (数值型)",
+                        "parameter unit": "在这里填写 parameter unit (字符串型)",
+                        "remark": "在这里填写 remark (字符串型)"
+                    }
+                ],
+                "new material": {
+                    "Material ID": "在这里填写 Material ID (字符串型)",
+                    "sample preparation": {
+                        "preparation": "在这里填写 preparation (字符串型)",
+                        "parameter": "在这里填写 parameter (字符串型)",
+                        "parameter_minimum": "在这里填写 parameter_minimum (数值型)",
+                        "parameter_maximum": "在这里填写 parameter_maximum (数值型)",
+                        "parameter_unit": "在这里填写 parameter_unit (字符串型)",
+                        "remark": "在这里填写 remark (字符串型)"
+                    },
+                    "characterization in vitro": {
+                        "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                        "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                        "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                        "parameter_2": "在这里填写 parameter_2 (字符串型)",
+                        "parameter_value_2": "在这里填写 parameter_value_2 (数值型)",
+                        "parameter_unit_2": "在这里填写 parameter_unit_2 (字符串型)",
+                        "measure factor": "在这里填写 measure factor (字符串型)",
+                        "property name": "在这里填写 property name (字符串型)",
+                        "property ID": "在这里填写 property ID (数值型)",
+                        "property value_min": "在这里填写 property value_min (数值型)",
+                        "property value_max": "在这里填写 property value_max (数值型)",
+                        "property value_unit": "在这里填写 property value_unit (字符串型)"
+                    },
+                    "characterization in vivo": {
+                        "Material ID": "在这里填写 Material ID (字符串型)",
+                        "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                        "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                        "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                        "measure factor": "在这里填写 measure factor (字符串型)",
+                        "property name": "在这里填写 property name (字符串型)",
+                        "property ID": "在这里填写 property ID (字符串型)",
+                        "property value_min": "在这里填写 property value_min (数值型)",
+                        "property value_max": "在这里填写 property value_max (数值型)",
+                        "property value_unit": "在这里填写 property value_unit (字符串型)"
+                    },
+                    "physicochemical characterization": [
+                        {
+                            "Material ID": "在这里填写 Material ID (字符串型)",
+                            "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                            "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                            "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                            "measure factor": "在这里填写 measure factor (字符串型)",
+                            "property name": "在这里填写 property name (字符串型)",
+                            "property ID": "在这里填写 property ID (字符串型)",
+                            "property value_min": "在这里填写 property value_min (数值型)",
+                            "property value_max": "在这里填写 property value_max (数值型)",
+                            "property value_unit": "在这里填写 property value_unit (字符串型)"
+                        },
+                        {
+                            "Material ID": "在这里填写 Material ID (字符串型)",
+                            "parameter_1": "在这里填写 parameter_1 (字符串型)",
+                            "parameter_value_1": "在这里填写 parameter_value_1 (数值型)",
+                            "parameter_unit_1": "在这里填写 parameter_unit_1 (字符串型)",
+                            "measure factor": "在这里填写 measure factor (字符串型)",
+                            "property name": "在这里填写 property name (字符串型)",
+                            "property ID": "在这里填写 property ID (字符串型)",
+                            "property value_min": "在这里填写 property value_min (数值型)",
+                            "property value_max": "在这里填写 property value_max (数值型)",
+                            "property value_unit": "在这里填写 property value_unit (字符串型)"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

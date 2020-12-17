@@ -1,0 +1,702 @@
+{
+    "template": {
+        "_id": 587,
+        "energy": {
+            "_type": "数值型"
+        },
+        "energy_per_atom": {
+            "_type": "数值型"
+        },
+        "volume": {
+            "_type": "数值型"
+        },
+        "formation_energy_per_atom": {
+            "_type": "数值型"
+        },
+        "nsites": {
+            "_type": "数值型"
+        },
+        "unit_cell_formula": {
+            "_type": "表格型",
+            "element": {
+                "_type": "字符串型"
+            },
+            "number": {
+                "_type": "数值型"
+            }
+        },
+        "pretty_formula": {
+            "_type": "字符串型"
+        },
+        "is_hubbard": {
+            "_type": "候选型"
+        },
+        "elements": {
+            "_type": "数组型",
+            "elements": {
+                "_type": "字符串型"
+            }
+        },
+        "nelements": {
+            "_type": "数值型"
+        },
+        "e_above_hull": {
+            "_type": "数值型"
+        },
+        "hubbards": {
+            "_type": "表格型",
+            "element": {
+                "_type": "字符串型"
+            },
+            "number": {
+                "_type": "数值型"
+            }
+        },
+        "is_compatible": {
+            "_type": "候选型"
+        },
+        "spacegroup": {
+            "_type": "容器型",
+            "source": {
+                "_type": "字符串型"
+            },
+            "symbol": {
+                "_type": "字符串型"
+            },
+            "number": {
+                "_type": "数值型"
+            },
+            "point_group": {
+                "_type": "字符串型"
+            },
+            "crystal_system": {
+                "_type": "字符串型"
+            },
+            "hall": {
+                "_type": "字符串型"
+            }
+        },
+        "task_ids": {
+            "_type": "数组型",
+            "task_ids": {
+                "_type": "字符串型"
+            }
+        },
+        "band_gap": {
+            "_type": "数值型"
+        },
+        "density": {
+            "_type": "数值型"
+        },
+        "icsd_id": {
+            "_type": "数值型"
+        },
+        "icsd_ids": {
+            "_type": "数组型",
+            "icsd_ids": {
+                "_type": "数值型"
+            }
+        },
+        "cif": {
+            "_type": "字符串型"
+        },
+        "total_magnetization": {
+            "_type": "数值型"
+        },
+        "material_id": {
+            "_type": "字符串型"
+        },
+        "oxide_type": {
+            "_type": "字符串型"
+        },
+        "tags": {
+            "_type": "数组型",
+            "tags": {
+                "_type": "字符串型"
+            }
+        },
+        "elasticity": {
+            "_type": "容器型",
+            "G_Reuss": {
+                "_type": "数值型"
+            },
+            "G_VRH": {
+                "_type": "数值型"
+            },
+            "G_Voigt": {
+                "_type": "数值型"
+            },
+            "G_Voigt_Reuss_Hill": {
+                "_type": "数值型"
+            },
+            "K_Reuss": {
+                "_type": "数值型"
+            },
+            "K_VRH": {
+                "_type": "数值型"
+            },
+            "K_Voigt": {
+                "_type": "数值型"
+            },
+            "K_Voigt_Reuss_Hill": {
+                "_type": "数值型"
+            },
+            "elastic_anisotropy": {
+                "_type": "数值型"
+            },
+            "elastic_tensor": {
+                "_type": "表格型",
+                "一": {
+                    "_type": "数值型"
+                },
+                "二": {
+                    "_type": "数值型"
+                },
+                "三": {
+                    "_type": "数值型"
+                },
+                "四": {
+                    "_type": "数值型"
+                },
+                "五": {
+                    "_type": "数值型"
+                },
+                "六": {
+                    "_type": "数值型"
+                }
+            },
+            "homogeneous_poisson": {
+                "_type": "数值型"
+            },
+            "poisson_ratio": {
+                "_type": "数值型"
+            },
+            "universal_anisotropy": {
+                "_type": "数值型"
+            },
+            "elastic_tensor_original": {
+                "_type": "表格型",
+                "一": {
+                    "_type": "数值型"
+                },
+                "二": {
+                    "_type": "数值型"
+                },
+                "三": {
+                    "_type": "数值型"
+                },
+                "四": {
+                    "_type": "数值型"
+                },
+                "五": {
+                    "_type": "数值型"
+                },
+                "六": {
+                    "_type": "数值型"
+                }
+            },
+            "compliance_tensor": {
+                "_type": "表格型",
+                "一": {
+                    "_type": "数值型"
+                },
+                "二": {
+                    "_type": "数值型"
+                },
+                "三": {
+                    "_type": "数值型"
+                },
+                "四": {
+                    "_type": "数值型"
+                },
+                "五": {
+                    "_type": "数值型"
+                },
+                "六": {
+                    "_type": "数值型"
+                }
+            },
+            "warnings": {
+                "_type": "数组型",
+                "warnings": {
+                    "_type": "字符串型"
+                }
+            },
+            "nsites": {
+                "_type": "数值型"
+            }
+        },
+        "piezo": {
+            "_type": "容器型",
+            "eij_max": {
+                "_type": "数值型"
+            },
+            "piezoelectric_tensor": {
+                "_type": "容器型",
+                "first": {
+                    "_type": "数组型",
+                    "first": {
+                        "_type": "数值型"
+                    }
+                },
+                "second": {
+                    "_type": "数组型",
+                    "second": {
+                        "_type": "数值型"
+                    }
+                },
+                "third": {
+                    "_type": "数组型",
+                    "third": {
+                        "_type": "数值型"
+                    }
+                }
+            },
+            "v_max": {
+                "_type": "数组型",
+                "v_max": {
+                    "_type": "数值型"
+                }
+            }
+        },
+        "diel": {
+            "_type": "容器型",
+            "e_electronic": {
+                "_type": "表格型",
+                "一": {
+                    "_type": "数值型"
+                },
+                "二": {
+                    "_type": "数值型"
+                },
+                "三": {
+                    "_type": "数值型"
+                }
+            },
+            "e_total": {
+                "_type": "表格型",
+                "一": {
+                    "_type": "数值型"
+                },
+                "二": {
+                    "_type": "数值型"
+                },
+                "三": {
+                    "_type": "数值型"
+                }
+            },
+            "n": {
+                "_type": "数值型"
+            },
+            "poly_electronic": {
+                "_type": "数值型"
+            },
+            "poly_total": {
+                "_type": "数值型"
+            }
+        },
+        "full_formula": {
+            "_type": "字符串型"
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "energy": "在这里填写 energy (数值型)",
+                "energy_per_atom": "在这里填写 energy_per_atom (数值型)",
+                "volume": "在这里填写 volume (数值型)",
+                "formation_energy_per_atom": "在这里填写 formation_energy_per_atom (数值型)",
+                "nsites": "在这里填写 nsites (数值型)",
+                "unit_cell_formula": [
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    },
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    }
+                ],
+                "pretty_formula": "在这里填写 pretty_formula (字符串型)",
+                "is_hubbard": "在这里填写 is_hubbard(候选型)，可选值为 true, false 之一",
+                "elements": [
+                    "在这里填写 elements (字符串型)",
+                    "在这里填写 elements (字符串型)"
+                ],
+                "nelements": "在这里填写 nelements (数值型)",
+                "e_above_hull": "在这里填写 e_above_hull (数值型)",
+                "hubbards": [
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    },
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    }
+                ],
+                "is_compatible": "在这里填写 is_compatible(候选型)，可选值为 true, false 之一",
+                "spacegroup": {
+                    "source": "在这里填写 source (字符串型)",
+                    "symbol": "在这里填写 symbol (字符串型)",
+                    "number": "在这里填写 number (数值型)",
+                    "point_group": "在这里填写 point_group (字符串型)",
+                    "crystal_system": "在这里填写 crystal_system (字符串型)",
+                    "hall": "在这里填写 hall (字符串型)"
+                },
+                "task_ids": [
+                    "在这里填写 task_ids (字符串型)",
+                    "在这里填写 task_ids (字符串型)"
+                ],
+                "band_gap": "在这里填写 band_gap (数值型)",
+                "density": "在这里填写 density (数值型)",
+                "icsd_id": "在这里填写 icsd_id (数值型)",
+                "icsd_ids": [
+                    "在这里填写 icsd_ids (数值型)",
+                    "在这里填写 icsd_ids (数值型)"
+                ],
+                "cif": "在这里填写 cif (字符串型)",
+                "total_magnetization": "在这里填写 total_magnetization (数值型)",
+                "material_id": "在这里填写 material_id (字符串型)",
+                "oxide_type": "在这里填写 oxide_type (字符串型)",
+                "tags": [
+                    "在这里填写 tags (字符串型)",
+                    "在这里填写 tags (字符串型)"
+                ],
+                "elasticity": {
+                    "G_Reuss": "在这里填写 G_Reuss (数值型)",
+                    "G_VRH": "在这里填写 G_VRH (数值型)",
+                    "G_Voigt": "在这里填写 G_Voigt (数值型)",
+                    "G_Voigt_Reuss_Hill": "在这里填写 G_Voigt_Reuss_Hill (数值型)",
+                    "K_Reuss": "在这里填写 K_Reuss (数值型)",
+                    "K_VRH": "在这里填写 K_VRH (数值型)",
+                    "K_Voigt": "在这里填写 K_Voigt (数值型)",
+                    "K_Voigt_Reuss_Hill": "在这里填写 K_Voigt_Reuss_Hill (数值型)",
+                    "elastic_anisotropy": "在这里填写 elastic_anisotropy (数值型)",
+                    "elastic_tensor": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        }
+                    ],
+                    "homogeneous_poisson": "在这里填写 homogeneous_poisson (数值型)",
+                    "poisson_ratio": "在这里填写 poisson_ratio (数值型)",
+                    "universal_anisotropy": "在这里填写 universal_anisotropy (数值型)",
+                    "elastic_tensor_original": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        }
+                    ],
+                    "compliance_tensor": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        }
+                    ],
+                    "warnings": [
+                        "在这里填写 warnings (字符串型)",
+                        "在这里填写 warnings (字符串型)"
+                    ],
+                    "nsites": "在这里填写 nsites (数值型)"
+                },
+                "piezo": {
+                    "eij_max": "在这里填写 eij_max (数值型)",
+                    "piezoelectric_tensor": {
+                        "first": [
+                            "在这里填写 first (数值型)",
+                            "在这里填写 first (数值型)"
+                        ],
+                        "second": [
+                            "在这里填写 second (数值型)",
+                            "在这里填写 second (数值型)"
+                        ],
+                        "third": [
+                            "在这里填写 third (数值型)",
+                            "在这里填写 third (数值型)"
+                        ]
+                    },
+                    "v_max": [
+                        "在这里填写 v_max (数值型)",
+                        "在这里填写 v_max (数值型)"
+                    ]
+                },
+                "diel": {
+                    "e_electronic": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        }
+                    ],
+                    "e_total": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        }
+                    ],
+                    "n": "在这里填写 n (数值型)",
+                    "poly_electronic": "在这里填写 poly_electronic (数值型)",
+                    "poly_total": "在这里填写 poly_total (数值型)"
+                },
+                "full_formula": "在这里填写 full_formula (字符串型)"
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "energy": "在这里填写 energy (数值型)",
+                "energy_per_atom": "在这里填写 energy_per_atom (数值型)",
+                "volume": "在这里填写 volume (数值型)",
+                "formation_energy_per_atom": "在这里填写 formation_energy_per_atom (数值型)",
+                "nsites": "在这里填写 nsites (数值型)",
+                "unit_cell_formula": [
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    },
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    }
+                ],
+                "pretty_formula": "在这里填写 pretty_formula (字符串型)",
+                "is_hubbard": "在这里填写 is_hubbard(候选型)，可选值为 true, false 之一",
+                "elements": [
+                    "在这里填写 elements (字符串型)",
+                    "在这里填写 elements (字符串型)"
+                ],
+                "nelements": "在这里填写 nelements (数值型)",
+                "e_above_hull": "在这里填写 e_above_hull (数值型)",
+                "hubbards": [
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    },
+                    {
+                        "element": "在这里填写 element (字符串型)",
+                        "number": "在这里填写 number (数值型)"
+                    }
+                ],
+                "is_compatible": "在这里填写 is_compatible(候选型)，可选值为 true, false 之一",
+                "spacegroup": {
+                    "source": "在这里填写 source (字符串型)",
+                    "symbol": "在这里填写 symbol (字符串型)",
+                    "number": "在这里填写 number (数值型)",
+                    "point_group": "在这里填写 point_group (字符串型)",
+                    "crystal_system": "在这里填写 crystal_system (字符串型)",
+                    "hall": "在这里填写 hall (字符串型)"
+                },
+                "task_ids": [
+                    "在这里填写 task_ids (字符串型)",
+                    "在这里填写 task_ids (字符串型)"
+                ],
+                "band_gap": "在这里填写 band_gap (数值型)",
+                "density": "在这里填写 density (数值型)",
+                "icsd_id": "在这里填写 icsd_id (数值型)",
+                "icsd_ids": [
+                    "在这里填写 icsd_ids (数值型)",
+                    "在这里填写 icsd_ids (数值型)"
+                ],
+                "cif": "在这里填写 cif (字符串型)",
+                "total_magnetization": "在这里填写 total_magnetization (数值型)",
+                "material_id": "在这里填写 material_id (字符串型)",
+                "oxide_type": "在这里填写 oxide_type (字符串型)",
+                "tags": [
+                    "在这里填写 tags (字符串型)",
+                    "在这里填写 tags (字符串型)"
+                ],
+                "elasticity": {
+                    "G_Reuss": "在这里填写 G_Reuss (数值型)",
+                    "G_VRH": "在这里填写 G_VRH (数值型)",
+                    "G_Voigt": "在这里填写 G_Voigt (数值型)",
+                    "G_Voigt_Reuss_Hill": "在这里填写 G_Voigt_Reuss_Hill (数值型)",
+                    "K_Reuss": "在这里填写 K_Reuss (数值型)",
+                    "K_VRH": "在这里填写 K_VRH (数值型)",
+                    "K_Voigt": "在这里填写 K_Voigt (数值型)",
+                    "K_Voigt_Reuss_Hill": "在这里填写 K_Voigt_Reuss_Hill (数值型)",
+                    "elastic_anisotropy": "在这里填写 elastic_anisotropy (数值型)",
+                    "elastic_tensor": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        }
+                    ],
+                    "homogeneous_poisson": "在这里填写 homogeneous_poisson (数值型)",
+                    "poisson_ratio": "在这里填写 poisson_ratio (数值型)",
+                    "universal_anisotropy": "在这里填写 universal_anisotropy (数值型)",
+                    "elastic_tensor_original": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        }
+                    ],
+                    "compliance_tensor": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)",
+                            "四": "在这里填写 四 (数值型)",
+                            "五": "在这里填写 五 (数值型)",
+                            "六": "在这里填写 六 (数值型)"
+                        }
+                    ],
+                    "warnings": [
+                        "在这里填写 warnings (字符串型)",
+                        "在这里填写 warnings (字符串型)"
+                    ],
+                    "nsites": "在这里填写 nsites (数值型)"
+                },
+                "piezo": {
+                    "eij_max": "在这里填写 eij_max (数值型)",
+                    "piezoelectric_tensor": {
+                        "first": [
+                            "在这里填写 first (数值型)",
+                            "在这里填写 first (数值型)"
+                        ],
+                        "second": [
+                            "在这里填写 second (数值型)",
+                            "在这里填写 second (数值型)"
+                        ],
+                        "third": [
+                            "在这里填写 third (数值型)",
+                            "在这里填写 third (数值型)"
+                        ]
+                    },
+                    "v_max": [
+                        "在这里填写 v_max (数值型)",
+                        "在这里填写 v_max (数值型)"
+                    ]
+                },
+                "diel": {
+                    "e_electronic": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        }
+                    ],
+                    "e_total": [
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        },
+                        {
+                            "一": "在这里填写 一 (数值型)",
+                            "二": "在这里填写 二 (数值型)",
+                            "三": "在这里填写 三 (数值型)"
+                        }
+                    ],
+                    "n": "在这里填写 n (数值型)",
+                    "poly_electronic": "在这里填写 poly_electronic (数值型)",
+                    "poly_total": "在这里填写 poly_total (数值型)"
+                },
+                "full_formula": "在这里填写 full_formula (字符串型)"
+            }
+        }
+    ]
+}

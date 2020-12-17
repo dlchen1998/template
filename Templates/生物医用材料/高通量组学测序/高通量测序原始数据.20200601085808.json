@@ -1,0 +1,222 @@
+{
+    "template": {
+        "_id": 464,
+        "Raw_Sequence_ID": {
+            "_type": "字符串型"
+        },
+        "Organisms": {
+            "_type": "字符串型"
+        },
+        "cell type": {
+            "_type": "字符串型"
+        },
+        "resolution": {
+            "_type": "字符串型"
+        },
+        "genome": {
+            "_type": "字符串型"
+        },
+        "process technology": {
+            "_type": "容器型",
+            "process technology name": {
+                "_type": "字符串型"
+            },
+            "process": {
+                "_type": "表格型",
+                "step number": {
+                    "_type": "字符串型"
+                },
+                "process": {
+                    "_type": "字符串型"
+                }
+            }
+        },
+        "Contact name": {
+            "_type": "容器型",
+            "E-mail": {
+                "_type": "字符串型"
+            },
+            "Organization name": {
+                "_type": "字符串型"
+            },
+            "Department": {
+                "_type": "字符串型"
+            },
+            "Lab": {
+                "_type": "字符串型"
+            },
+            "Street address": {
+                "_type": "字符串型"
+            },
+            "City": {
+                "_type": "字符串型"
+            },
+            "State/province": {
+                "_type": "字符串型"
+            },
+            "ZIP/Postal code": {
+                "_type": "字符串型"
+            },
+            "Country": {
+                "_type": "字符串型"
+            }
+        },
+        "rawdata": {
+            "_type": "表格型",
+            "Isogenic replicate": {
+                "_type": "字符串型"
+            },
+            "RawDataName": {
+                "_type": "字符串型"
+            },
+            "Library": {
+                "_type": "字符串型"
+            },
+            "Run type": {
+                "_type": "字符串型"
+            },
+            "RawDataFile": {
+                "_type": "文件"
+            },
+            "File type/resource": {
+                "_type": "字符串型"
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Raw_Sequence_ID": "在这里填写 Raw_Sequence_ID (字符串型)",
+                "Organisms": "在这里填写 Organisms (字符串型)",
+                "cell type": "在这里填写 cell type (字符串型)",
+                "resolution": "在这里填写 resolution (字符串型)",
+                "genome": "在这里填写 genome (字符串型)",
+                "process technology": {
+                    "process technology name": "在这里填写 process technology name (字符串型)",
+                    "process": [
+                        {
+                            "step number": "在这里填写 step number (字符串型)",
+                            "process": "在这里填写 process (字符串型)"
+                        },
+                        {
+                            "step number": "在这里填写 step number (字符串型)",
+                            "process": "在这里填写 process (字符串型)"
+                        }
+                    ]
+                },
+                "Contact name": {
+                    "E-mail": "在这里填写 E-mail (字符串型)",
+                    "Organization name": "在这里填写 Organization name (字符串型)",
+                    "Department": "在这里填写 Department (字符串型)",
+                    "Lab": "在这里填写 Lab (字符串型)",
+                    "Street address": "在这里填写 Street address (字符串型)",
+                    "City": "在这里填写 City (字符串型)",
+                    "State/province": "在这里填写 State/province (字符串型)",
+                    "ZIP/Postal code": "在这里填写 ZIP/Postal code (字符串型)",
+                    "Country": "在这里填写 Country (字符串型)"
+                },
+                "rawdata": [
+                    {
+                        "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                        "RawDataName": "在这里填写 RawDataName (字符串型)",
+                        "Library": "在这里填写 Library (字符串型)",
+                        "Run type": "在这里填写 Run type (字符串型)",
+                        "RawDataFile": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "File type/resource": "在这里填写 File type/resource (字符串型)"
+                    },
+                    {
+                        "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                        "RawDataName": "在这里填写 RawDataName (字符串型)",
+                        "Library": "在这里填写 Library (字符串型)",
+                        "Run type": "在这里填写 Run type (字符串型)",
+                        "RawDataFile": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "File type/resource": "在这里填写 File type/resource (字符串型)"
+                    }
+                ]
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Raw_Sequence_ID": "在这里填写 Raw_Sequence_ID (字符串型)",
+                "Organisms": "在这里填写 Organisms (字符串型)",
+                "cell type": "在这里填写 cell type (字符串型)",
+                "resolution": "在这里填写 resolution (字符串型)",
+                "genome": "在这里填写 genome (字符串型)",
+                "process technology": {
+                    "process technology name": "在这里填写 process technology name (字符串型)",
+                    "process": [
+                        {
+                            "step number": "在这里填写 step number (字符串型)",
+                            "process": "在这里填写 process (字符串型)"
+                        },
+                        {
+                            "step number": "在这里填写 step number (字符串型)",
+                            "process": "在这里填写 process (字符串型)"
+                        }
+                    ]
+                },
+                "Contact name": {
+                    "E-mail": "在这里填写 E-mail (字符串型)",
+                    "Organization name": "在这里填写 Organization name (字符串型)",
+                    "Department": "在这里填写 Department (字符串型)",
+                    "Lab": "在这里填写 Lab (字符串型)",
+                    "Street address": "在这里填写 Street address (字符串型)",
+                    "City": "在这里填写 City (字符串型)",
+                    "State/province": "在这里填写 State/province (字符串型)",
+                    "ZIP/Postal code": "在这里填写 ZIP/Postal code (字符串型)",
+                    "Country": "在这里填写 Country (字符串型)"
+                },
+                "rawdata": [
+                    {
+                        "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                        "RawDataName": "在这里填写 RawDataName (字符串型)",
+                        "Library": "在这里填写 Library (字符串型)",
+                        "Run type": "在这里填写 Run type (字符串型)",
+                        "RawDataFile": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "File type/resource": "在这里填写 File type/resource (字符串型)"
+                    },
+                    {
+                        "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                        "RawDataName": "在这里填写 RawDataName (字符串型)",
+                        "Library": "在这里填写 Library (字符串型)",
+                        "Run type": "在这里填写 Run type (字符串型)",
+                        "RawDataFile": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "File type/resource": "在这里填写 File type/resource (字符串型)"
+                    }
+                ]
+            }
+        }
+    ]
+}

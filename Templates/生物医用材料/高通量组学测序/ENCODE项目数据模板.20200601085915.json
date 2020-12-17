@@ -1,0 +1,512 @@
+{
+    "template": {
+        "_id": 391,
+        "Summary": {
+            "_type": "容器型",
+            "Status": {
+                "_type": "字符串型"
+            },
+            "Assay": {
+                "_type": "字符串型"
+            },
+            "Biosample summary": {
+                "_type": "字符串型"
+            },
+            "Biosample Type": {
+                "_type": "字符串型"
+            },
+            "Replication type": {
+                "_type": "字符串型"
+            },
+            "Description": {
+                "_type": "字符串型"
+            },
+            "Nucleic acid type": {
+                "_type": "字符串型"
+            },
+            "Library starting quantity": {
+                "_type": "字符串型"
+            },
+            "Size range": {
+                "_type": "字符串型"
+            },
+            "Fragmentation methods": {
+                "_type": "字符串型"
+            },
+            "Size selection method": {
+                "_type": "字符串型"
+            },
+            "Strand specificity": {
+                "_type": "字符串型"
+            },
+            "Platform": {
+                "_type": "字符串型"
+            }
+        },
+        "Attribution": {
+            "_type": "容器型",
+            "Lab": {
+                "_type": "字符串型"
+            },
+            "Award": {
+                "_type": "字符串型"
+            },
+            "Project": {
+                "_type": "字符串型"
+            },
+            "External resources": {
+                "_type": "字符串型"
+            },
+            "Aliases": {
+                "_type": "字符串型"
+            },
+            "Date submitted": {
+                "_type": "字符串型"
+            },
+            "Date released": {
+                "_type": "字符串型"
+            }
+        },
+        "Isogenic replicates": {
+            "_type": "容器型",
+            "Isogenic replicate": {
+                "_type": "字符串型"
+            },
+            "Technical replicate": {
+                "_type": "字符串型"
+            },
+            "Summary": {
+                "_type": "字符串型"
+            },
+            "Biosample": {
+                "_type": "字符串型"
+            },
+            "Library": {
+                "_type": "字符串型"
+            }
+        },
+        "File details": {
+            "_type": "容器型",
+            "Raw sequencing data": {
+                "_type": "表格型",
+                "Isogenic replicate": {
+                    "_type": "字符串型"
+                },
+                "Library": {
+                    "_type": "字符串型"
+                },
+                "Accession": {
+                    "_type": "文件"
+                },
+                "File type": {
+                    "_type": "字符串型"
+                },
+                "Run type": {
+                    "_type": "字符串型"
+                },
+                "Read": {
+                    "_type": "数值型"
+                },
+                "Lab": {
+                    "_type": "字符串型"
+                },
+                "Date added": {
+                    "_type": "字符串型"
+                },
+                "File size": {
+                    "_type": "字符串型"
+                },
+                "Audit status": {
+                    "_type": "字符串型"
+                },
+                "File status": {
+                    "_type": "字符串型"
+                }
+            },
+            "Processed data": {
+                "_type": "表格型",
+                "Visualize": {
+                    "_type": "字符串型"
+                },
+                "Accession": {
+                    "_type": "文件"
+                },
+                "File type": {
+                    "_type": "字符串型"
+                },
+                "Output type": {
+                    "_type": "字符串型"
+                },
+                "Isogenic replicate": {
+                    "_type": "字符串型"
+                },
+                "Mapping assembly": {
+                    "_type": "文件"
+                },
+                "Lab": {
+                    "_type": "文件"
+                },
+                "Date added": {
+                    "_type": "文件"
+                },
+                "File size": {
+                    "_type": "文件"
+                },
+                "Audit status": {
+                    "_type": "文件"
+                },
+                "File status": {
+                    "_type": "文件"
+                }
+            }
+        },
+        "Documents": {
+            "_type": "数组型",
+            "Documents": {
+                "_type": "容器型",
+                "Description": {
+                    "_type": "字符串型"
+                },
+                "Standards Document": {
+                    "_type": "文件"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Summary": {
+                    "Status": "在这里填写 Status (字符串型)",
+                    "Assay": "在这里填写 Assay (字符串型)",
+                    "Biosample summary": "在这里填写 Biosample summary (字符串型)",
+                    "Biosample Type": "在这里填写 Biosample Type (字符串型)",
+                    "Replication type": "在这里填写 Replication type (字符串型)",
+                    "Description": "在这里填写 Description (字符串型)",
+                    "Nucleic acid type": "在这里填写 Nucleic acid type (字符串型)",
+                    "Library starting quantity": "在这里填写 Library starting quantity (字符串型)",
+                    "Size range": "在这里填写 Size range (字符串型)",
+                    "Fragmentation methods": "在这里填写 Fragmentation methods (字符串型)",
+                    "Size selection method": "在这里填写 Size selection method (字符串型)",
+                    "Strand specificity": "在这里填写 Strand specificity (字符串型)",
+                    "Platform": "在这里填写 Platform (字符串型)"
+                },
+                "Attribution": {
+                    "Lab": "在这里填写 Lab (字符串型)",
+                    "Award": "在这里填写 Award (字符串型)",
+                    "Project": "在这里填写 Project (字符串型)",
+                    "External resources": "在这里填写 External resources (字符串型)",
+                    "Aliases": "在这里填写 Aliases (字符串型)",
+                    "Date submitted": "在这里填写 Date submitted (字符串型)",
+                    "Date released": "在这里填写 Date released (字符串型)"
+                },
+                "Isogenic replicates": {
+                    "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                    "Technical replicate": "在这里填写 Technical replicate (字符串型)",
+                    "Summary": "在这里填写 Summary (字符串型)",
+                    "Biosample": "在这里填写 Biosample (字符串型)",
+                    "Library": "在这里填写 Library (字符串型)"
+                },
+                "File details": {
+                    "Raw sequencing data": [
+                        {
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Library": "在这里填写 Library (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Run type": "在这里填写 Run type (字符串型)",
+                            "Read": "在这里填写 Read (数值型)",
+                            "Lab": "在这里填写 Lab (字符串型)",
+                            "Date added": "在这里填写 Date added (字符串型)",
+                            "File size": "在这里填写 File size (字符串型)",
+                            "Audit status": "在这里填写 Audit status (字符串型)",
+                            "File status": "在这里填写 File status (字符串型)"
+                        },
+                        {
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Library": "在这里填写 Library (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Run type": "在这里填写 Run type (字符串型)",
+                            "Read": "在这里填写 Read (数值型)",
+                            "Lab": "在这里填写 Lab (字符串型)",
+                            "Date added": "在这里填写 Date added (字符串型)",
+                            "File size": "在这里填写 File size (字符串型)",
+                            "Audit status": "在这里填写 Audit status (字符串型)",
+                            "File status": "在这里填写 File status (字符串型)"
+                        }
+                    ],
+                    "Processed data": [
+                        {
+                            "Visualize": "在这里填写 Visualize (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Output type": "在这里填写 Output type (字符串型)",
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Mapping assembly": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Lab": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Date added": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File size": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Audit status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ]
+                        },
+                        {
+                            "Visualize": "在这里填写 Visualize (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Output type": "在这里填写 Output type (字符串型)",
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Mapping assembly": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Lab": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Date added": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File size": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Audit status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ]
+                        }
+                    ]
+                },
+                "Documents": [
+                    {
+                        "Description": "在这里填写 Description (字符串型)",
+                        "Standards Document": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ]
+                    },
+                    {
+                        "Description": "在这里填写 Description (字符串型)",
+                        "Standards Document": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Summary": {
+                    "Status": "在这里填写 Status (字符串型)",
+                    "Assay": "在这里填写 Assay (字符串型)",
+                    "Biosample summary": "在这里填写 Biosample summary (字符串型)",
+                    "Biosample Type": "在这里填写 Biosample Type (字符串型)",
+                    "Replication type": "在这里填写 Replication type (字符串型)",
+                    "Description": "在这里填写 Description (字符串型)",
+                    "Nucleic acid type": "在这里填写 Nucleic acid type (字符串型)",
+                    "Library starting quantity": "在这里填写 Library starting quantity (字符串型)",
+                    "Size range": "在这里填写 Size range (字符串型)",
+                    "Fragmentation methods": "在这里填写 Fragmentation methods (字符串型)",
+                    "Size selection method": "在这里填写 Size selection method (字符串型)",
+                    "Strand specificity": "在这里填写 Strand specificity (字符串型)",
+                    "Platform": "在这里填写 Platform (字符串型)"
+                },
+                "Attribution": {
+                    "Lab": "在这里填写 Lab (字符串型)",
+                    "Award": "在这里填写 Award (字符串型)",
+                    "Project": "在这里填写 Project (字符串型)",
+                    "External resources": "在这里填写 External resources (字符串型)",
+                    "Aliases": "在这里填写 Aliases (字符串型)",
+                    "Date submitted": "在这里填写 Date submitted (字符串型)",
+                    "Date released": "在这里填写 Date released (字符串型)"
+                },
+                "Isogenic replicates": {
+                    "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                    "Technical replicate": "在这里填写 Technical replicate (字符串型)",
+                    "Summary": "在这里填写 Summary (字符串型)",
+                    "Biosample": "在这里填写 Biosample (字符串型)",
+                    "Library": "在这里填写 Library (字符串型)"
+                },
+                "File details": {
+                    "Raw sequencing data": [
+                        {
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Library": "在这里填写 Library (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Run type": "在这里填写 Run type (字符串型)",
+                            "Read": "在这里填写 Read (数值型)",
+                            "Lab": "在这里填写 Lab (字符串型)",
+                            "Date added": "在这里填写 Date added (字符串型)",
+                            "File size": "在这里填写 File size (字符串型)",
+                            "Audit status": "在这里填写 Audit status (字符串型)",
+                            "File status": "在这里填写 File status (字符串型)"
+                        },
+                        {
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Library": "在这里填写 Library (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Run type": "在这里填写 Run type (字符串型)",
+                            "Read": "在这里填写 Read (数值型)",
+                            "Lab": "在这里填写 Lab (字符串型)",
+                            "Date added": "在这里填写 Date added (字符串型)",
+                            "File size": "在这里填写 File size (字符串型)",
+                            "Audit status": "在这里填写 Audit status (字符串型)",
+                            "File status": "在这里填写 File status (字符串型)"
+                        }
+                    ],
+                    "Processed data": [
+                        {
+                            "Visualize": "在这里填写 Visualize (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Output type": "在这里填写 Output type (字符串型)",
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Mapping assembly": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Lab": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Date added": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File size": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Audit status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ]
+                        },
+                        {
+                            "Visualize": "在这里填写 Visualize (字符串型)",
+                            "Accession": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File type": "在这里填写 File type (字符串型)",
+                            "Output type": "在这里填写 Output type (字符串型)",
+                            "Isogenic replicate": "在这里填写 Isogenic replicate (字符串型)",
+                            "Mapping assembly": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Lab": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Date added": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File size": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "Audit status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ],
+                            "File status": [
+                                "***此处填写第1个file的路径***",
+                                "***此处填写第2个file的路径***"
+                            ]
+                        }
+                    ]
+                },
+                "Documents": [
+                    {
+                        "Description": "在这里填写 Description (字符串型)",
+                        "Standards Document": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ]
+                    },
+                    {
+                        "Description": "在这里填写 Description (字符串型)",
+                        "Standards Document": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

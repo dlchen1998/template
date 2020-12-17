@@ -1,0 +1,385 @@
+{
+    "template": {
+        "_id": 672,
+        "材料体系": {
+            "_type": "字符串型"
+        },
+        "结构": {
+            "_type": "容器型",
+            "CONTCAR": {
+                "_type": "文件"
+            },
+            "lattice constants": {
+                "_type": "字符串型"
+            },
+            "lattice mismatch ": {
+                "_type": "字符串型"
+            }
+        },
+        "能量": {
+            "_type": "容器型",
+            "total energy": {
+                "_type": "数值型",
+                "_unit": "eV"
+            },
+            "formation energy": {
+                "_type": "数值型",
+                "_unit": "eV"
+            },
+            "adsorption energy ": {
+                "_type": "数值型",
+                "_unit": "eV"
+            },
+            "exfoliation energy ": {
+                "_type": "数值型",
+                "_unit": "eV"
+            },
+            "migration barrier": {
+                "_type": "数值型",
+                "_unit": "eV"
+            }
+        },
+        "电子结构": {
+            "_type": "容器型",
+            "band structures ": {
+                "_type": "图片型"
+            },
+            "DOS": {
+                "_type": "图片型"
+            },
+            "band gaps": {
+                "_type": "数值型",
+                "_unit": "eV"
+            },
+            "electron density": {
+                "_type": "字符串型"
+            },
+            "charge density": {
+                "_type": "字符串型"
+            },
+            "ELF": {
+                "_type": "图片型"
+            }
+        },
+        "电性能": {
+            "_type": "容器型",
+            "electrical conductivity ": {
+                "_type": "数值型",
+                "_unit": "s/m"
+            },
+            "dielectric constant ": {
+                "_type": "数值型",
+                "_unit": "F/m"
+            },
+            "charge transfer": {
+                "_type": "字符串型"
+            },
+            "electrostatic potential": {
+                "_type": "数值型",
+                "_unit": "kj/mol"
+            }
+        },
+        "弹性参量": {
+            "_type": "表格型",
+            "name": {
+                "_type": "字符串型"
+            },
+            "elastic constants": {
+                "_type": "数值型"
+            },
+            "bulk modulus B ": {
+                "_type": "数值型",
+                "_unit": "MPa"
+            },
+            "shear modulus G": {
+                "_type": "数值型",
+                "_unit": "MPa"
+            },
+            "Yang's modulus E": {
+                "_type": "数值型",
+                "_unit": "MPa"
+            },
+            "Poission’s ratio (v) ": {
+                "_type": "数值型"
+            }
+        },
+        "热性能": {
+            "_type": "容器型",
+            "热电性质": {
+                "_type": "容器型",
+                "Seebeck coeﬃcient": {
+                    "_type": "数值型"
+                },
+                "electronic thermal conductivity": {
+                    "_type": "数值型",
+                    "_unit": "s/m"
+                },
+                "lattice thermal conductivity": {
+                    "_type": "数值型",
+                    "_unit": "s/m"
+                },
+                "ZT（热电转换效率）": {
+                    "_type": "数值型"
+                },
+                "COHP(晶体轨道哈密顿布居数)": {
+                    "_type": "数值型"
+                }
+            },
+            "其他": {
+                "_type": "容器型",
+                "Debye temperature": {
+                    "_type": "数值型",
+                    "_unit": "K"
+                },
+                "Curie temperature ": {
+                    "_type": "数值型",
+                    "_unit": "K"
+                },
+                "thermal expansion coeﬃcient": {
+                    "_type": "数值型"
+                }
+            }
+        },
+        "光学性质": {
+            "_type": "容器型",
+            "absorption coeﬃcients": {
+                "_type": "数值型"
+            },
+            "absorption spectra ": {
+                "_type": "图片型"
+            },
+            "其他（请填写参数及数值）": {
+                "_type": "字符串型"
+            }
+        },
+        "磁性能": {
+            "_type": "容器型",
+            "magnetic moments ": {
+                "_type": "数值型",
+                "_unit": "μB"
+            },
+            "其他（请填写参数及数值）": {
+                "_type": "字符串型"
+            }
+        },
+        "其他": {
+            "_type": "容器型",
+            "phonon dispersion curves ": {
+                "_type": "图片型"
+            },
+            "其他（请填写参数及数值）": {
+                "_type": "字符串型"
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "材料体系": "在这里填写 材料体系 (字符串型)",
+                "结构": {
+                    "CONTCAR": [
+                        "***此处填写第1个file的路径***",
+                        "***此处填写第2个file的路径***"
+                    ],
+                    "lattice constants": "在这里填写 lattice constants (字符串型)",
+                    "lattice mismatch ": "在这里填写 lattice mismatch  (字符串型)"
+                },
+                "能量": {
+                    "total energy": "在这里填写 total energy (数值型)",
+                    "formation energy": "在这里填写 formation energy (数值型)",
+                    "adsorption energy ": "在这里填写 adsorption energy  (数值型)",
+                    "exfoliation energy ": "在这里填写 exfoliation energy  (数值型)",
+                    "migration barrier": "在这里填写 migration barrier (数值型)"
+                },
+                "电子结构": {
+                    "band structures ": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "DOS": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "band gaps": "在这里填写 band gaps (数值型)",
+                    "electron density": "在这里填写 electron density (字符串型)",
+                    "charge density": "在这里填写 charge density (字符串型)",
+                    "ELF": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ]
+                },
+                "电性能": {
+                    "electrical conductivity ": "在这里填写 electrical conductivity  (数值型)",
+                    "dielectric constant ": "在这里填写 dielectric constant  (数值型)",
+                    "charge transfer": "在这里填写 charge transfer (字符串型)",
+                    "electrostatic potential": "在这里填写 electrostatic potential (数值型)"
+                },
+                "弹性参量": [
+                    {
+                        "name": "在这里填写 name (字符串型)",
+                        "elastic constants": "在这里填写 elastic constants (数值型)",
+                        "bulk modulus B ": "在这里填写 bulk modulus B  (数值型)",
+                        "shear modulus G": "在这里填写 shear modulus G (数值型)",
+                        "Yang's modulus E": "在这里填写 Yang's modulus E (数值型)",
+                        "Poission’s ratio (v) ": "在这里填写 Poission’s ratio (v)  (数值型)"
+                    },
+                    {
+                        "name": "在这里填写 name (字符串型)",
+                        "elastic constants": "在这里填写 elastic constants (数值型)",
+                        "bulk modulus B ": "在这里填写 bulk modulus B  (数值型)",
+                        "shear modulus G": "在这里填写 shear modulus G (数值型)",
+                        "Yang's modulus E": "在这里填写 Yang's modulus E (数值型)",
+                        "Poission’s ratio (v) ": "在这里填写 Poission’s ratio (v)  (数值型)"
+                    }
+                ],
+                "热性能": {
+                    "热电性质": {
+                        "Seebeck coeﬃcient": "在这里填写 Seebeck coeﬃcient (数值型)",
+                        "electronic thermal conductivity": "在这里填写 electronic thermal conductivity (数值型)",
+                        "lattice thermal conductivity": "在这里填写 lattice thermal conductivity (数值型)",
+                        "ZT（热电转换效率）": "在这里填写 ZT（热电转换效率） (数值型)",
+                        "COHP(晶体轨道哈密顿布居数)": "在这里填写 COHP(晶体轨道哈密顿布居数) (数值型)"
+                    },
+                    "其他": {
+                        "Debye temperature": "在这里填写 Debye temperature (数值型)",
+                        "Curie temperature ": "在这里填写 Curie temperature  (数值型)",
+                        "thermal expansion coeﬃcient": "在这里填写 thermal expansion coeﬃcient (数值型)"
+                    }
+                },
+                "光学性质": {
+                    "absorption coeﬃcients": "在这里填写 absorption coeﬃcients (数值型)",
+                    "absorption spectra ": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "其他（请填写参数及数值）": "在这里填写 其他（请填写参数及数值） (字符串型)"
+                },
+                "磁性能": {
+                    "magnetic moments ": "在这里填写 magnetic moments  (数值型)",
+                    "其他（请填写参数及数值）": "在这里填写 其他（请填写参数及数值） (字符串型)"
+                },
+                "其他": {
+                    "phonon dispersion curves ": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "其他（请填写参数及数值）": "在这里填写 其他（请填写参数及数值） (字符串型)"
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "材料体系": "在这里填写 材料体系 (字符串型)",
+                "结构": {
+                    "CONTCAR": [
+                        "***此处填写第1个file的路径***",
+                        "***此处填写第2个file的路径***"
+                    ],
+                    "lattice constants": "在这里填写 lattice constants (字符串型)",
+                    "lattice mismatch ": "在这里填写 lattice mismatch  (字符串型)"
+                },
+                "能量": {
+                    "total energy": "在这里填写 total energy (数值型)",
+                    "formation energy": "在这里填写 formation energy (数值型)",
+                    "adsorption energy ": "在这里填写 adsorption energy  (数值型)",
+                    "exfoliation energy ": "在这里填写 exfoliation energy  (数值型)",
+                    "migration barrier": "在这里填写 migration barrier (数值型)"
+                },
+                "电子结构": {
+                    "band structures ": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "DOS": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "band gaps": "在这里填写 band gaps (数值型)",
+                    "electron density": "在这里填写 electron density (字符串型)",
+                    "charge density": "在这里填写 charge density (字符串型)",
+                    "ELF": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ]
+                },
+                "电性能": {
+                    "electrical conductivity ": "在这里填写 electrical conductivity  (数值型)",
+                    "dielectric constant ": "在这里填写 dielectric constant  (数值型)",
+                    "charge transfer": "在这里填写 charge transfer (字符串型)",
+                    "electrostatic potential": "在这里填写 electrostatic potential (数值型)"
+                },
+                "弹性参量": [
+                    {
+                        "name": "在这里填写 name (字符串型)",
+                        "elastic constants": "在这里填写 elastic constants (数值型)",
+                        "bulk modulus B ": "在这里填写 bulk modulus B  (数值型)",
+                        "shear modulus G": "在这里填写 shear modulus G (数值型)",
+                        "Yang's modulus E": "在这里填写 Yang's modulus E (数值型)",
+                        "Poission’s ratio (v) ": "在这里填写 Poission’s ratio (v)  (数值型)"
+                    },
+                    {
+                        "name": "在这里填写 name (字符串型)",
+                        "elastic constants": "在这里填写 elastic constants (数值型)",
+                        "bulk modulus B ": "在这里填写 bulk modulus B  (数值型)",
+                        "shear modulus G": "在这里填写 shear modulus G (数值型)",
+                        "Yang's modulus E": "在这里填写 Yang's modulus E (数值型)",
+                        "Poission’s ratio (v) ": "在这里填写 Poission’s ratio (v)  (数值型)"
+                    }
+                ],
+                "热性能": {
+                    "热电性质": {
+                        "Seebeck coeﬃcient": "在这里填写 Seebeck coeﬃcient (数值型)",
+                        "electronic thermal conductivity": "在这里填写 electronic thermal conductivity (数值型)",
+                        "lattice thermal conductivity": "在这里填写 lattice thermal conductivity (数值型)",
+                        "ZT（热电转换效率）": "在这里填写 ZT（热电转换效率） (数值型)",
+                        "COHP(晶体轨道哈密顿布居数)": "在这里填写 COHP(晶体轨道哈密顿布居数) (数值型)"
+                    },
+                    "其他": {
+                        "Debye temperature": "在这里填写 Debye temperature (数值型)",
+                        "Curie temperature ": "在这里填写 Curie temperature  (数值型)",
+                        "thermal expansion coeﬃcient": "在这里填写 thermal expansion coeﬃcient (数值型)"
+                    }
+                },
+                "光学性质": {
+                    "absorption coeﬃcients": "在这里填写 absorption coeﬃcients (数值型)",
+                    "absorption spectra ": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "其他（请填写参数及数值）": "在这里填写 其他（请填写参数及数值） (字符串型)"
+                },
+                "磁性能": {
+                    "magnetic moments ": "在这里填写 magnetic moments  (数值型)",
+                    "其他（请填写参数及数值）": "在这里填写 其他（请填写参数及数值） (字符串型)"
+                },
+                "其他": {
+                    "phonon dispersion curves ": [
+                        "***此处填写第1个image的路径***",
+                        "***此处填写第2个image的路径***"
+                    ],
+                    "其他（请填写参数及数值）": "在这里填写 其他（请填写参数及数值） (字符串型)"
+                }
+            }
+        }
+    ]
+}

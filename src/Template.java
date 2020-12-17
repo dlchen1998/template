@@ -42,15 +42,17 @@ public class Template{
      * @MethodName: Template
      * @Return
      */
-    public Template(String templatename){
+    public Template(String templatePath){
 
-        this.templateName = templatename;
+        List<String> path = Arrays.asList(templatePath.split("\\\\"));
+        String name = path.get(path.size()-1);
+        this.templateName = name.split("\\.")[0];
         this.idxs = new HashMap<>();
         this.fields = new HashMap<>();
         this.type = new HashMap<>();
         this.arrays = new HashMap<>();
 
-        JSONObject origianlJson = JSON.parseObject(readTemplate());
+        JSONObject origianlJson = JSON.parseObject(readTemplate(templatePath));
         this.leaf = transformTemplate(origianlJson.getJSONObject("template"), this.templateName,0,"_notarray");
 
     }
@@ -61,10 +63,10 @@ public class Template{
      * @MethodName: readTemplate
      * @Return java.lang.String
      */
-    String readTemplate(){
+    String readTemplate(String templatePath){
 
         String laststr = "";
-        try( FileInputStream fileinputstream = new FileInputStream("./templates/"+this.templateName + ".json");
+        try( FileInputStream fileinputstream = new FileInputStream(templatePath);
              InputStreamReader inputstreamreader = new InputStreamReader(fileinputstream, "UTF-8");
              BufferedReader reader = new BufferedReader(inputstreamreader)) {
 
@@ -219,6 +221,13 @@ public class Template{
     }
 
     /**
+     * 获取模板名
+     * */
+    public String getTemplateName(){
+        return templateName;
+    }
+
+    /**
      * 获取此模板第一层叶子节点数量
      * @MethodName: getLeaf
      * @Return int
@@ -267,9 +276,6 @@ public class Template{
 
         return this.arrays;
     }
-
-
-
 
 
 }

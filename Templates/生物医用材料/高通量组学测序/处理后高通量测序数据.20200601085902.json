@@ -1,0 +1,119 @@
+{
+    "template": {
+        "_id": 465,
+        "Processed_data_ID": {
+            "_type": "字符串型"
+        },
+        "Raw_Sequence_ID": {
+            "_type": "字符串型"
+        },
+        "Data processing flow description": {
+            "_type": "表格型",
+            "Step_Number": {
+                "_type": "字符串型"
+            },
+            "description": {
+                "_type": "字符串型"
+            },
+            "Processed_File": {
+                "_type": "文件"
+            },
+            "data visualization": {
+                "_type": "图片型"
+            },
+            "Data analysis conclusion": {
+                "_type": "字符串型"
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Processed_data_ID": "在这里填写 Processed_data_ID (字符串型)",
+                "Raw_Sequence_ID": "在这里填写 Raw_Sequence_ID (字符串型)",
+                "Data processing flow description": [
+                    {
+                        "Step_Number": "在这里填写 Step_Number (字符串型)",
+                        "description": "在这里填写 description (字符串型)",
+                        "Processed_File": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "data visualization": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Data analysis conclusion": "在这里填写 Data analysis conclusion (字符串型)"
+                    },
+                    {
+                        "Step_Number": "在这里填写 Step_Number (字符串型)",
+                        "description": "在这里填写 description (字符串型)",
+                        "Processed_File": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "data visualization": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Data analysis conclusion": "在这里填写 Data analysis conclusion (字符串型)"
+                    }
+                ]
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Processed_data_ID": "在这里填写 Processed_data_ID (字符串型)",
+                "Raw_Sequence_ID": "在这里填写 Raw_Sequence_ID (字符串型)",
+                "Data processing flow description": [
+                    {
+                        "Step_Number": "在这里填写 Step_Number (字符串型)",
+                        "description": "在这里填写 description (字符串型)",
+                        "Processed_File": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "data visualization": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Data analysis conclusion": "在这里填写 Data analysis conclusion (字符串型)"
+                    },
+                    {
+                        "Step_Number": "在这里填写 Step_Number (字符串型)",
+                        "description": "在这里填写 description (字符串型)",
+                        "Processed_File": [
+                            "***此处填写第1个file的路径***",
+                            "***此处填写第2个file的路径***"
+                        ],
+                        "data visualization": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Data analysis conclusion": "在这里填写 Data analysis conclusion (字符串型)"
+                    }
+                ]
+            }
+        }
+    ]
+}

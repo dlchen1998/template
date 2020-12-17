@@ -3,8 +3,7 @@
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-//import javafx.util.Pair;
-//import scu.mge.mdb.template.Template;
+
 
 import java.util.*;
 
@@ -44,6 +43,7 @@ public class Schema {
     private Map<String, Integer> type;//字段名 --> 类型
     private int leaf;//Record 第一层长度
     private Map<String, Integer> arrays;//数组字段名 --> 数组元素叶子节点个数
+    private Map<String,Integer> offsets;
 
     /**
      * 无参构造
@@ -57,10 +57,12 @@ public class Schema {
      * 构造函数（通过template）
      * @MethodName: Schema
      */
-    public Schema(String name) {
-        Template template = new Template(name);
+    public Schema(String path) {
+        Template template = new Template(path);
+        this.offsets = new HashMap<>();
         this.idxs = template.getIdxs();
-        this.schemaName = name;
+        this.schemaName = template.getTemplateName();
+        offsets.put(schemaName,0);
         this.fields = template.getFields();
         this.arrays = template.getArrays();
         this.type = template.getType();
@@ -330,10 +332,42 @@ public class Schema {
     }
 
     /**
+     * 获取当前Schema在join之后的Schema
+     * */
+    public int getOffset(String tableName){
+        return offsets.get(tableName);
+    }
+
+    /**
+     * 获取所有offset
+     * */
+    private Map<String, Integer> getOffsets() {
+        return offsets;
+    }
+
+    /**
+     * 设置Offesets
+     * */
+    private void setOffsets(Map<String, Integer> offsets) {
+        this.offsets = offsets;
+    }
+
+    /**
+     * 针对该Schema，整体后移，增加偏移量
+     * */
+    private Map<String,Integer> incOffsets(int offset){
+        Map<String,Integer> map = new HashMap<>();
+        for(HashMap.Entry<String,Integer> entry: offsets.entrySet()){
+            
+            int o = entry.getValue();
+            map.put(entry.getKey(),o+offset);
+
+        }
+        return map;
+    }
+
+    /**
      * schema做join操作
-     *
-     * @MethodName: joinSchema
-     * @Return Schema
      */
     public Schema joinSchema(Schema s2){
 
@@ -341,17 +375,27 @@ public class Schema {
         result.setSchemaName(schemaName+"_join_"+s2.getSchemaName());
         result.setLeaf(this.leaf+s2.getLeaf());
         int offset = this.leaf;
-
+        
         Map<String, List<Integer>> idxs2 = s2.getIdxs();
-        Map<String, List<Integer>> newidxs = new HashMap<>(); // 字段名 --> 下标
-        Map<List<Integer>, String> newfields = new HashMap<>();// 下标 --> 字段名
+        Map<String, List<Integer>> newIdxs = new HashMap<>(); // 字段名 --> 下标
+        Map<List<Integer>, String> newFields = new HashMap<>();// 下标 --> 字段名
+        Map<String,Integer> newType = new HashMap<>();
+        Map<String,Integer> newOffsets = new HashMap<>();
 
 
+        /**针对作为参数的Schema，需要将其添加到另一个Schema之后，所以需要记录偏移量*/
+        /**将两个Schema的偏移量记录合并*/
+        newOffsets.putAll(offsets);
+        newOffsets.putAll(s2.incOffsets(offset));
+        result.setOffsets(newOffsets);
+
+
+        /**将两个Schema的Idxs合并，作为参数的Schema需要加偏移量*/
         for(HashMap.Entry<String, List<Integer>> entry : idxs.entrySet()) {
             String key = entry.getKey();
             List<Integer> value = entry.getValue();
-            newidxs.put(key,value);
-            newfields.put(value,key);
+            newIdxs.put(key,value);
+            newFields.put(value,key);
         }
 
         for(HashMap.Entry<String, List<Integer>> entry : idxs2.entrySet()) {
@@ -359,53 +403,49 @@ public class Schema {
            ArrayList<Integer> value = (ArrayList<Integer>)entry.getValue();
            ArrayList<Integer> v = (ArrayList<Integer>)value.clone();
            v.set(0,value.get(0)+offset);
-           newidxs.put(key,v);
-           newfields.put(v,key);
+           newIdxs.put(key,v);
+           newFields.put(v,key);
         }
 
-        result.setIdxs(newidxs);
-        result.setFields(newfields);
+        result.setIdxs(newIdxs);
+        result.setFields(newFields);
 
-        Map<String,Integer> newtype = new HashMap<>();
-        newtype.putAll(type);
-        newtype.putAll(s2.getAllType());
 
-        result.setType(newtype);
+        /**将两个Schema的类型定义合并*/
+        newType.putAll(type);
+        newType.putAll(s2.getAllType());
+
+        result.setType(newType);
 
 
         return result;
     }
 
-
-
     /**
      * schema做projection操作
-     *
-     * @MethodName: projectSchema
-     * @Return Schema
      */
     public Schema projectSchema(List<String> rules) {
 
         Schema result = new Schema();
 
-        Map<String, List<Integer>> newidxs = new HashMap<>(); // 字段名 --> 下标
-        Map<List<Integer>, String> newfields = new HashMap<>();// 下标 --> 字段名
-        Map<String,Integer> newtype = new HashMap<>();
+        Map<String, List<Integer>> newIdxs = new HashMap<>(); // 字段名 --> 下标
+        Map<List<Integer>, String> newFields = new HashMap<>();// 下标 --> 字段名
+        Map<String,Integer> newType = new HashMap<>();
 
         for(String rule: rules){
 
             List<Integer> idx = idxs.get(rule);
             int t = type.get(rule);
 
-            newidxs.put(rule,idx);
-            newfields.put(idx,rule);
-            newtype.put(rule,t);
+            newIdxs.put(rule,idx);
+            newFields.put(idx,rule);
+            newType.put(rule,t);
 
         }
 
-        result.setIdxs(newidxs);
-        result.setFields(newfields);
-        result.setType(newtype);
+        result.setIdxs(newIdxs);
+        result.setFields(newFields);
+        result.setType(newType);
 
         return result;
     }

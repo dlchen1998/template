@@ -1,0 +1,1125 @@
+{
+    "template": {
+        "_id": 466,
+        "calculation details": {
+            "_type": "容器型",
+            "auid": {
+                "_type": "字符串型"
+            },
+            "aurl": {
+                "_type": "字符串型"
+            },
+            "code": {
+                "_type": "字符串型"
+            },
+            "prototype": {
+                "_type": "字符串型"
+            },
+            "nspecies": {
+                "_type": "数值型"
+            },
+            "species": {
+                "_type": "字符串型"
+            },
+            "composition": {
+                "_type": "数组型",
+                "composition": {
+                    "_type": "数值型"
+                }
+            },
+            "dft_type": {
+                "_type": "字符串型"
+            },
+            "species_pp_version": {
+                "_type": "字符串型"
+            },
+            "species_pp_ZVAL": {
+                "_type": "数组型",
+                "species_pp_ZVAL": {
+                    "_type": "数值型"
+                }
+            },
+            "ldau_type": {
+                "_type": "数值型"
+            },
+            "ldau_l": {
+                "_type": "数组型",
+                "ldau_l": {
+                    "_type": "数值型"
+                }
+            },
+            "ldau_u": {
+                "_type": "数组型",
+                "ldau_u": {
+                    "_type": "数值型"
+                }
+            },
+            "ldau_j": {
+                "_type": "数组型",
+                "ldau_j": {
+                    "_type": "数值型"
+                }
+            },
+            "calculation_time": {
+                "_type": "数值型",
+                "_unit": "s"
+            },
+            "calculation_memory": {
+                "_type": "数值型",
+                "_unit": "GB"
+            },
+            "calculation_cores": {
+                "_type": "数值型"
+            },
+            "node_CPU_Model": {
+                "_type": "字符串型"
+            },
+            "node_CPU_MHz": {
+                "_type": "数值型",
+                "_unit": "MHz"
+            },
+            "node_CPU_Cores": {
+                "_type": "数值型"
+            },
+            "node_RAM_GB": {
+                "_type": "数值型",
+                "_unit": "GB"
+            },
+            "aflow_version": {
+                "_type": "字符串型"
+            },
+            "catalog": {
+                "_type": "字符串型"
+            },
+            "data_api": {
+                "_type": "字符串型"
+            },
+            "data_source": {
+                "_type": "字符串型"
+            },
+            "loop": {
+                "_type": "数组型",
+                "loop": {
+                    "_type": "字符串型"
+                }
+            },
+            "aflowlib_version": {
+                "_type": "字符串型"
+            },
+            "aflowlib_date": {
+                "_type": "字符串型"
+            },
+            "energy_cutoff": {
+                "_type": "数值型"
+            },
+            "delta_electronic_energy_convergence": {
+                "_type": "数值型"
+            },
+            "delta_electronic_energy_threshold": {
+                "_type": "数值型"
+            },
+            "forces": {
+                "_type": "数值型"
+            },
+            "pressure": {
+                "_type": "数值型"
+            }
+        },
+        "UNRELAXED STRUCTURE": {
+            "_type": "容器型",
+            "Real Space Lattice": {
+                "_type": "容器型",
+                "geometry_orig": {
+                    "_type": "数组型",
+                    "geometry_orig": {
+                        "_type": "数值型"
+                    }
+                },
+                "natoms_orig": {
+                    "_type": "数值型"
+                },
+                "volume_cell_orig": {
+                    "_type": "数值型"
+                },
+                "volume_atom_orig": {
+                    "_type": "数值型"
+                },
+                "density_orig": {
+                    "_type": "数值型"
+                }
+            },
+            "Bravais Lattice of the Crystal": {
+                "_type": "容器型",
+                "spacegroup_orig": {
+                    "_type": "数值型"
+                },
+                "Pearson_symbol_orig": {
+                    "_type": "字符串型"
+                },
+                "Bravais_lattice_orig": {
+                    "_type": "字符串型"
+                },
+                "lattice_variation_orig": {
+                    "_type": "字符串型"
+                },
+                "lattice_system_orig": {
+                    "_type": "字符串型"
+                }
+            },
+            "Point Group of the Crystal": {
+                "_type": "容器型",
+                "crystal_family_orig": {
+                    "_type": "字符串型"
+                },
+                "crystal_system_orig": {
+                    "_type": "字符串型"
+                },
+                "crystal_class_orig": {
+                    "_type": "字符串型"
+                },
+                "point_group_Hermann_Mauguin_orig": {
+                    "_type": "字符串型"
+                },
+                "point_group_Schoenflies_orig": {
+                    "_type": "字符串型"
+                },
+                "point_group_orbifold_orig": {
+                    "_type": "字符串型"
+                },
+                "point_group_type_orig": {
+                    "_type": "字符串型"
+                },
+                "point_group_order_orig": {
+                    "_type": "数值型"
+                },
+                "point_group_structure_orig": {
+                    "_type": "字符串型"
+                }
+            },
+            "Bravais Lattice of the Lattice": {
+                "_type": "容器型",
+                "Bravais_lattice_lattice_type_orig": {
+                    "_type": "字符串型"
+                },
+                "Bravais_lattice_lattice_variation_type_orig": {
+                    "_type": "字符串型"
+                },
+                "Bravais_lattice_lattice_system_orig": {
+                    "_type": "字符串型"
+                }
+            },
+            "Superlattice": {
+                "_type": "容器型",
+                "Bravais_superlattice_lattice_type_orig": {
+                    "_type": "字符串型"
+                },
+                "Bravais_superlattice_lattice_variation_type_orig": {
+                    "_type": "字符串型"
+                },
+                "Bravais_superlattice_lattice_system_orig": {
+                    "_type": "字符串型"
+                },
+                "Pearson_symbol_superlattice_orig": {
+                    "_type": "字符串型"
+                }
+            },
+            "Reciprocal Space Lattice": {
+                "_type": "容器型",
+                "reciprocal_geometry_orig": {
+                    "_type": "数组型",
+                    "reciprocal_geometry_orig": {
+                        "_type": "数值型"
+                    }
+                },
+                "reciprocal_volume_cell_orig": {
+                    "_type": "数值型"
+                },
+                "reciprocal_lattice_type_orig": {
+                    "_type": "字符串型"
+                },
+                "reciprocal_lattice_variation_type_orig": {
+                    "_type": "字符串型"
+                }
+            }
+        },
+        "RELAXED STRUCTURE": {
+            "_type": "容器型",
+            "Real Space Lattice": {
+                "_type": "容器型",
+                "nbondxx": {
+                    "_type": "数组型",
+                    "nbondxx": {
+                        "_type": "数值型"
+                    }
+                },
+                "geometry": {
+                    "_type": "数组型",
+                    "geometry": {
+                        "_type": "数值型"
+                    }
+                },
+                "volume_cell": {
+                    "_type": "数值型"
+                },
+                "volume_atom": {
+                    "_type": "数值型"
+                },
+                "natoms": {
+                    "_type": "数值型"
+                },
+                "density": {
+                    "_type": "数值型"
+                },
+                "positions_cartesian": {
+                    "_type": "字符串型"
+                },
+                "positions_fractional": {
+                    "_type": "字符串型"
+                },
+                "kpoints_relax": {
+                    "_type": "数组型",
+                    "kpoints_relax": {
+                        "_type": "数值型"
+                    }
+                },
+                "kpoints_static": {
+                    "_type": "数组型",
+                    "kpoints_static": {
+                        "_type": "数值型"
+                    }
+                },
+                "kpoints_bands_nkpts": {
+                    "_type": "数值型"
+                },
+                "kpoints": {
+                    "_type": "字符串型"
+                },
+                "kpoints_bands_path": {
+                    "_type": "字符串型"
+                }
+            },
+            "Bravais Lattice of the Crystal": {
+                "_type": "容器型",
+                "spacegroup_relax": {
+                    "_type": "数值型"
+                },
+                "Pearson_symbol_relax": {
+                    "_type": "字符串型"
+                },
+                "Bravais_lattice_relax": {
+                    "_type": "字符串型"
+                },
+                "lattice_variation_relax": {
+                    "_type": "字符串型"
+                },
+                "lattice_system_relax": {
+                    "_type": "字符串型"
+                }
+            },
+            "Point Group of the Crystal": {
+                "_type": "容器型",
+                "crystal_family": {
+                    "_type": "字符串型"
+                },
+                "crystal_system": {
+                    "_type": "字符串型"
+                },
+                "crystal_class": {
+                    "_type": "字符串型"
+                },
+                "point_group_Hermann_Mauguin": {
+                    "_type": "字符串型"
+                },
+                "point_group_Schoenflies": {
+                    "_type": "字符串型"
+                },
+                "point_group_orbifold": {
+                    "_type": "字符串型"
+                },
+                "point_group_order": {
+                    "_type": "数值型"
+                },
+                "point_group_structure": {
+                    "_type": "字符串型"
+                }
+            },
+            "Bravais Lattice of the Lattice": {
+                "_type": "容器型",
+                "Bravais_lattice_lattice_type": {
+                    "_type": "字符串型"
+                },
+                "Bravais_lattice_lattice_variation_type": {
+                    "_type": "字符串型"
+                },
+                "Bravais_lattice_lattice_system": {
+                    "_type": "字符串型"
+                }
+            },
+            "Superlattice": {
+                "_type": "容器型",
+                "Bravais_superlattice_lattice_type": {
+                    "_type": "字符串型"
+                },
+                "Bravais_superlattice_lattice_variation_type": {
+                    "_type": "字符串型"
+                },
+                "Bravais_superlattice_lattice_system": {
+                    "_type": "字符串型"
+                },
+                "Pearson_symbol_superlattice": {
+                    "_type": "字符串型"
+                }
+            },
+            "Reciprocal Space Lattice": {
+                "_type": "容器型",
+                "reciprocal_geometry": {
+                    "_type": "数组型",
+                    "reciprocal_geometry": {
+                        "_type": "数值型"
+                    }
+                },
+                "reciprocal_volume_cell": {
+                    "_type": "数值型"
+                },
+                "reciprocal_lattice_type": {
+                    "_type": "字符串型"
+                },
+                "reciprocal_lattice_variation_type": {
+                    "_type": "字符串型"
+                }
+            }
+        },
+        "THERMODYNAMICS PROPERTIES": {
+            "_type": "容器型",
+            "enthalpy_cell": {
+                "_type": "数值型"
+            },
+            "enthalpy_atom": {
+                "_type": "数值型"
+            },
+            "eentropy_cell": {
+                "_type": "数值型"
+            },
+            "eentropy_atom": {
+                "_type": "数值型"
+            },
+            "energy_cell": {
+                "_type": "数值型"
+            },
+            "energy_atom": {
+                "_type": "数值型"
+            },
+            "pressure": {
+                "_type": "数值型"
+            },
+            "stress_tensor": {
+                "_type": "数组型",
+                "stress_tensor": {
+                    "_type": "数值型"
+                }
+            },
+            "pressure_residual": {
+                "_type": "数值型"
+            },
+            "Pulay_stress": {
+                "_type": "数值型"
+            }
+        },
+        "AGL PROPERTIES": {
+            "_type": "容器型",
+            "agl_acoustic_debye": {
+                "_type": "数值型"
+            },
+            "agl_bulk_modulus_isothermal_300K": {
+                "_type": "数值型"
+            },
+            "agl_bulk_modulus_static_300K": {
+                "_type": "数值型"
+            },
+            "agl_debye": {
+                "_type": "数值型"
+            },
+            "agl_gruneisen": {
+                "_type": "数值型"
+            },
+            "agl_heat_capacity_Cp_300K": {
+                "_type": "数值型"
+            },
+            "agl_heat_capacity_Cv_300K": {
+                "_type": "数值型"
+            },
+            "agl_poisson_ratio_source": {
+                "_type": "数值型"
+            },
+            "agl_thermal_conductivity_300K": {
+                "_type": "数值型"
+            },
+            "agl_thermal_expansion_300K": {
+                "_type": "数值型"
+            },
+            "agl_vibrational_entropy_300K_atom": {
+                "_type": "数值型"
+            },
+            "agl_vibrational_entropy_300K_cell": {
+                "_type": "数值型"
+            },
+            "agl_vibrational_free_energy_300K_atom": {
+                "_type": "数值型"
+            },
+            "agl_vibrational_free_energy_300K_cell": {
+                "_type": "数值型"
+            }
+        },
+        "AEL PROPERTIES": {
+            "_type": "容器型",
+            "ael_applied_pressure": {
+                "_type": "数值型"
+            },
+            "ael_average_external_pressure": {
+                "_type": "数值型"
+            },
+            "ael_bulk_modulus_reuss": {
+                "_type": "数值型"
+            },
+            "ael_bulk_modulus_voigt": {
+                "_type": "数值型"
+            },
+            "ael_bulk_modulus_vrh": {
+                "_type": "数值型"
+            },
+            "ael_debye_temperature": {
+                "_type": "数值型"
+            },
+            "ael_elastic_anisotropy": {
+                "_type": "数值型"
+            },
+            "ael_poisson_ratio": {
+                "_type": "数值型"
+            },
+            "ael_pughs_modulus_ratio": {
+                "_type": "数值型"
+            },
+            "ael_shear_modulus_reuss": {
+                "_type": "数值型"
+            },
+            "ael_shear_modulus_voigt": {
+                "_type": "数值型"
+            },
+            "ael_shear_modulus_vrh": {
+                "_type": "数值型"
+            },
+            "ael_speed_sound_average": {
+                "_type": "数值型"
+            },
+            "ael_speed_sound_longitudinal": {
+                "_type": "数值型"
+            },
+            "ael_speed_sound_transverse": {
+                "_type": "数值型"
+            },
+            "ael_youngs_modulus_vrh": {
+                "_type": "数值型"
+            }
+        },
+        "BADER ATOMS IN MOLECULES PROPERTIES": {
+            "_type": "容器型",
+            "bader_net_charges": {
+                "_type": "数组型",
+                "bader_net_charges": {
+                    "_type": "数值型"
+                }
+            },
+            "bader_atomic_volumes": {
+                "_type": "数组型",
+                "bader_atomic_volumes": {
+                    "_type": "数值型"
+                }
+            }
+        },
+        "MAGNETIC PROPERTIES": {
+            "_type": "容器型",
+            "spinD": {
+                "_type": "数组型",
+                "spinD": {
+                    "_type": "数值型"
+                }
+            },
+            "spinF": {
+                "_type": "数值型"
+            },
+            "spin_cell": {
+                "_type": "数值型"
+            },
+            "spin_atom": {
+                "_type": "数值型"
+            }
+        },
+        "SCINTILLATION PROPERTIES": {
+            "_type": "容器型",
+            "scintillation_attenuation_length": {
+                "_type": "数值型"
+            }
+        },
+        "ELECTRONIC PROPERTIES": {
+            "_type": "容器型",
+            "Egap": {
+                "_type": "数值型"
+            },
+            "Egap_fit": {
+                "_type": "数值型"
+            },
+            "Egap_type": {
+                "_type": "字符串型"
+            },
+            "spinD": {
+                "_type": "数组型",
+                "spinD": {
+                    "_type": "数值型"
+                }
+            },
+            "spinF": {
+                "_type": "数值型"
+            },
+            "spin_cell": {
+                "_type": "数值型"
+            },
+            "spin_atom": {
+                "_type": "数值型"
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "calculation details": {
+                    "auid": "在这里填写 auid (字符串型)",
+                    "aurl": "在这里填写 aurl (字符串型)",
+                    "code": "在这里填写 code (字符串型)",
+                    "prototype": "在这里填写 prototype (字符串型)",
+                    "nspecies": "在这里填写 nspecies (数值型)",
+                    "species": "在这里填写 species (字符串型)",
+                    "composition": [
+                        "在这里填写 composition (数值型)",
+                        "在这里填写 composition (数值型)"
+                    ],
+                    "dft_type": "在这里填写 dft_type (字符串型)",
+                    "species_pp_version": "在这里填写 species_pp_version (字符串型)",
+                    "species_pp_ZVAL": [
+                        "在这里填写 species_pp_ZVAL (数值型)",
+                        "在这里填写 species_pp_ZVAL (数值型)"
+                    ],
+                    "ldau_type": "在这里填写 ldau_type (数值型)",
+                    "ldau_l": [
+                        "在这里填写 ldau_l (数值型)",
+                        "在这里填写 ldau_l (数值型)"
+                    ],
+                    "ldau_u": [
+                        "在这里填写 ldau_u (数值型)",
+                        "在这里填写 ldau_u (数值型)"
+                    ],
+                    "ldau_j": [
+                        "在这里填写 ldau_j (数值型)",
+                        "在这里填写 ldau_j (数值型)"
+                    ],
+                    "calculation_time": "在这里填写 calculation_time (数值型)",
+                    "calculation_memory": "在这里填写 calculation_memory (数值型)",
+                    "calculation_cores": "在这里填写 calculation_cores (数值型)",
+                    "node_CPU_Model": "在这里填写 node_CPU_Model (字符串型)",
+                    "node_CPU_MHz": "在这里填写 node_CPU_MHz (数值型)",
+                    "node_CPU_Cores": "在这里填写 node_CPU_Cores (数值型)",
+                    "node_RAM_GB": "在这里填写 node_RAM_GB (数值型)",
+                    "aflow_version": "在这里填写 aflow_version (字符串型)",
+                    "catalog": "在这里填写 catalog (字符串型)",
+                    "data_api": "在这里填写 data_api (字符串型)",
+                    "data_source": "在这里填写 data_source (字符串型)",
+                    "loop": [
+                        "在这里填写 loop (字符串型)",
+                        "在这里填写 loop (字符串型)"
+                    ],
+                    "aflowlib_version": "在这里填写 aflowlib_version (字符串型)",
+                    "aflowlib_date": "在这里填写 aflowlib_date (字符串型)",
+                    "energy_cutoff": "在这里填写 energy_cutoff (数值型)",
+                    "delta_electronic_energy_convergence": "在这里填写 delta_electronic_energy_convergence (数值型)",
+                    "delta_electronic_energy_threshold": "在这里填写 delta_electronic_energy_threshold (数值型)",
+                    "forces": "在这里填写 forces (数值型)",
+                    "pressure": "在这里填写 pressure (数值型)"
+                },
+                "UNRELAXED STRUCTURE": {
+                    "Real Space Lattice": {
+                        "geometry_orig": [
+                            "在这里填写 geometry_orig (数值型)",
+                            "在这里填写 geometry_orig (数值型)"
+                        ],
+                        "natoms_orig": "在这里填写 natoms_orig (数值型)",
+                        "volume_cell_orig": "在这里填写 volume_cell_orig (数值型)",
+                        "volume_atom_orig": "在这里填写 volume_atom_orig (数值型)",
+                        "density_orig": "在这里填写 density_orig (数值型)"
+                    },
+                    "Bravais Lattice of the Crystal": {
+                        "spacegroup_orig": "在这里填写 spacegroup_orig (数值型)",
+                        "Pearson_symbol_orig": "在这里填写 Pearson_symbol_orig (字符串型)",
+                        "Bravais_lattice_orig": "在这里填写 Bravais_lattice_orig (字符串型)",
+                        "lattice_variation_orig": "在这里填写 lattice_variation_orig (字符串型)",
+                        "lattice_system_orig": "在这里填写 lattice_system_orig (字符串型)"
+                    },
+                    "Point Group of the Crystal": {
+                        "crystal_family_orig": "在这里填写 crystal_family_orig (字符串型)",
+                        "crystal_system_orig": "在这里填写 crystal_system_orig (字符串型)",
+                        "crystal_class_orig": "在这里填写 crystal_class_orig (字符串型)",
+                        "point_group_Hermann_Mauguin_orig": "在这里填写 point_group_Hermann_Mauguin_orig (字符串型)",
+                        "point_group_Schoenflies_orig": "在这里填写 point_group_Schoenflies_orig (字符串型)",
+                        "point_group_orbifold_orig": "在这里填写 point_group_orbifold_orig (字符串型)",
+                        "point_group_type_orig": "在这里填写 point_group_type_orig (字符串型)",
+                        "point_group_order_orig": "在这里填写 point_group_order_orig (数值型)",
+                        "point_group_structure_orig": "在这里填写 point_group_structure_orig (字符串型)"
+                    },
+                    "Bravais Lattice of the Lattice": {
+                        "Bravais_lattice_lattice_type_orig": "在这里填写 Bravais_lattice_lattice_type_orig (字符串型)",
+                        "Bravais_lattice_lattice_variation_type_orig": "在这里填写 Bravais_lattice_lattice_variation_type_orig (字符串型)",
+                        "Bravais_lattice_lattice_system_orig": "在这里填写 Bravais_lattice_lattice_system_orig (字符串型)"
+                    },
+                    "Superlattice": {
+                        "Bravais_superlattice_lattice_type_orig": "在这里填写 Bravais_superlattice_lattice_type_orig (字符串型)",
+                        "Bravais_superlattice_lattice_variation_type_orig": "在这里填写 Bravais_superlattice_lattice_variation_type_orig (字符串型)",
+                        "Bravais_superlattice_lattice_system_orig": "在这里填写 Bravais_superlattice_lattice_system_orig (字符串型)",
+                        "Pearson_symbol_superlattice_orig": "在这里填写 Pearson_symbol_superlattice_orig (字符串型)"
+                    },
+                    "Reciprocal Space Lattice": {
+                        "reciprocal_geometry_orig": [
+                            "在这里填写 reciprocal_geometry_orig (数值型)",
+                            "在这里填写 reciprocal_geometry_orig (数值型)"
+                        ],
+                        "reciprocal_volume_cell_orig": "在这里填写 reciprocal_volume_cell_orig (数值型)",
+                        "reciprocal_lattice_type_orig": "在这里填写 reciprocal_lattice_type_orig (字符串型)",
+                        "reciprocal_lattice_variation_type_orig": "在这里填写 reciprocal_lattice_variation_type_orig (字符串型)"
+                    }
+                },
+                "RELAXED STRUCTURE": {
+                    "Real Space Lattice": {
+                        "nbondxx": [
+                            "在这里填写 nbondxx (数值型)",
+                            "在这里填写 nbondxx (数值型)"
+                        ],
+                        "geometry": [
+                            "在这里填写 geometry (数值型)",
+                            "在这里填写 geometry (数值型)"
+                        ],
+                        "volume_cell": "在这里填写 volume_cell (数值型)",
+                        "volume_atom": "在这里填写 volume_atom (数值型)",
+                        "natoms": "在这里填写 natoms (数值型)",
+                        "density": "在这里填写 density (数值型)",
+                        "positions_cartesian": "在这里填写 positions_cartesian (字符串型)",
+                        "positions_fractional": "在这里填写 positions_fractional (字符串型)",
+                        "kpoints_relax": [
+                            "在这里填写 kpoints_relax (数值型)",
+                            "在这里填写 kpoints_relax (数值型)"
+                        ],
+                        "kpoints_static": [
+                            "在这里填写 kpoints_static (数值型)",
+                            "在这里填写 kpoints_static (数值型)"
+                        ],
+                        "kpoints_bands_nkpts": "在这里填写 kpoints_bands_nkpts (数值型)",
+                        "kpoints": "在这里填写 kpoints (字符串型)",
+                        "kpoints_bands_path": "在这里填写 kpoints_bands_path (字符串型)"
+                    },
+                    "Bravais Lattice of the Crystal": {
+                        "spacegroup_relax": "在这里填写 spacegroup_relax (数值型)",
+                        "Pearson_symbol_relax": "在这里填写 Pearson_symbol_relax (字符串型)",
+                        "Bravais_lattice_relax": "在这里填写 Bravais_lattice_relax (字符串型)",
+                        "lattice_variation_relax": "在这里填写 lattice_variation_relax (字符串型)",
+                        "lattice_system_relax": "在这里填写 lattice_system_relax (字符串型)"
+                    },
+                    "Point Group of the Crystal": {
+                        "crystal_family": "在这里填写 crystal_family (字符串型)",
+                        "crystal_system": "在这里填写 crystal_system (字符串型)",
+                        "crystal_class": "在这里填写 crystal_class (字符串型)",
+                        "point_group_Hermann_Mauguin": "在这里填写 point_group_Hermann_Mauguin (字符串型)",
+                        "point_group_Schoenflies": "在这里填写 point_group_Schoenflies (字符串型)",
+                        "point_group_orbifold": "在这里填写 point_group_orbifold (字符串型)",
+                        "point_group_order": "在这里填写 point_group_order (数值型)",
+                        "point_group_structure": "在这里填写 point_group_structure (字符串型)"
+                    },
+                    "Bravais Lattice of the Lattice": {
+                        "Bravais_lattice_lattice_type": "在这里填写 Bravais_lattice_lattice_type (字符串型)",
+                        "Bravais_lattice_lattice_variation_type": "在这里填写 Bravais_lattice_lattice_variation_type (字符串型)",
+                        "Bravais_lattice_lattice_system": "在这里填写 Bravais_lattice_lattice_system (字符串型)"
+                    },
+                    "Superlattice": {
+                        "Bravais_superlattice_lattice_type": "在这里填写 Bravais_superlattice_lattice_type (字符串型)",
+                        "Bravais_superlattice_lattice_variation_type": "在这里填写 Bravais_superlattice_lattice_variation_type (字符串型)",
+                        "Bravais_superlattice_lattice_system": "在这里填写 Bravais_superlattice_lattice_system (字符串型)",
+                        "Pearson_symbol_superlattice": "在这里填写 Pearson_symbol_superlattice (字符串型)"
+                    },
+                    "Reciprocal Space Lattice": {
+                        "reciprocal_geometry": [
+                            "在这里填写 reciprocal_geometry (数值型)",
+                            "在这里填写 reciprocal_geometry (数值型)"
+                        ],
+                        "reciprocal_volume_cell": "在这里填写 reciprocal_volume_cell (数值型)",
+                        "reciprocal_lattice_type": "在这里填写 reciprocal_lattice_type (字符串型)",
+                        "reciprocal_lattice_variation_type": "在这里填写 reciprocal_lattice_variation_type (字符串型)"
+                    }
+                },
+                "THERMODYNAMICS PROPERTIES": {
+                    "enthalpy_cell": "在这里填写 enthalpy_cell (数值型)",
+                    "enthalpy_atom": "在这里填写 enthalpy_atom (数值型)",
+                    "eentropy_cell": "在这里填写 eentropy_cell (数值型)",
+                    "eentropy_atom": "在这里填写 eentropy_atom (数值型)",
+                    "energy_cell": "在这里填写 energy_cell (数值型)",
+                    "energy_atom": "在这里填写 energy_atom (数值型)",
+                    "pressure": "在这里填写 pressure (数值型)",
+                    "stress_tensor": [
+                        "在这里填写 stress_tensor (数值型)",
+                        "在这里填写 stress_tensor (数值型)"
+                    ],
+                    "pressure_residual": "在这里填写 pressure_residual (数值型)",
+                    "Pulay_stress": "在这里填写 Pulay_stress (数值型)"
+                },
+                "AGL PROPERTIES": {
+                    "agl_acoustic_debye": "在这里填写 agl_acoustic_debye (数值型)",
+                    "agl_bulk_modulus_isothermal_300K": "在这里填写 agl_bulk_modulus_isothermal_300K (数值型)",
+                    "agl_bulk_modulus_static_300K": "在这里填写 agl_bulk_modulus_static_300K (数值型)",
+                    "agl_debye": "在这里填写 agl_debye (数值型)",
+                    "agl_gruneisen": "在这里填写 agl_gruneisen (数值型)",
+                    "agl_heat_capacity_Cp_300K": "在这里填写 agl_heat_capacity_Cp_300K (数值型)",
+                    "agl_heat_capacity_Cv_300K": "在这里填写 agl_heat_capacity_Cv_300K (数值型)",
+                    "agl_poisson_ratio_source": "在这里填写 agl_poisson_ratio_source (数值型)",
+                    "agl_thermal_conductivity_300K": "在这里填写 agl_thermal_conductivity_300K (数值型)",
+                    "agl_thermal_expansion_300K": "在这里填写 agl_thermal_expansion_300K (数值型)",
+                    "agl_vibrational_entropy_300K_atom": "在这里填写 agl_vibrational_entropy_300K_atom (数值型)",
+                    "agl_vibrational_entropy_300K_cell": "在这里填写 agl_vibrational_entropy_300K_cell (数值型)",
+                    "agl_vibrational_free_energy_300K_atom": "在这里填写 agl_vibrational_free_energy_300K_atom (数值型)",
+                    "agl_vibrational_free_energy_300K_cell": "在这里填写 agl_vibrational_free_energy_300K_cell (数值型)"
+                },
+                "AEL PROPERTIES": {
+                    "ael_applied_pressure": "在这里填写 ael_applied_pressure (数值型)",
+                    "ael_average_external_pressure": "在这里填写 ael_average_external_pressure (数值型)",
+                    "ael_bulk_modulus_reuss": "在这里填写 ael_bulk_modulus_reuss (数值型)",
+                    "ael_bulk_modulus_voigt": "在这里填写 ael_bulk_modulus_voigt (数值型)",
+                    "ael_bulk_modulus_vrh": "在这里填写 ael_bulk_modulus_vrh (数值型)",
+                    "ael_debye_temperature": "在这里填写 ael_debye_temperature (数值型)",
+                    "ael_elastic_anisotropy": "在这里填写 ael_elastic_anisotropy (数值型)",
+                    "ael_poisson_ratio": "在这里填写 ael_poisson_ratio (数值型)",
+                    "ael_pughs_modulus_ratio": "在这里填写 ael_pughs_modulus_ratio (数值型)",
+                    "ael_shear_modulus_reuss": "在这里填写 ael_shear_modulus_reuss (数值型)",
+                    "ael_shear_modulus_voigt": "在这里填写 ael_shear_modulus_voigt (数值型)",
+                    "ael_shear_modulus_vrh": "在这里填写 ael_shear_modulus_vrh (数值型)",
+                    "ael_speed_sound_average": "在这里填写 ael_speed_sound_average (数值型)",
+                    "ael_speed_sound_longitudinal": "在这里填写 ael_speed_sound_longitudinal (数值型)",
+                    "ael_speed_sound_transverse": "在这里填写 ael_speed_sound_transverse (数值型)",
+                    "ael_youngs_modulus_vrh": "在这里填写 ael_youngs_modulus_vrh (数值型)"
+                },
+                "BADER ATOMS IN MOLECULES PROPERTIES": {
+                    "bader_net_charges": [
+                        "在这里填写 bader_net_charges (数值型)",
+                        "在这里填写 bader_net_charges (数值型)"
+                    ],
+                    "bader_atomic_volumes": [
+                        "在这里填写 bader_atomic_volumes (数值型)",
+                        "在这里填写 bader_atomic_volumes (数值型)"
+                    ]
+                },
+                "MAGNETIC PROPERTIES": {
+                    "spinD": [
+                        "在这里填写 spinD (数值型)",
+                        "在这里填写 spinD (数值型)"
+                    ],
+                    "spinF": "在这里填写 spinF (数值型)",
+                    "spin_cell": "在这里填写 spin_cell (数值型)",
+                    "spin_atom": "在这里填写 spin_atom (数值型)"
+                },
+                "SCINTILLATION PROPERTIES": {
+                    "scintillation_attenuation_length": "在这里填写 scintillation_attenuation_length (数值型)"
+                },
+                "ELECTRONIC PROPERTIES": {
+                    "Egap": "在这里填写 Egap (数值型)",
+                    "Egap_fit": "在这里填写 Egap_fit (数值型)",
+                    "Egap_type": "在这里填写 Egap_type (字符串型)",
+                    "spinD": [
+                        "在这里填写 spinD (数值型)",
+                        "在这里填写 spinD (数值型)"
+                    ],
+                    "spinF": "在这里填写 spinF (数值型)",
+                    "spin_cell": "在这里填写 spin_cell (数值型)",
+                    "spin_atom": "在这里填写 spin_atom (数值型)"
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "calculation details": {
+                    "auid": "在这里填写 auid (字符串型)",
+                    "aurl": "在这里填写 aurl (字符串型)",
+                    "code": "在这里填写 code (字符串型)",
+                    "prototype": "在这里填写 prototype (字符串型)",
+                    "nspecies": "在这里填写 nspecies (数值型)",
+                    "species": "在这里填写 species (字符串型)",
+                    "composition": [
+                        "在这里填写 composition (数值型)",
+                        "在这里填写 composition (数值型)"
+                    ],
+                    "dft_type": "在这里填写 dft_type (字符串型)",
+                    "species_pp_version": "在这里填写 species_pp_version (字符串型)",
+                    "species_pp_ZVAL": [
+                        "在这里填写 species_pp_ZVAL (数值型)",
+                        "在这里填写 species_pp_ZVAL (数值型)"
+                    ],
+                    "ldau_type": "在这里填写 ldau_type (数值型)",
+                    "ldau_l": [
+                        "在这里填写 ldau_l (数值型)",
+                        "在这里填写 ldau_l (数值型)"
+                    ],
+                    "ldau_u": [
+                        "在这里填写 ldau_u (数值型)",
+                        "在这里填写 ldau_u (数值型)"
+                    ],
+                    "ldau_j": [
+                        "在这里填写 ldau_j (数值型)",
+                        "在这里填写 ldau_j (数值型)"
+                    ],
+                    "calculation_time": "在这里填写 calculation_time (数值型)",
+                    "calculation_memory": "在这里填写 calculation_memory (数值型)",
+                    "calculation_cores": "在这里填写 calculation_cores (数值型)",
+                    "node_CPU_Model": "在这里填写 node_CPU_Model (字符串型)",
+                    "node_CPU_MHz": "在这里填写 node_CPU_MHz (数值型)",
+                    "node_CPU_Cores": "在这里填写 node_CPU_Cores (数值型)",
+                    "node_RAM_GB": "在这里填写 node_RAM_GB (数值型)",
+                    "aflow_version": "在这里填写 aflow_version (字符串型)",
+                    "catalog": "在这里填写 catalog (字符串型)",
+                    "data_api": "在这里填写 data_api (字符串型)",
+                    "data_source": "在这里填写 data_source (字符串型)",
+                    "loop": [
+                        "在这里填写 loop (字符串型)",
+                        "在这里填写 loop (字符串型)"
+                    ],
+                    "aflowlib_version": "在这里填写 aflowlib_version (字符串型)",
+                    "aflowlib_date": "在这里填写 aflowlib_date (字符串型)",
+                    "energy_cutoff": "在这里填写 energy_cutoff (数值型)",
+                    "delta_electronic_energy_convergence": "在这里填写 delta_electronic_energy_convergence (数值型)",
+                    "delta_electronic_energy_threshold": "在这里填写 delta_electronic_energy_threshold (数值型)",
+                    "forces": "在这里填写 forces (数值型)",
+                    "pressure": "在这里填写 pressure (数值型)"
+                },
+                "UNRELAXED STRUCTURE": {
+                    "Real Space Lattice": {
+                        "geometry_orig": [
+                            "在这里填写 geometry_orig (数值型)",
+                            "在这里填写 geometry_orig (数值型)"
+                        ],
+                        "natoms_orig": "在这里填写 natoms_orig (数值型)",
+                        "volume_cell_orig": "在这里填写 volume_cell_orig (数值型)",
+                        "volume_atom_orig": "在这里填写 volume_atom_orig (数值型)",
+                        "density_orig": "在这里填写 density_orig (数值型)"
+                    },
+                    "Bravais Lattice of the Crystal": {
+                        "spacegroup_orig": "在这里填写 spacegroup_orig (数值型)",
+                        "Pearson_symbol_orig": "在这里填写 Pearson_symbol_orig (字符串型)",
+                        "Bravais_lattice_orig": "在这里填写 Bravais_lattice_orig (字符串型)",
+                        "lattice_variation_orig": "在这里填写 lattice_variation_orig (字符串型)",
+                        "lattice_system_orig": "在这里填写 lattice_system_orig (字符串型)"
+                    },
+                    "Point Group of the Crystal": {
+                        "crystal_family_orig": "在这里填写 crystal_family_orig (字符串型)",
+                        "crystal_system_orig": "在这里填写 crystal_system_orig (字符串型)",
+                        "crystal_class_orig": "在这里填写 crystal_class_orig (字符串型)",
+                        "point_group_Hermann_Mauguin_orig": "在这里填写 point_group_Hermann_Mauguin_orig (字符串型)",
+                        "point_group_Schoenflies_orig": "在这里填写 point_group_Schoenflies_orig (字符串型)",
+                        "point_group_orbifold_orig": "在这里填写 point_group_orbifold_orig (字符串型)",
+                        "point_group_type_orig": "在这里填写 point_group_type_orig (字符串型)",
+                        "point_group_order_orig": "在这里填写 point_group_order_orig (数值型)",
+                        "point_group_structure_orig": "在这里填写 point_group_structure_orig (字符串型)"
+                    },
+                    "Bravais Lattice of the Lattice": {
+                        "Bravais_lattice_lattice_type_orig": "在这里填写 Bravais_lattice_lattice_type_orig (字符串型)",
+                        "Bravais_lattice_lattice_variation_type_orig": "在这里填写 Bravais_lattice_lattice_variation_type_orig (字符串型)",
+                        "Bravais_lattice_lattice_system_orig": "在这里填写 Bravais_lattice_lattice_system_orig (字符串型)"
+                    },
+                    "Superlattice": {
+                        "Bravais_superlattice_lattice_type_orig": "在这里填写 Bravais_superlattice_lattice_type_orig (字符串型)",
+                        "Bravais_superlattice_lattice_variation_type_orig": "在这里填写 Bravais_superlattice_lattice_variation_type_orig (字符串型)",
+                        "Bravais_superlattice_lattice_system_orig": "在这里填写 Bravais_superlattice_lattice_system_orig (字符串型)",
+                        "Pearson_symbol_superlattice_orig": "在这里填写 Pearson_symbol_superlattice_orig (字符串型)"
+                    },
+                    "Reciprocal Space Lattice": {
+                        "reciprocal_geometry_orig": [
+                            "在这里填写 reciprocal_geometry_orig (数值型)",
+                            "在这里填写 reciprocal_geometry_orig (数值型)"
+                        ],
+                        "reciprocal_volume_cell_orig": "在这里填写 reciprocal_volume_cell_orig (数值型)",
+                        "reciprocal_lattice_type_orig": "在这里填写 reciprocal_lattice_type_orig (字符串型)",
+                        "reciprocal_lattice_variation_type_orig": "在这里填写 reciprocal_lattice_variation_type_orig (字符串型)"
+                    }
+                },
+                "RELAXED STRUCTURE": {
+                    "Real Space Lattice": {
+                        "nbondxx": [
+                            "在这里填写 nbondxx (数值型)",
+                            "在这里填写 nbondxx (数值型)"
+                        ],
+                        "geometry": [
+                            "在这里填写 geometry (数值型)",
+                            "在这里填写 geometry (数值型)"
+                        ],
+                        "volume_cell": "在这里填写 volume_cell (数值型)",
+                        "volume_atom": "在这里填写 volume_atom (数值型)",
+                        "natoms": "在这里填写 natoms (数值型)",
+                        "density": "在这里填写 density (数值型)",
+                        "positions_cartesian": "在这里填写 positions_cartesian (字符串型)",
+                        "positions_fractional": "在这里填写 positions_fractional (字符串型)",
+                        "kpoints_relax": [
+                            "在这里填写 kpoints_relax (数值型)",
+                            "在这里填写 kpoints_relax (数值型)"
+                        ],
+                        "kpoints_static": [
+                            "在这里填写 kpoints_static (数值型)",
+                            "在这里填写 kpoints_static (数值型)"
+                        ],
+                        "kpoints_bands_nkpts": "在这里填写 kpoints_bands_nkpts (数值型)",
+                        "kpoints": "在这里填写 kpoints (字符串型)",
+                        "kpoints_bands_path": "在这里填写 kpoints_bands_path (字符串型)"
+                    },
+                    "Bravais Lattice of the Crystal": {
+                        "spacegroup_relax": "在这里填写 spacegroup_relax (数值型)",
+                        "Pearson_symbol_relax": "在这里填写 Pearson_symbol_relax (字符串型)",
+                        "Bravais_lattice_relax": "在这里填写 Bravais_lattice_relax (字符串型)",
+                        "lattice_variation_relax": "在这里填写 lattice_variation_relax (字符串型)",
+                        "lattice_system_relax": "在这里填写 lattice_system_relax (字符串型)"
+                    },
+                    "Point Group of the Crystal": {
+                        "crystal_family": "在这里填写 crystal_family (字符串型)",
+                        "crystal_system": "在这里填写 crystal_system (字符串型)",
+                        "crystal_class": "在这里填写 crystal_class (字符串型)",
+                        "point_group_Hermann_Mauguin": "在这里填写 point_group_Hermann_Mauguin (字符串型)",
+                        "point_group_Schoenflies": "在这里填写 point_group_Schoenflies (字符串型)",
+                        "point_group_orbifold": "在这里填写 point_group_orbifold (字符串型)",
+                        "point_group_order": "在这里填写 point_group_order (数值型)",
+                        "point_group_structure": "在这里填写 point_group_structure (字符串型)"
+                    },
+                    "Bravais Lattice of the Lattice": {
+                        "Bravais_lattice_lattice_type": "在这里填写 Bravais_lattice_lattice_type (字符串型)",
+                        "Bravais_lattice_lattice_variation_type": "在这里填写 Bravais_lattice_lattice_variation_type (字符串型)",
+                        "Bravais_lattice_lattice_system": "在这里填写 Bravais_lattice_lattice_system (字符串型)"
+                    },
+                    "Superlattice": {
+                        "Bravais_superlattice_lattice_type": "在这里填写 Bravais_superlattice_lattice_type (字符串型)",
+                        "Bravais_superlattice_lattice_variation_type": "在这里填写 Bravais_superlattice_lattice_variation_type (字符串型)",
+                        "Bravais_superlattice_lattice_system": "在这里填写 Bravais_superlattice_lattice_system (字符串型)",
+                        "Pearson_symbol_superlattice": "在这里填写 Pearson_symbol_superlattice (字符串型)"
+                    },
+                    "Reciprocal Space Lattice": {
+                        "reciprocal_geometry": [
+                            "在这里填写 reciprocal_geometry (数值型)",
+                            "在这里填写 reciprocal_geometry (数值型)"
+                        ],
+                        "reciprocal_volume_cell": "在这里填写 reciprocal_volume_cell (数值型)",
+                        "reciprocal_lattice_type": "在这里填写 reciprocal_lattice_type (字符串型)",
+                        "reciprocal_lattice_variation_type": "在这里填写 reciprocal_lattice_variation_type (字符串型)"
+                    }
+                },
+                "THERMODYNAMICS PROPERTIES": {
+                    "enthalpy_cell": "在这里填写 enthalpy_cell (数值型)",
+                    "enthalpy_atom": "在这里填写 enthalpy_atom (数值型)",
+                    "eentropy_cell": "在这里填写 eentropy_cell (数值型)",
+                    "eentropy_atom": "在这里填写 eentropy_atom (数值型)",
+                    "energy_cell": "在这里填写 energy_cell (数值型)",
+                    "energy_atom": "在这里填写 energy_atom (数值型)",
+                    "pressure": "在这里填写 pressure (数值型)",
+                    "stress_tensor": [
+                        "在这里填写 stress_tensor (数值型)",
+                        "在这里填写 stress_tensor (数值型)"
+                    ],
+                    "pressure_residual": "在这里填写 pressure_residual (数值型)",
+                    "Pulay_stress": "在这里填写 Pulay_stress (数值型)"
+                },
+                "AGL PROPERTIES": {
+                    "agl_acoustic_debye": "在这里填写 agl_acoustic_debye (数值型)",
+                    "agl_bulk_modulus_isothermal_300K": "在这里填写 agl_bulk_modulus_isothermal_300K (数值型)",
+                    "agl_bulk_modulus_static_300K": "在这里填写 agl_bulk_modulus_static_300K (数值型)",
+                    "agl_debye": "在这里填写 agl_debye (数值型)",
+                    "agl_gruneisen": "在这里填写 agl_gruneisen (数值型)",
+                    "agl_heat_capacity_Cp_300K": "在这里填写 agl_heat_capacity_Cp_300K (数值型)",
+                    "agl_heat_capacity_Cv_300K": "在这里填写 agl_heat_capacity_Cv_300K (数值型)",
+                    "agl_poisson_ratio_source": "在这里填写 agl_poisson_ratio_source (数值型)",
+                    "agl_thermal_conductivity_300K": "在这里填写 agl_thermal_conductivity_300K (数值型)",
+                    "agl_thermal_expansion_300K": "在这里填写 agl_thermal_expansion_300K (数值型)",
+                    "agl_vibrational_entropy_300K_atom": "在这里填写 agl_vibrational_entropy_300K_atom (数值型)",
+                    "agl_vibrational_entropy_300K_cell": "在这里填写 agl_vibrational_entropy_300K_cell (数值型)",
+                    "agl_vibrational_free_energy_300K_atom": "在这里填写 agl_vibrational_free_energy_300K_atom (数值型)",
+                    "agl_vibrational_free_energy_300K_cell": "在这里填写 agl_vibrational_free_energy_300K_cell (数值型)"
+                },
+                "AEL PROPERTIES": {
+                    "ael_applied_pressure": "在这里填写 ael_applied_pressure (数值型)",
+                    "ael_average_external_pressure": "在这里填写 ael_average_external_pressure (数值型)",
+                    "ael_bulk_modulus_reuss": "在这里填写 ael_bulk_modulus_reuss (数值型)",
+                    "ael_bulk_modulus_voigt": "在这里填写 ael_bulk_modulus_voigt (数值型)",
+                    "ael_bulk_modulus_vrh": "在这里填写 ael_bulk_modulus_vrh (数值型)",
+                    "ael_debye_temperature": "在这里填写 ael_debye_temperature (数值型)",
+                    "ael_elastic_anisotropy": "在这里填写 ael_elastic_anisotropy (数值型)",
+                    "ael_poisson_ratio": "在这里填写 ael_poisson_ratio (数值型)",
+                    "ael_pughs_modulus_ratio": "在这里填写 ael_pughs_modulus_ratio (数值型)",
+                    "ael_shear_modulus_reuss": "在这里填写 ael_shear_modulus_reuss (数值型)",
+                    "ael_shear_modulus_voigt": "在这里填写 ael_shear_modulus_voigt (数值型)",
+                    "ael_shear_modulus_vrh": "在这里填写 ael_shear_modulus_vrh (数值型)",
+                    "ael_speed_sound_average": "在这里填写 ael_speed_sound_average (数值型)",
+                    "ael_speed_sound_longitudinal": "在这里填写 ael_speed_sound_longitudinal (数值型)",
+                    "ael_speed_sound_transverse": "在这里填写 ael_speed_sound_transverse (数值型)",
+                    "ael_youngs_modulus_vrh": "在这里填写 ael_youngs_modulus_vrh (数值型)"
+                },
+                "BADER ATOMS IN MOLECULES PROPERTIES": {
+                    "bader_net_charges": [
+                        "在这里填写 bader_net_charges (数值型)",
+                        "在这里填写 bader_net_charges (数值型)"
+                    ],
+                    "bader_atomic_volumes": [
+                        "在这里填写 bader_atomic_volumes (数值型)",
+                        "在这里填写 bader_atomic_volumes (数值型)"
+                    ]
+                },
+                "MAGNETIC PROPERTIES": {
+                    "spinD": [
+                        "在这里填写 spinD (数值型)",
+                        "在这里填写 spinD (数值型)"
+                    ],
+                    "spinF": "在这里填写 spinF (数值型)",
+                    "spin_cell": "在这里填写 spin_cell (数值型)",
+                    "spin_atom": "在这里填写 spin_atom (数值型)"
+                },
+                "SCINTILLATION PROPERTIES": {
+                    "scintillation_attenuation_length": "在这里填写 scintillation_attenuation_length (数值型)"
+                },
+                "ELECTRONIC PROPERTIES": {
+                    "Egap": "在这里填写 Egap (数值型)",
+                    "Egap_fit": "在这里填写 Egap_fit (数值型)",
+                    "Egap_type": "在这里填写 Egap_type (字符串型)",
+                    "spinD": [
+                        "在这里填写 spinD (数值型)",
+                        "在这里填写 spinD (数值型)"
+                    ],
+                    "spinF": "在这里填写 spinF (数值型)",
+                    "spin_cell": "在这里填写 spin_cell (数值型)",
+                    "spin_atom": "在这里填写 spin_atom (数值型)"
+                }
+            }
+        }
+    ]
+}

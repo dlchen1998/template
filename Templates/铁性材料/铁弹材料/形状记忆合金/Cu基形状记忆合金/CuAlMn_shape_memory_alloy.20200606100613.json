@@ -1,0 +1,179 @@
+{
+    "template": {
+        "_id": 565,
+        "Sample Information": {
+            "_type": "容器型",
+            "Chemical Composition": {
+                "_type": "表格型",
+                "Element": {
+                    "_type": "字符串型"
+                },
+                "Atomic Percent": {
+                    "_type": "数值型",
+                    "_unit": "at.%"
+                },
+                "Weight Percent": {
+                    "_type": "数值型",
+                    "_unit": "wt.%"
+                }
+            },
+            "Preparation Method": {
+                "_type": "字符串型"
+            },
+            "Composition Testing Method ": {
+                "_type": "字符串型"
+            }
+        },
+        "Property": {
+            "_type": "容器型",
+            "Transformation Temperature": {
+                "_type": "容器型",
+                "Martensite Start Temperature": {
+                    "_type": "数值型",
+                    "_unit": "K"
+                },
+                "Martensite Finish Temperature": {
+                    "_type": "数值型",
+                    "_unit": "K"
+                },
+                "Austenite Start Temperature": {
+                    "_type": "数值型",
+                    "_unit": "K"
+                },
+                "Austenite Finish Temperature": {
+                    "_type": "数值型",
+                    "_unit": "K"
+                },
+                "Description": {
+                    "_type": "字符串型"
+                }
+            },
+            "Microstructure": {
+                "_type": "容器型",
+                "Optical Micrograph": {
+                    "_type": "图片型"
+                },
+                "Description": {
+                    "_type": "字符串型"
+                }
+            },
+            "Superelastic cyclic stress–strain curve": {
+                "_type": "容器型",
+                "curve graph": {
+                    "_type": "图片型"
+                },
+                "Description": {
+                    "_type": "字符串型"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "meta": {
+                "数据 ID": "***第1个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Sample Information": {
+                    "Chemical Composition": [
+                        {
+                            "Element": "在这里填写 Element (字符串型)",
+                            "Atomic Percent": "在这里填写 Atomic Percent (数值型)",
+                            "Weight Percent": "在这里填写 Weight Percent (数值型)"
+                        },
+                        {
+                            "Element": "在这里填写 Element (字符串型)",
+                            "Atomic Percent": "在这里填写 Atomic Percent (数值型)",
+                            "Weight Percent": "在这里填写 Weight Percent (数值型)"
+                        }
+                    ],
+                    "Preparation Method": "在这里填写 Preparation Method (字符串型)",
+                    "Composition Testing Method ": "在这里填写 Composition Testing Method  (字符串型)"
+                },
+                "Property": {
+                    "Transformation Temperature": {
+                        "Martensite Start Temperature": "在这里填写 Martensite Start Temperature (数值型)",
+                        "Martensite Finish Temperature": "在这里填写 Martensite Finish Temperature (数值型)",
+                        "Austenite Start Temperature": "在这里填写 Austenite Start Temperature (数值型)",
+                        "Austenite Finish Temperature": "在这里填写 Austenite Finish Temperature (数值型)",
+                        "Description": "在这里填写 Description (字符串型)"
+                    },
+                    "Microstructure": {
+                        "Optical Micrograph": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Description": "在这里填写 Description (字符串型)"
+                    },
+                    "Superelastic cyclic stress–strain curve": {
+                        "curve graph": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Description": "在这里填写 Description (字符串型)"
+                    }
+                }
+            }
+        },
+        {
+            "meta": {
+                "数据 ID": "***第2个数据的ID***",
+                "标题": "在这里填写 标题",
+                "DOI": "在这里填写 DOI",
+                "数据摘要": "在这里填写 数据摘要",
+                "关键词": "在这里填写 关键词",
+                "来源": "MGE-SOURCE_HEADER v1 000 10 #",
+                "引用": "在这里填写 引用",
+                "其他信息": "project: 2016YFB0700500；subject: 2016YFB0700503"
+            },
+            "content": {
+                "Sample Information": {
+                    "Chemical Composition": [
+                        {
+                            "Element": "在这里填写 Element (字符串型)",
+                            "Atomic Percent": "在这里填写 Atomic Percent (数值型)",
+                            "Weight Percent": "在这里填写 Weight Percent (数值型)"
+                        },
+                        {
+                            "Element": "在这里填写 Element (字符串型)",
+                            "Atomic Percent": "在这里填写 Atomic Percent (数值型)",
+                            "Weight Percent": "在这里填写 Weight Percent (数值型)"
+                        }
+                    ],
+                    "Preparation Method": "在这里填写 Preparation Method (字符串型)",
+                    "Composition Testing Method ": "在这里填写 Composition Testing Method  (字符串型)"
+                },
+                "Property": {
+                    "Transformation Temperature": {
+                        "Martensite Start Temperature": "在这里填写 Martensite Start Temperature (数值型)",
+                        "Martensite Finish Temperature": "在这里填写 Martensite Finish Temperature (数值型)",
+                        "Austenite Start Temperature": "在这里填写 Austenite Start Temperature (数值型)",
+                        "Austenite Finish Temperature": "在这里填写 Austenite Finish Temperature (数值型)",
+                        "Description": "在这里填写 Description (字符串型)"
+                    },
+                    "Microstructure": {
+                        "Optical Micrograph": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Description": "在这里填写 Description (字符串型)"
+                    },
+                    "Superelastic cyclic stress–strain curve": {
+                        "curve graph": [
+                            "***此处填写第1个image的路径***",
+                            "***此处填写第2个image的路径***"
+                        ],
+                        "Description": "在这里填写 Description (字符串型)"
+                    }
+                }
+            }
+        }
+    ]
+}
